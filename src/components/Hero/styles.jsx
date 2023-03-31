@@ -9,4 +9,12 @@ export const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  btn: {
+    borderRadius: 5,
+    backgroundColor: "black",
+    "&:hover": { backgroundColor: "black" },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
 }));
