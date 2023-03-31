@@ -18,11 +18,12 @@ const Footer = (props: Props) => {
         }}
       />
       <Box>
-        <Typography fontFamily={"Fira Code"} gutterBottom>
+        <Typography variant={"h5"} fontFamily={"Fira Code"} gutterBottom>
           Name : Tomdieu Ivan
         </Typography>
-        <Typography fontFamily={"Fira Code"} gutterBottom>
-          Email : ivan.tomdieu@gmail.com
+        <Typography variant={"h5"} fontFamily={"Fira Code"} gutterBottom>
+          Email :{" "}
+          <a href="mailto:ivan.tomdieu@gmail.com">ivan.tomdieu@gmail.com</a>
         </Typography>
       </Box>
       <Typography textAlign={"center"} gutterBottom>

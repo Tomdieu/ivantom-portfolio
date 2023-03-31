@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
   return (
     <Box id="projects" mb={3}>
       <SectionDivider />
-      <Typography gutterBottom variant="h3" fontFamily={'Fira Code'}>
+      <Typography gutterBottom variant="h3" fontFamily={"Fira Code"}>
         Projects
       </Typography>
       <Grid
@@ -76,11 +76,19 @@ const Projects = (props: Props) => {
                         height={"100%"}
                       />
                     </Box>
-                    <Typography gutterBottom fontWeight={"bold"} fontFamily={'Fira Code'}>
+                    <Typography
+                      gutterBottom
+                      fontWeight={"bold"}
+                      fontFamily={"Fira Code"}
+                    >
                       {title}
                     </Typography>
-                    <Typography variant="body1" fontFamily={'Fira Code'}>{description}</Typography>
-                    <Typography textAlign={"center"} fontFamily={'Fira Code'}>Stack</Typography>
+                    <Typography variant="body1" fontFamily={"Fira Code"}>
+                      {description}
+                    </Typography>
+                    <Typography textAlign={"center"} fontFamily={"Fira Code"}>
+                      Stack
+                    </Typography>
                     <Box display={"flex"} flexWrap={"wrap"} gap={0.5}>
                       {tags?.map(({ label, icon }, index) => (
                         <Typography
@@ -96,7 +104,7 @@ const Projects = (props: Props) => {
                             gap: 5,
                           }}
                           variant={"caption"}
-                          fontFamily={'Fira Code'}
+                          fontFamily={"Fira Code"}
                         >
                           {icon}
                           {label}

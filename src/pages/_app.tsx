@@ -7,29 +7,9 @@ import Head from "next/head";
 import { Box } from "@mui/material";
 
 let theme = createTheme({
-  typography:{
-    h1:{
-      fontFamily:"Fira Code"
-    },
-    h2:{
-      fontFamily:"Fira Code"
-    },
-    h3:{
-      fontFamily:"Fira Code"
-    },
-    h4:{
-      fontFamily:"Fira Code"
-    },
-    h5:{
-      fontFamily:"Fira Code"
-    },
-    h6:{
-      fontFamily:"Fira Code"
-    },
-    caption:{
-      fontFamily:"Fira Code"
-    },
-  }
+  typography: {
+    fontFamily: ["Fira Code", "monospace"].join(","),
+  },
 });
 theme = responsiveFontSizes(theme);
 
@@ -47,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
             backgroundColor: "rgba(23,60,100,.7)",
             margin: 0,
             padding: 0,
-            fontFamily:'Fira Code',
+            fontFamily: "Fira Code",
             overflow: "auto",
             "& > *": {
               color: "#fff",

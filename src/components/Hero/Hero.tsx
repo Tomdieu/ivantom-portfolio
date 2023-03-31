@@ -22,7 +22,7 @@ const Hero = (props: Props) => {
       })}
     >
       <Grid item sm={12} md={5} xs={12}>
-        <Typography variant="h4" fontFamily={"Fira Code"} gutterBottom>
+        <Typography variant="h4" gutterBottom>
           Welcome To <br />
           My Personal Porfolio
         </Typography>
@@ -31,7 +31,6 @@ const Hero = (props: Props) => {
           maxWidth={500}
           textOverflow={"wrap"}
           gutterBottom
-          fontFamily={"Fira Code"}
         >
           I am a Backend Developper and i develope backend web application in
           Django & Nodejs

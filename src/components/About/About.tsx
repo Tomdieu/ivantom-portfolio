@@ -9,14 +9,13 @@ const About = (props: Props) => {
     <Box id="about">
       <SectionDivider />
       <Box>
-        <Typography variant="h3" fontFamily={'Fira Code'} gutterBottom>
+        <Typography variant="h3" fontFamily={"Fira Code"} gutterBottom>
           About Me
         </Typography>
         <Typography
           variant="h5"
           textAlign={"justify"}
           color={"#ccc"}
-          fontFamily={"Fira Code"}
           gutterBottom
         >
           Currently student in 3rd year in computer sciences with the ambition

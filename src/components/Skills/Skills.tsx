@@ -14,7 +14,7 @@ const Skills = (props: Props) => {
     <Box mb={4}>
       <SectionDivider />
       <Box>
-        <Typography variant="h3" fontFamily={'Fira Code'} gutterBottom>
+        <Typography variant="h3" fontFamily={"Fira Code"} gutterBottom>
           Skills
         </Typography>
         <Box
@@ -25,11 +25,7 @@ const Skills = (props: Props) => {
           })}
         >
           <Box flex={6}>
-            <Typography
-              variant="h5"
-              fontWeight={"bold"}
-              fontFamily={"Fira Code"}
-            >
+            <Typography variant="h5" fontWeight={"bold"}>
               Languages
             </Typography>
             <Box
@@ -62,13 +58,13 @@ const Skills = (props: Props) => {
                   })}
                 >
                   {icon && icon}
-                  <Typography fontFamily='Fira Code'>{language}</Typography>
+                  <Typography fontFamily="Fira Code">{language}</Typography>
                 </Box>
               ))}
             </Box>
           </Box>
           <Box flex={6}>
-            <Typography fontFamily='Fira Code' variant="h5" fontWeight={"bold"}>
+            <Typography fontFamily="Fira Code" variant="h5" fontWeight={"bold"}>
               Frameworks
             </Typography>
             <Box
@@ -100,7 +96,7 @@ const Skills = (props: Props) => {
                   key={index}
                 >
                   {icon && icon}
-                  <Typography fontFamily='Fira Code'>{language}</Typography>
+                  <Typography fontFamily="Fira Code">{language}</Typography>
                 </Box>
               ))}
             </Box>
