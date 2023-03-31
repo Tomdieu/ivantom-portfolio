@@ -28,8 +28,8 @@ const index = (props: Props) => {
         <Technology />
         <Skills />
         <About />
-        <Timeline />
-        <Accomplishment />
+        {/* <Timeline />
+        <Accomplishment /> */}
       </Container>
       <Footer />
     </Container>
