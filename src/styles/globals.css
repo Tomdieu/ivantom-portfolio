@@ -1,7 +1,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  --font-mono:"Fira Code", ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
@@ -77,6 +77,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  font-family: "Fira Code";
+
+  scroll-behavior: smooth;
+  transition: all .4s linear;
 }
 
 html,
@@ -95,9 +100,8 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-*{
-  scroll-behavior: smooth;
-  transition: all .4s linear;
+h1,h2,h3,h4,h5,h6,span{
+  font-family: "Fira Code";
 }
 
 

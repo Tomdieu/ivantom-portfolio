@@ -1,10 +1,12 @@
 import React from 'react'
 
+import {Box} from '@mui/material'
+
 type Props = {}
 
 const Footer = (props: Props) => {
     return (
-        <div>Footer</div>
+        <Box>Footer</Box>
     )
 }
 

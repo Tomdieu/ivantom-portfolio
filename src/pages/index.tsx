@@ -4,11 +4,12 @@ import {
   Header,
   Hero,
   Projects,
+  Skills,
   Technology,
   Timeline,
 } from "@/components";
 import About from "@/components/About/About";
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 
@@ -25,6 +26,7 @@ const index = (props: Props) => {
         <Hero />
         <Projects />
         <Technology />
+        <Skills />
         <About />
         <Timeline />
         <Accomplishment />

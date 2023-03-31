@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
   return (
     <Box id="projects" mb={3}>
       <SectionDivider />
-      <Typography gutterBottom variant="h3">
+      <Typography gutterBottom variant="h3" fontFamily={'Fira Code'}>
         Projects
       </Typography>
       <Grid
@@ -44,23 +44,24 @@ const Projects = (props: Props) => {
             <Grid
               item
               md={5}
-              sm={11}
-              xs={11}
+              sm={5.7}
+              xs={12}
               key={index}
               sx={(theme) => ({
                 cursor: "pointer",
                 border: "1px solid #f5f5f5",
                 backdropFilter: "blur(4px)",
                 borderRadius: 1,
-                backgroundColor: "#143F6D",
-                color: "#f5f5f5",
+                backgroundColor: "rgb(177,177,177)",
+                // color: "#f5f5f5",
                 "&:hover": {
                   transform: "scale(1.04)",
                   transitionDelay: "1ms",
                 },
               })}
             >
-              <Card sx={{ backgroundColor: "#143F6D", color: "#fff" }}>
+              {/* sx={{ backgroundColor: "#143F6D", color: "#fff" }} */}
+              <Card>
                 <CardActionArea>
                   <CardContent>
                     <Box
@@ -75,13 +76,11 @@ const Projects = (props: Props) => {
                         height={"100%"}
                       />
                     </Box>
-                    <Typography gutterBottom fontWeight={"bold"}>
+                    <Typography gutterBottom fontWeight={"bold"} fontFamily={'Fira Code'}>
                       {title}
                     </Typography>
-                    <Typography variant="body1">{description}</Typography>
-                    <Typography color="#ddd" textAlign={"center"}>
-                      Stack
-                    </Typography>
+                    <Typography variant="body1" fontFamily={'Fira Code'}>{description}</Typography>
+                    <Typography textAlign={"center"} fontFamily={'Fira Code'}>Stack</Typography>
                     <Box display={"flex"} flexWrap={"wrap"} gap={0.5}>
                       {tags?.map(({ label, icon }, index) => (
                         <Typography
@@ -96,6 +95,8 @@ const Projects = (props: Props) => {
                             alignItems: "center",
                             gap: 5,
                           }}
+                          variant={"caption"}
+                          fontFamily={'Fira Code'}
                         >
                           {icon}
                           {label}
@@ -107,6 +108,7 @@ const Projects = (props: Props) => {
                 <CardActions>
                   <Button
                     href={source ? source : "#"}
+                    target="_blank"
                     startIcon={<AiFillGithub />}
                     variant="contained"
                     sx={{

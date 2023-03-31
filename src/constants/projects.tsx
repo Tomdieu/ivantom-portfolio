@@ -26,7 +26,6 @@ export const projectsData: ProjectType[] = [
     title: "A Mobile Money Application",
     description: "This is an android app to make money transfer",
     source: "https://github.com/Tomdieu/momo-app-clone",
-
     tags: [
       {
         label: "Javascript",

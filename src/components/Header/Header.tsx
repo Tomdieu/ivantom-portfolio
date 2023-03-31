@@ -30,7 +30,7 @@ const Header = (props: Props) => {
     >
       <Box>
         <Link href={"/"} style={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h3">Portfolio</Typography>
+          <Typography variant="h4" fontFamily={'Fira Code'}>Portfolio</Typography>
         </Link>
       </Box>
 
@@ -42,7 +42,6 @@ const Header = (props: Props) => {
         sx={(theme) => ({
           [theme.breakpoints.down("md")]: {
             position: "absolute",
-            // bottom: `-${theme.spacing()}`,
             left: theme.spacing(1),
             right: theme.spacing(1),
             top: theme.spacing(7),
@@ -55,33 +54,28 @@ const Header = (props: Props) => {
       >
         <Box>
           <Link href={"#projects"}>
-            <Typography variant="body1" className={classes.link}>
-              Projects
-            </Typography>
+            <Typography fontFamily={'Fira Code'} className={classes.link}>Projects</Typography>
           </Link>
         </Box>
         <Box>
           <Link href={"#tech"}>
-            <Typography className={classes.link}>Technologies</Typography>
+            <Typography fontFamily={'Fira Code'} className={classes.link}>Technologies</Typography>
           </Link>
         </Box>
         <Box>
           <Link href={"#about"}>
-            <Typography className={classes.link}>About</Typography>
+            <Typography fontFamily={'Fira Code'} className={classes.link}>About</Typography>
           </Link>
         </Box>
       </Box>
 
       <Box component={Box} justifyContent={"flex-end"} display={"flex"} gap={2}>
-        <SocialIcons href="https://github.com">
+        <SocialIcons href="https://github.com/tomdieu">
           <AiFillGithub size={"2rem"} />
         </SocialIcons>
         <SocialIcons href="https://linkedin.com">
           <AiFillLinkedin size={"2rem"} />
         </SocialIcons>
-        {/* <Box display={"flex"} gap={5}>
-
-                </Box> */}
       </Box>
     </Box>
   );
