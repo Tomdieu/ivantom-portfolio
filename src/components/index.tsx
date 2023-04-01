@@ -6,6 +6,7 @@ import Technology from "./Technology/Technology";
 import Timeline from "./Timeline/Timeline";
 import Footer from "./Footer/Footer";
 import Skills from "./Skills/Skills";
+import Contact from "./Contact/Contact";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Timeline,
   Footer,
   Skills,
+  Contact,
 };

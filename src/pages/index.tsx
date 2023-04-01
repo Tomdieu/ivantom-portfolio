@@ -7,6 +7,7 @@ import {
   Skills,
   Technology,
   Timeline,
+  Contact,
 } from "@/components";
 import About from "@/components/About/About";
 import { Container } from "@mui/material";
@@ -28,6 +29,7 @@ const index = (props: Props) => {
         <Technology />
         <Skills />
         <About />
+        <Contact />
         {/* <Timeline />
         <Accomplishment /> */}
       </Container>
