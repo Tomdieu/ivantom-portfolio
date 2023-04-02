@@ -21,6 +21,7 @@ const index = (props: Props) => {
     <Container>
       <Head>
         <title>Tomdieu | Portfolio</title>
+        <link rel="stylesheet" href="/font.css" />
       </Head>
       <Header />
       <Container>

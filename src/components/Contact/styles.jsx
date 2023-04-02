@@ -5,26 +5,32 @@ export const useStyles = makeStyles((theme) => ({
     // backgroundColor: theme.palette.grey[100],
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
-    padding: theme.spacing(1),
+    // padding: theme.spacing(1),
   },
   heading: {
     // fontWeight: "bold",
   },
   input: {
-    // backgroundColor: "#fff",
     color: "#fff",
-    // "& .MuiInputBase-root": {
-    //   color: "#fff",
-    // },
-    // "& input": {
-    //   color: "#fff",
-    // },
-    // "& .MuiFormLabel-root": {
-    //   color: "#fff",
-    // },
-    // "& .MuiFormLabel-root.Mui-focused": {
-    //   color: "#fff",
-    // },
+    borderColor: "#fff",
+
+    "& >*": {
+      color: "#fff",
+    },
+    "& .MuiOutlinedInput-input,.MuiFormLabel-root": {
+      color: "#fff",
+      borderColor: "#fff",
+    },
+    "& .MuiFormControl-root": {
+      color: "#fff",
+      borderColor: "#ccc",
+    },
+    "& .MuiFormLabel-root.Mui-focused": {
+      color: "#ccc",
+    },
+    "& > *": {
+      borderColor: "#fff",
+    },
   },
   sendButton: {
     marginTop: theme.spacing(2),
