@@ -94,7 +94,7 @@ const Contact = (props: Props) => {
           onClose={handleClose}
           sx={{ width: "100%" }}
         >
-          {status.message}
+          {status && status.message}
         </Alert>
       </Snackbar>
       <Typography
@@ -126,7 +126,6 @@ const Contact = (props: Props) => {
               className={classes.input}
               value={message.name}
               onChange={handleChange}
-              
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -139,7 +138,6 @@ const Contact = (props: Props) => {
               className={classes.input}
               value={message.email}
               onChange={handleChange}
-              
             />
           </Grid>
           <Grid item xs={12}>
@@ -154,7 +152,6 @@ const Contact = (props: Props) => {
               className={classes.input}
               value={message.message}
               onChange={handleChange}
-              
             />
           </Grid>
           <Grid item xs={12}>

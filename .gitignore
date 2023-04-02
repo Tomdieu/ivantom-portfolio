@@ -38,6 +38,5 @@ next-env.d.ts
 other.js
 
 .env
-*.env
 
 /other
