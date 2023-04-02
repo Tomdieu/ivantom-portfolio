@@ -116,7 +116,13 @@ const Contact = (props: Props) => {
           backgroundColor: "inherit",
         })}
       >
-        <Grid container p={0.8} spacing={2} component={"form"}>
+        <Grid
+          container
+          p={0.8}
+          spacing={2}
+          component={"form"}
+          onSubmit={handleSentMessage}
+        >
           <Grid item xs={12} sm={6}>
             <TextField
               label="Name"
