@@ -15,6 +15,7 @@ import { AiFillGithub } from "react-icons/ai";
 
 import SectionDivider from "../global/SectionDivider";
 import { projectsData } from "@/constants/projects";
+import Image from "next/image";
 
 type Props = {};
 
@@ -61,7 +62,7 @@ const Projects = (props: Props) => {
               })}
             >
               {/* sx={{ backgroundColor: "#143F6D", color: "#fff" }} */}
-              <Card>
+              <Card sx={{backgroundColor:"#143F6D",color:"#ddd"}}>
                 <CardActionArea>
                   <CardContent>
                     <Box
@@ -70,10 +71,14 @@ const Projects = (props: Props) => {
                       justifyContent={"center"}
                     >
                       <img
-                        src={image || "vercel.svg"}
+                        src={image || "/vercel.svg"}
                         alt="Vercel"
-                        width={"100%"}
-                        height={"100%"}
+                        // width={100}
+                        // height={100}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
                       />
                     </Box>
                     <Typography

@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "../../public/font.css";
 import type { AppProps } from "next/app";
 
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";

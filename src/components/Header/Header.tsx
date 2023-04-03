@@ -73,7 +73,7 @@ const Header = (props: Props) => {
         <SocialIcons href="https://github.com/tomdieu">
           <AiFillGithub size={"2rem"} />
         </SocialIcons>
-        <SocialIcons href="https://linkedin.com">
+        <SocialIcons href="https://linkedin.com/in/tomdieu-ivan-6086701b4">
           <AiFillLinkedin size={"2rem"} />
         </SocialIcons>
       </Box>

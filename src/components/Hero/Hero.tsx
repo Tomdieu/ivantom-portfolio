@@ -32,7 +32,7 @@ const Hero = (props: Props) => {
           textOverflow={"wrap"}
           gutterBottom
         >
-          I am a Backend Developper and i develope backend web application in
+          I am a Backend Developer and i develope backend web application in
           Django & Nodejs
         </Typography>
         <Button
@@ -50,7 +50,13 @@ const Hero = (props: Props) => {
         </Button>
       </Grid>
       <Grid item md={5} sm={0} xs={0} className={classes.rightContainer}>
-        <img src={"/logo-white.png"} alt={"Logo"} />
+        <Image
+          src={"/logo-white.png"}
+          alt={"Logo"}
+          width={480}
+          height={480}
+          style={{ width: "100%", height: "100%" }}
+        />
       </Grid>
     </Grid>
   );

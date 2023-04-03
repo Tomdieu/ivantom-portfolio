@@ -55,6 +55,7 @@ export const projectsData: ProjectType[] = [
     image: "next.svg",
   },
   {
+    source:"https://github.com/Tomdieu/NvChat",
     title: "A Chat Application",
     description:
       "This is a complete chat application that include group chats and single chats",
