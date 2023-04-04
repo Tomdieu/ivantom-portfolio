@@ -6,4 +6,14 @@ export const useStyles = makeStyles((theme) => ({
       color: "tomato",
     },
   },
+  linkIcon: {
+    borderRadius: "50%",
+    "&: >*": {
+      borderRadius: "50%",
+    },
+    backgroundColor: "transparent",
+    "&:hover": {
+      boxShadow: "0px 0px 3px 5px #fff",
+    },
+  },
 }));

@@ -62,7 +62,7 @@ const Projects = (props: Props) => {
               })}
             >
               {/* sx={{ backgroundColor: "#143F6D", color: "#fff" }} */}
-              <Card sx={{backgroundColor:"#143F6D",color:"#ddd"}}>
+              <Card sx={{ backgroundColor: "#143F6D", color: "#ddd" }}>
                 <CardActionArea>
                   <CardContent>
                     <Box
@@ -70,14 +70,16 @@ const Projects = (props: Props) => {
                       alignItems={"center"}
                       justifyContent={"center"}
                     >
-                      <img
+                      <Image
                         src={image || "/vercel.svg"}
                         alt="Vercel"
-                        // width={100}
-                        // height={100}
+                        width={300}
+                        height={300}
                         style={{
                           width: "100%",
-                          height: "100%",
+                          // height: "100%",
+                          objectFit: "contain",
+                          maxHeight: "400px",
                         }}
                       />
                     </Box>
@@ -124,6 +126,7 @@ const Projects = (props: Props) => {
                     target="_blank"
                     startIcon={<AiFillGithub />}
                     variant="contained"
+                    size={"large"}
                     sx={{
                       borderRadius: 5,
                       backgroundColor: "black",

@@ -30,7 +30,9 @@ const Header = (props: Props) => {
     >
       <Box>
         <Link href={"/"} style={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h4" fontFamily={'Fira Code'}>Portfolio</Typography>
+          <Typography variant="h4" fontFamily={"Fira Code"}>
+            Portfolio
+          </Typography>
         </Link>
       </Box>
 
@@ -54,27 +56,33 @@ const Header = (props: Props) => {
       >
         <Box>
           <Link href={"#projects"}>
-            <Typography fontFamily={'Fira Code'} className={classes.link}>Projects</Typography>
+            <Typography fontFamily={"Fira Code"} className={classes.link}>
+              Projects
+            </Typography>
           </Link>
         </Box>
         <Box>
           <Link href={"#tech"}>
-            <Typography fontFamily={'Fira Code'} className={classes.link}>Technologies</Typography>
+            <Typography fontFamily={"Fira Code"} className={classes.link}>
+              Technologies
+            </Typography>
           </Link>
         </Box>
         <Box>
           <Link href={"#about"}>
-            <Typography fontFamily={'Fira Code'} className={classes.link}>About</Typography>
+            <Typography fontFamily={"Fira Code"} className={classes.link}>
+              About
+            </Typography>
           </Link>
         </Box>
       </Box>
 
       <Box component={Box} justifyContent={"flex-end"} display={"flex"} gap={2}>
         <SocialIcons href="https://github.com/tomdieu">
-          <AiFillGithub size={"2rem"} />
+          <AiFillGithub size={"2rem"} className={classes.linkIcon} />
         </SocialIcons>
         <SocialIcons href="https://linkedin.com/in/tomdieu-ivan-6086701b4">
-          <AiFillLinkedin size={"2rem"} />
+          <AiFillLinkedin size={"2rem"} className={classes.linkIcon} />
         </SocialIcons>
       </Box>
     </Box>

@@ -19,6 +19,9 @@ const Hero = (props: Props) => {
         [theme.breakpoints.down("sm")]: {
           marginTop: theme.spacing(5),
         },
+        [theme.breakpoints.down("md")]: {
+          marginTop: theme.spacing(7),
+        },
       })}
     >
       <Grid item sm={12} md={5} xs={12}>
@@ -37,6 +40,8 @@ const Hero = (props: Props) => {
         </Typography>
         <Button
           variant={"contained"}
+          href="/ivantom-cv.pdf"
+          target="_blank"
           sx={(theme) => ({
             borderRadius: 5,
             backgroundColor: "black",
@@ -46,7 +51,7 @@ const Hero = (props: Props) => {
             },
           })}
         >
-          Learn More
+          Download Resume
         </Button>
       </Grid>
       <Grid item md={5} sm={0} xs={0} className={classes.rightContainer}>
