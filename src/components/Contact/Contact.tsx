@@ -70,10 +70,17 @@ const Contact = (props: Props) => {
       .then((data) => {
         console.log(data);
         setOpenSnack(true);
-        setStatus({
-          message: String(data.message),
-          severity: "success",
-        });
+        if (data.message === "Message sent successfully!") {
+          setStatus({
+            message: data.message,
+            severity: "success",
+          });
+        } else {
+          setStatus({
+            message: err.message,
+            severity: "error",
+          });
+        }
         setMessage(initialData);
       })
       .catch((err) => {
