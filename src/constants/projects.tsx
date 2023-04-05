@@ -25,8 +25,9 @@ type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
-    title: "Momo app Clone",
-    description: "This is a Mobile money android app to make money transfer,withdraw and top up transactions.This app have translation feature which means can change language from french to english",
+    title: "Trix Wallet",
+    description:
+      "This is a Mobile money android app to make money transfer,withdraw and top up transactions.This app have translation feature which means can change language from french to english",
     source: "https://github.com/Tomdieu/momo-app-clone",
     tags: [
       {
@@ -54,12 +55,12 @@ export const projectsData: ProjectType[] = [
         icon: <DiDocker size={32} />,
       },
     ],
-    image: "/momo-app-icon.jpg",
+    image: "/trixwallet.png",
   },
   {
     source: "https://github.com/Tomdieu/NvChat",
     title: "Nv Chat Application",
-    image: "/nv-chat-icon.png",
+    image: "/nvchat.svg",
     description:
       "NvChat is a complete chat application that include group chats and single chats and also have a post section where people can like and comment posts",
     tags: [
@@ -116,7 +117,7 @@ export const projectsData: ProjectType[] = [
     title: "A Djangi Website",
     description:
       "This is a web application where people can manage thier Djangi",
-    image: "/logo.png",
+    image: "/logo-white.png",
     tags: [
       {
         label: "Javascript",

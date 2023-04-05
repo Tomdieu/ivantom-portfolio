@@ -5,7 +5,6 @@ export const useStyles = makeStyles((theme) => ({
     // backgroundColor: theme.palette.grey[100],
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
-    // padding: theme.spacing(1),
   },
   heading: {
     // fontWeight: "bold",
@@ -13,10 +12,6 @@ export const useStyles = makeStyles((theme) => ({
   input: {
     color: "#fff",
     borderColor: "#fff",
-
-    "& >*": {
-      color: "#fff",
-    },
     "& .MuiOutlinedInput-input,.MuiFormLabel-root": {
       color: "#fff",
       borderColor: "#fff",
@@ -29,6 +24,7 @@ export const useStyles = makeStyles((theme) => ({
       color: "#ccc",
     },
     "& > *": {
+      color: "#fff",
       borderColor: "#fff",
     },
   },

@@ -21,6 +21,16 @@ const index = (props: Props) => {
     <Container>
       <Head>
         <title>Tomdieu | Portfolio</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+
+        <link rel="icon" href="/ninga.png" />
+        <meta property="og:title" content="Tomdieu Ivan" />
+        <meta property="og:image" content="/logo.png" />
+        <meta
+          property="og:description"
+          content="Tomdieu Ivan(ivantom) portfolio website"
+        />
+        <meta property="og:url" content="https://ivantom-porfolio.vercel.app" />
       </Head>
       <Header />
       <Container>
@@ -29,12 +39,11 @@ const index = (props: Props) => {
         <Technology />
         <Skills />
         <About />
-        {/* <Contact /> */}
+        <Contact />
         {/* <Timeline />
         <Accomplishment /> */}
         <Footer />
       </Container>
-      
     </Container>
   );
 };
