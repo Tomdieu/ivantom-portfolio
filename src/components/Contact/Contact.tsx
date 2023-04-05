@@ -71,16 +71,17 @@ const Contact = (props: Props) => {
         console.log(data);
         setOpenSnack(true);
         setStatus({
-          message: String(data),
+          message: String(data.message),
           severity: "success",
         });
+        setMessage(initialData);
       })
       .catch((err) => {
         console.log(err);
         setOpenSnack(true);
 
         setStatus({
-          message: err,
+          message: err.message,
           severity: "success",
         });
       });
@@ -92,7 +93,7 @@ const Contact = (props: Props) => {
         <Alert
           severity={status?.severity || "success"}
           onClose={handleClose}
-          sx={{ width: "100%" }}
+          sx={{ width: "100%", p: 2 }}
         >
           {status && status.message}
         </Alert>
