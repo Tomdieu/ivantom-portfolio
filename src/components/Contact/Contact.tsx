@@ -9,9 +9,7 @@ import {
   Paper,
   Snackbar,
   Alert,
-  AlertProps,
   AlertColor,
-  SnackbarCloseReason,
 } from "@mui/material";
 import { Send } from "@mui/icons-material";
 
@@ -118,9 +116,7 @@ const Contact = (props: Props) => {
       <Box
         component={Paper}
         mt={5}
-        // 163D66
         sx={(theme) => ({
-          // backgroundColor: "#102A46",
           backgroundColor: "inherit",
         })}
       >
