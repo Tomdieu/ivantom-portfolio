@@ -19,7 +19,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
     await sgMail.send(msg);
     res.status(200).send({ message: "Message sent successfully!" });
   } catch (error) {
-    // console.error(error);
+    console.error(error);
     res.status(500).send({ message: "Error sending message." });
   }
 }
