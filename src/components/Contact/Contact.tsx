@@ -75,13 +75,13 @@ const Contact = (props: Props) => {
             message: data.message,
             severity: "success",
           });
+          setMessage(initialData);
         } else {
           setStatus({
             message: data.message,
             severity: "error",
           });
         }
-        setMessage(initialData);
       })
       .catch((err) => {
         console.log(err);
