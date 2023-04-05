@@ -77,7 +77,7 @@ const Contact = (props: Props) => {
           });
         } else {
           setStatus({
-            message: err.message,
+            message: data.message,
             severity: "error",
           });
         }
