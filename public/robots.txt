@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ivantom-portfolio.vercel.app/
+
+# Sitemaps
+Sitemap: https://ivantom-portfolio.vercel.app/sitemap.xml
