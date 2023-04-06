@@ -22,13 +22,13 @@ const index = (props: Props) => {
     <Container>
       <NextSeo
         title="Tomdieu Ivan | Portfolio"
-        description="I'm a software engineer and web developer with experience in building beautiful, functional and responsive websites."
+        description="I'm a software engineer and fullstack web developer with experience in building beautiful, functional and responsive websites."
         canonical="https://ivantom-portfolio.vercel.app/"
         openGraph={{
           url: "https://ivantom-portfolio.vercel.app/",
           title: "Tomdieu Ivan | Portfolio",
           description:
-            "I'm a software engineer and web developer with experience in building beautiful, functional and responsive websites.",
+            "I'm a software engineer and fullstack web developer with experience in building beautiful, functional and responsive websites.",
           images: [
             {
               url: "/logo.png",
@@ -37,7 +37,7 @@ const index = (props: Props) => {
               alt: "Tomdieu Ivan Portfolio",
             },
           ],
-          site_name: "Tomdieu Ivan | Portfolio",
+          site_name: "Tomdieu Ivan (ivantom)",
         }}
         twitter={{
           handle: "@IvanTomdieu",
