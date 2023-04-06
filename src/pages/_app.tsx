@@ -6,6 +6,7 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/styles";
 import { Box } from "@mui/material";
 import { NextSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react";
 
 let theme = createTheme({
   typography: {
@@ -126,6 +127,7 @@ export default function App({ Component, pageProps }: AppProps) {
           }}
         >
           <Component {...pageProps} />
+          <Analytics />
         </Box>
       </ThemeProvider>
     </>

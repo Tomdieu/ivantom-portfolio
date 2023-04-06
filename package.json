@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild":"next-sitemap",
+    "postbuild": "next-sitemap",
     "export": "next build && next export && next-sitemap"
   },
   "dependencies": {
@@ -32,6 +32,10 @@
     "react-dom": "18.2.0",
     "react-horizontal-scrolling-menu": "^4.0.1",
     "react-icons": "^4.8.0",
+    "sharp": "^0.32.0",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@vercel/analytics": "^0.1.11"
   }
 }
