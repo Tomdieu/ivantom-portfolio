@@ -46,6 +46,15 @@ const index = (props: Props) => {
         }}
         additionalMetaTags={[
           {
+            name: 'apple-touch-icon',
+            content: '/logo.png',
+            sizes: '180x180',
+          },
+          {
+            name: 'icon',
+            href: '/ninga.png',
+          },
+          {
             name: "keywords",
             content:
               "Tomdieu Ivan, Portfolio, Web Developer, Software Engineer, Full-Stack, ReactJS, NextJS, NodeJS, ExpressJS, MongoDB",
