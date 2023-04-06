@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild":"next-sitemap",
+    "export": "next build && next export && next-sitemap"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -25,6 +27,7 @@
     "millify": "^6.1.0",
     "next": "13.2.4",
     "next-seo": "^6.0.0",
+    "next-sitemap": "^4.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-horizontal-scrolling-menu": "^4.0.1",
