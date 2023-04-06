@@ -31,7 +31,7 @@ const index = (props: Props) => {
             "I'm a software engineer and web developer with experience in building beautiful, functional and responsive websites.",
           images: [
             {
-              url: "/og-image.jpg",
+              url: "/logo.png",
               width: 1200,
               height: 630,
               alt: "Tomdieu Ivan Portfolio",
