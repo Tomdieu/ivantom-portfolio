@@ -44,16 +44,18 @@ const index = (props: Props) => {
           site: "@IvanTomdieu",
           cardType: "This is my twitter profile",
         }}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/ninga.png",
+          },
+          {
+            rel: "apple-touch-icon",
+            sizes: "180x180",
+            href: "/logo.png",
+          },
+        ]}
         additionalMetaTags={[
-          {
-            name: 'apple-touch-icon',
-            content: '/logo.png',
-            sizes: '180x180',
-          },
-          {
-            name: 'icon',
-            href: '/ninga.png',
-          },
           {
             name: "keywords",
             content:
