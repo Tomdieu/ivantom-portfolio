@@ -23,7 +23,16 @@ const Projects = (props: Props) => {
   return (
     <Box id="projects" mb={3}>
       <SectionDivider />
-      <Typography gutterBottom variant="h3" fontFamily={"Fira Code"}>
+      <Typography
+        gutterBottom
+        variant="h3"
+        fontFamily={"Fira Code"}
+        sx={(theme) => ({
+          [theme.breakpoints.down("sm")]: {
+            fontSize: "2.3rem",
+          },
+        })}
+      >
         Projects
       </Typography>
       <Grid

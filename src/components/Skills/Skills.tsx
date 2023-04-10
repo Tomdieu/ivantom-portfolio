@@ -14,7 +14,16 @@ const Skills = (props: Props) => {
     <Box mb={4}>
       <SectionDivider />
       <Box>
-        <Typography variant="h3" fontFamily={"Fira Code"} gutterBottom>
+        <Typography
+          variant="h3"
+          fontFamily={"Fira Code"}
+          gutterBottom
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "2.3rem",
+            },
+          })}
+          >
           Skills
         </Typography>
         <Box

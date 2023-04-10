@@ -30,7 +30,12 @@ const Header = (props: Props) => {
     >
       <Box>
         <Link href={"/"} style={{ display: "flex", alignItems: "center" }}>
-          <Typography variant="h4" fontFamily={"Fira Code"}>
+          <Typography
+            variant="h4"
+            fontFamily={"Fira Code"}
+            style={{ color: "var(--primary-glow)" }}
+            className={classes.title}
+          >
             Portfolio
           </Typography>
         </Link>

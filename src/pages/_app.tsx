@@ -114,7 +114,6 @@ export default function App({ Component, pageProps }: AppProps) {
           width={"100vw"}
           height={"100vh"}
           sx={{
-            // backgroundColor: "rgba(23,60,100,.7)",
             backgroundColor: "#102A46",
             margin: 0,
             padding: 0,

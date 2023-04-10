@@ -9,7 +9,16 @@ const About = (props: Props) => {
     <Box id="about">
       <SectionDivider />
       <Box>
-        <Typography variant="h3" fontFamily={"Fira Code"} gutterBottom>
+        <Typography
+          variant="h3"
+          fontFamily={"Fira Code"}
+          gutterBottom
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "2.3rem",
+            },
+          })}
+        >
           About Me
         </Typography>
         <Typography

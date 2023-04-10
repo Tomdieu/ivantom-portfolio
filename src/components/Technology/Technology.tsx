@@ -11,7 +11,16 @@ const Technology = (props: Props) => {
   return (
     <Box id="tech" marginBottom={5}>
       <SectionDivider />
-      <Typography variant="h3" fontFamily={'Fira Code'} gutterBottom>
+      <Typography
+        variant="h3"
+        fontFamily={"Fira Code"}
+        gutterBottom
+        sx={(theme) => ({
+          [theme.breakpoints.down("sm")]: {
+            fontSize: "2.3rem",
+          },
+        })}
+      >
         Technologies
       </Typography>
       <Box>
@@ -21,7 +30,7 @@ const Technology = (props: Props) => {
           color={"#ccc"}
           pl={1}
           textAlign={"left"}
-          fontFamily={'Fira Code'}
+          fontFamily={"Fira Code"}
         >
           I have work with a range of technologies in the web development <br />
           world. From Back-end to Front-End
@@ -60,10 +69,18 @@ const Technology = (props: Props) => {
             >
               <Box sx={{ borderRadius: 4 }}>
                 {icon}
-                <Typography fontFamily={'Fira Code'} fontWeight={"bold"} variant="h5">
+                <Typography
+                  fontFamily={"Fira Code"}
+                  fontWeight={"bold"}
+                  variant="h5"
+                >
                   {title}
                 </Typography>
-                <Typography fontFamily={'Fira Code'} variant="caption" color={"#ddd"}>
+                <Typography
+                  fontFamily={"Fira Code"}
+                  variant="caption"
+                  color={"#ddd"}
+                >
                   {desc1}
                   <br /> {desc2}
                 </Typography>

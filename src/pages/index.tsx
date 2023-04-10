@@ -17,7 +17,16 @@ type Props = {};
 
 const index = (props: Props) => {
   return (
-    <Container>
+    <Container
+      sx={(theme) => ({
+        "::-webkit-progress-bar": {
+          display: "none",
+        },
+        [theme.breakpoints.down("md")]: {
+          padding: 1,
+        },
+      })}
+    >
       <Header />
       <Container>
         <Hero />

@@ -5,6 +5,9 @@ export const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: "tomato",
     },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".7rem",
+    },
   },
   linkIcon: {
     borderRadius: "50%",
@@ -14,6 +17,11 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent",
     "&:hover": {
       boxShadow: "0px 0px 3px 5px #fff",
+    },
+  },
+  title: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.7rem",
     },
   },
 }));
