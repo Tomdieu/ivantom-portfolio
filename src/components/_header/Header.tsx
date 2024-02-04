@@ -5,7 +5,7 @@ type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <header className='px-5 md:px-0 flex items-center justify-center w-full py-5 absolute top-0 left-0 right-0 z-[50] border-b bg-white'>
+    <header className='px-5 md:px-0 flex items-center justify-center w-full py-5 absolute top-0 left-0 right-0 z-[50] bg-white'>
        <Link className="flex items-center justify-center cursor-pointer" href="#">
        <h1 className='text-xl font-bold'>Tomdieu Ivan</h1>
 

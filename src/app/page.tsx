@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth min-h-screen h-screen w-screen flex flex-col container relative mx-auto">
+    <div className="scroll-smooth min-h-screen h-screen w-screen flex flex-col container relative mx-auto bg-[#102A46e]">
       <Header />
-      <main className="flex-1 h-full w-full fixed">
+      <main className="flex-1 h-full w-full static">
         <Hero/>
         <Skills/>
       </main>
