@@ -32,27 +32,27 @@ export const projectsData: ProjectType[] = [
     tags: [
       {
         label: "Javascript",
-        icon: <DiJavascript1 size={32} />,
+        icon: <DiJavascript1 size={16} />,
       },
       {
         label: "Python",
-        icon: <DiPython size={32} />,
+        icon: <DiPython size={16} />,
       },
       {
         label: "React Native",
-        icon: <DiReact size={32} />,
+        icon: <DiReact size={16} />,
       },
       {
         label: "Django",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
       {
         label: "Django Rest Framework",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
       {
         label: "Docker",
-        icon: <DiDocker size={32} />,
+        icon: <DiDocker size={16} />,
       },
     ],
     image: "/trixwallet.png",
@@ -66,19 +66,19 @@ export const projectsData: ProjectType[] = [
     tags: [
       {
         label: "TypeScript",
-        icon: <DiJavascript1 size={32} />,
+        icon: <DiJavascript1 size={16} />,
       },
       {
         label: "Python",
-        icon: <DiPython size={32} />,
+        icon: <DiPython size={16} />,
       },
       {
         label: "Django",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
       {
         label: "Django Rest Framework",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
     ],
   },
@@ -91,23 +91,23 @@ export const projectsData: ProjectType[] = [
     tags: [
       {
         label: "TypeScript",
-        icon: <DiJavascript1 size={32} />,
+        icon: <DiJavascript1 size={16} />,
       },
       {
         label: "NextJs",
-        icon: <DiReact size={32} />,
+        icon: <DiReact size={16} />,
       },
       {
         label: "Python",
-        icon: <DiPython size={32} />,
+        icon: <DiPython size={16} />,
       },
       {
         label: "Django",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
       {
         label: "Django Rest Framework",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
     ],
   },
@@ -121,23 +121,23 @@ export const projectsData: ProjectType[] = [
     tags: [
       {
         label: "Javascript",
-        icon: <DiJavascript1 size={32} />,
+        icon: <DiJavascript1 size={16} />,
       },
       {
         label: "Html",
-        icon: <DiHtml5 size={32} />,
+        icon: <DiHtml5 size={16} />,
       },
       {
         label: "Python",
-        icon: <DiPython size={32} />,
+        icon: <DiPython size={16} />,
       },
       {
         label: "Django",
-        icon: <DiDjango size={32} />,
+        icon: <DiDjango size={16} />,
       },
       {
         label: "Css",
-        icon: <DiCss3 size={32} />,
+        icon: <DiCss3 size={16} />,
       },
     ],
   },

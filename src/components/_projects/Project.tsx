@@ -23,7 +23,7 @@ type Props = {
 const Project = ({ project, className }: Props) => {
   const { id, title, description, image, tags, visit, source } = project;
   return (
-    <Card className={cn("max-w-sm", className)}>
+    <Card className={cn("max-w-sm dark:bg-slate-600", className)}>
       <div className="w-full">
           {image && (
             <Image
@@ -49,14 +49,17 @@ const Project = ({ project, className }: Props) => {
               <Badge
                 key={index}
                 className="text-sm flex items-center space-x-2"
+                variant="outline"
               >
-                <div className="w-3 h-3">{tag.icon}</div>
+                {tag.icon}
                 {tag.label}
               </Badge>
             ))}
           </div>
         </div>
-        <div className={"flex items-center space-x-2 mt-2 gap-1"}>
+        
+      </CardContent>
+      <div className={"flex items-center space-x-2 mt-2 mb-1 gap-1"}>
           <Button asChild className="rounded-2xl">
             <Link href={source!}>
               <GitHubLogoIcon />
@@ -64,7 +67,6 @@ const Project = ({ project, className }: Props) => {
             </Link>
           </Button>
         </div>
-      </CardContent>
     </Card>
   );
 };

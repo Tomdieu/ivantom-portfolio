@@ -9,7 +9,7 @@ const Hero = (props: Props) => {
 
   return (
     <section id="hero" className="container mx-auto w-full py-6 sm:py-12 md:py-18">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6  ">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           
           <HeroImage/>
