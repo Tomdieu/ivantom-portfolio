@@ -13,7 +13,7 @@ export const technologyData: Tech[] = [
     icon: <DiReact />,
     title: "Front-End",
     desc1: "Experience with",
-    desc2: "React.js",
+    desc2: "Html, Css, React.js & NextJs",
   },
   {
     icon: <DiDatabase />,

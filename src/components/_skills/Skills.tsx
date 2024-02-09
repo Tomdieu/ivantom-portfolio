@@ -1,11 +1,12 @@
 import React from 'react'
+import SectionDivider from '../global/SectionDivider'
 
 type Props = {}
 
 const Skills = (props: Props) => {
   return (
-    <section id="skills" className="w-full py-6 px-6">
-    
+    <section id="skills" className="container mx-auto w-full py-6 px-6">
+      <SectionDivider/>
         <div>
             <h1 className="text-xl lg:text-2xl font-bold">Skills</h1>
         </div>

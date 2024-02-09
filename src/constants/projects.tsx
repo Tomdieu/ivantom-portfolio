@@ -13,7 +13,7 @@ type TagType = {
   label: string;
 };
 
-type ProjectType = {
+export type ProjectType = {
   title: string;
   description: string;
   image?: string;

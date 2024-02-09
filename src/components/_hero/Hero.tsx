@@ -8,7 +8,7 @@ type Props = {};
 const Hero = (props: Props) => {
 
   return (
-    <section id="hero" className="w-full py-6 sm:py-12 md:py-18">
+    <section id="hero" className="container mx-auto w-full py-6 sm:py-12 md:py-18">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           
@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-100">
                 Hi, I&apos;m Tomdieu Ivan
               </h1>
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900 dark:text-stone-100">
+              <h2 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900 dark:text-stone-100">
                 Full Stack Developer
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
