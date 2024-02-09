@@ -1,4 +1,6 @@
 import { ProjectType } from "@/constants/projects";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 import React from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -23,15 +25,18 @@ type Props = {
 const Project = ({ project, className }: Props) => {
   const { id, title, description, image, tags, visit, source } = project;
   return (
-    <Card className={cn("max-w-lg dark:bg-slate-600 hover:scale-105 hover:shadow-lg hover:rotate-12 ease-linear transition-all", className)}>
+    <Card className={cn("max-w-lg dark:bg-slate-600 hover:scale-105 hover:shadow-lg hover:rotate-1 ease-linear transition-all", className)}>
       <div className="w-full">
           {image && (
+            <AspectRatio ratio={16 / 9}>
+
             <Image
               src={image}
               width={500}
               height={Math.floor((500 * 9) / 16)}
               alt={title}
             />
+            </AspectRatio>
           )}
         </div>
       <CardHeader>
@@ -44,7 +49,7 @@ const Project = ({ project, className }: Props) => {
       <CardContent>
         <div>
           <h1 className="text-base font-bold">Stack</h1>
-          <div className="flex items-center space-x-2 flex-wrap line-clamp-1">
+          <div className="flex items-center space-x-2 flex-nowrap line-clamp-1">
             {tags?.map((tag, index) => (
               <Badge
                 key={index}
