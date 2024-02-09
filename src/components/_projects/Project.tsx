@@ -23,7 +23,7 @@ type Props = {
 const Project = ({ project, className }: Props) => {
   const { id, title, description, image, tags, visit, source } = project;
   return (
-    <Card className={cn("max-w-lg dark:bg-slate-600", className)}>
+    <Card className={cn("max-w-lg dark:bg-slate-600 hover:scale-105 hover:shadow-lg hover:rotate-12 ease-linear transition-all", className)}>
       <div className="w-full">
           {image && (
             <Image
