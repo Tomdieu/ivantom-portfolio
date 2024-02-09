@@ -17,13 +17,13 @@ import Link from "next/link";
 
 type Props = {
   project: ProjectType;
-  className: string;
+  className?: string;
 };
 
 const Project = ({ project, className }: Props) => {
   const { id, title, description, image, tags, visit, source } = project;
   return (
-    <Card className={cn("max-w-sm dark:bg-slate-600", className)}>
+    <Card className={cn("max-w-lg dark:bg-slate-600", className)}>
       <div className="w-full">
           {image && (
             <Image
