@@ -1,3 +1,4 @@
+"use client";
 import { ProjectType } from "@/constants/projects";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
