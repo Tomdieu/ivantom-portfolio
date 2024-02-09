@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ivantom-portfolio.vercel.app/
+Host: https://ivantomdieu.vercel.app/
 
 # Sitemaps
-Sitemap: https://ivantom-portfolio.vercel.app/sitemap.xml
+Sitemap: https://ivantomdieu.vercel.app/sitemap.xml
