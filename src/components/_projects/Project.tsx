@@ -44,14 +44,14 @@ const Project = ({ project, className }: Props) => {
       <CardContent>
         <div>
           <h1 className="text-base font-bold">Stack</h1>
-          <div className="flex items-center space-x-2 flex-wrap">
+          <div className="flex items-center space-x-2 flex-wrap line-clamp-1">
             {tags?.map((tag, index) => (
               <Badge
                 key={index}
-                className="text-sm flex items-center space-x-2"
+                className="text-sm flex items-center space-x-2 space-y-2 gap-2"
                 variant="outline"
               >
-                {tag.icon}
+                {/* {tag.icon} */}
                 {tag.label}
               </Badge>
             ))}
@@ -59,7 +59,7 @@ const Project = ({ project, className }: Props) => {
         </div>
         
       </CardContent>
-      <div className={"flex items-center space-x-2 mt-2 mb-1 gap-1"}>
+      <div className={"flex items-center space-x-2 mt-2 mb-1 gap-1 px-2"}>
           <Button asChild className="rounded-2xl">
             <Link href={source!}>
               <GitHubLogoIcon />

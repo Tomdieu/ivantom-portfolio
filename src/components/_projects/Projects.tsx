@@ -15,7 +15,7 @@ const Projects = (props: Props) => {
       <div>
         <h1 className="text-xl lg:text-2xl font-bold">Projects</h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 space-x-2 gap-2">
+      <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 space-x-2 gap-2">
             {projectsData.map((project, index) => (<Project key={index} project={project}  />))}
       </div>
     </section>
