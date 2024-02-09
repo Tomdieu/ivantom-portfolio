@@ -48,8 +48,8 @@ const Project = ({ project, className }: Props) => {
             ))}
           </div>
         </div>
-        <div>
-          <Button asChild>
+        <div className={"flex items-center space-x-2"}>
+          <Button asChild className="rounded-2xl">
             <Link href={source!}>
               <GitHubLogoIcon />
               Github
