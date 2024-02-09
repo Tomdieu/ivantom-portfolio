@@ -1,11 +1,16 @@
+"use client";
+
+import { useScrollTop } from '@/hooks/use-scroll-top'
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
 
 const Header = (props: Props) => {
+  const scrolled = useScrollTop()
   return (
-    <header className='px-5 md:px-0 flex items-center justify-center w-full py-5 absolute top-0 left-0 right-0 z-[50] bg-white'>
+    <header className={cn('px-5 md:px-0 flex items-center justify-center w-full py-5 sticky top-0 z-[50] bg-white',scrolled && "  ")}>
        <Link className="flex items-center justify-center cursor-pointer" href="#">
        <h1 className='text-xl font-bold'>Tomdieu Ivan</h1>
 
