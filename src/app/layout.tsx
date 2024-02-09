@@ -22,14 +22,14 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Tomdieu Ivan | Portfolio",
+  title: "Tomdieu Ivan",
   keywords:
     "Tomdieu Ivan, Portfolio, Web Developer, Software Engineer, Full-Stack, ReactJS, NextJS, NodeJS, ExpressJS, Django",
   description:
     "I'm a software engineer and fullstack web developer with experience in building beautiful, functional and responsive websites.",
   openGraph: {
-    url: "https://ivantom-portfolio.vercel.app/",
-    title: "Tomdieu Ivan | Portfolio",
+    url: "https://ivantomdieu.vercel.app/",
+    title: "Tomdieu Ivan",
     description:
       "I'm a software engineer and fullstack web developer with experience in building beautiful, functional and responsive websites.",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     site: "@IvanTomdieu",
     description:
       "I'm a software engineer and fullstack web developer with experience in building beautiful, functional and responsive websites.",
-    title: "Tomdieu Ivan | Portfolio",
+    title: "Tomdieu Ivan",
     creator: "Tomdieu Ivan",
     card: "summary_large_image",
     images: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  metadataBase: new URL("https://ivantom-portfolio.vercel.app/"),
+  metadataBase: new URL("https://ivantomdieu.vercel.app/"),
   icons: [
     {
       url: "/ninga.png",
