@@ -24,10 +24,18 @@ const Project = ({ project, className }: Props) => {
   const { id, title, description, image, tags, visit, source } = project;
   return (
     <Card className={cn("max-w-sm", className)}>
-      <CardHeader>
-        <div>
-          {image && <Image src={image} width={500} height={500} alt={title} />}
+      <div className="w-full">
+          {image && (
+            <Image
+              src={image}
+              width={500}
+              height={Math.floor((500 * 9) / 16)}
+              alt={title}
+            />
+          )}
         </div>
+      <CardHeader>
+        
         <CardTitle>{title}</CardTitle>
         <CardDescription className="line-clamp-2">
           {description}
@@ -35,20 +43,20 @@ const Project = ({ project, className }: Props) => {
       </CardHeader>
       <CardContent>
         <div>
-          <h1 className="text-base">Stack</h1>
+          <h1 className="text-base font-bold">Stack</h1>
           <div className="flex items-center space-x-2 flex-wrap">
             {tags?.map((tag, index) => (
               <Badge
                 key={index}
                 className="text-sm flex items-center space-x-2"
               >
-                {tag.icon}
+                <div className="w-3 h-3">{tag.icon}</div>
                 {tag.label}
               </Badge>
             ))}
           </div>
         </div>
-        <div className={"flex items-center space-x-2"}>
+        <div className={"flex items-center space-x-2 mt-2 gap-1"}>
           <Button asChild className="rounded-2xl">
             <Link href={source!}>
               <GitHubLogoIcon />
