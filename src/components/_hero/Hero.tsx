@@ -11,13 +11,7 @@ const Hero = (props: Props) => {
     <section id="hero" className="w-full py-6 sm:py-12 md:py-18">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          {/* <Image
-            alt="Hero"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-            height="550"
-            src="/logo.png"
-            width="550"
-          /> */}
+          
           <HeroImage/>
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
