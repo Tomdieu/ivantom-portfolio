@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
               />
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-gray-100">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-100">
                   Hi, I&apos;m Tomdieu Ivan
                 </h1>
                   <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">

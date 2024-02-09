@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -22,7 +23,8 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   title: "Tomdieu Ivan | Portfolio",
-  keywords:"Tomdieu Ivan, Portfolio, Web Developer, Software Engineer, Full-Stack, ReactJS, NextJS, NodeJS, ExpressJS, Django",
+  keywords:
+    "Tomdieu Ivan, Portfolio, Web Developer, Software Engineer, Full-Stack, ReactJS, NextJS, NodeJS, ExpressJS, Django",
   description:
     "I'm a software engineer and fullstack web developer with experience in building beautiful, functional and responsive websites.",
   openGraph: {
@@ -98,7 +100,16 @@ export default function RootLayout({
       suppressHydrationWarning
       translate={"no"}
     >
-      <body className="">{children}</body>
+      <body className="dark:bg-slate-700">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
