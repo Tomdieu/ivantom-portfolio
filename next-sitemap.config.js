@@ -1,10 +1,9 @@
 module.exports = {
-  siteUrl: "https://ivantom-portfolio.vercel.app/",
+  siteUrl: "https://ivantomdieu.vercel.app/",
   generateRobotsTxt: true,
   changefreq: "daily",
-  priority: 0.7,
+  priority: 1,
   sitemapSize: 5000,
-  // exclude: ['/secret-page'],
   robotsTxtOptions: {
     policies: [
       {

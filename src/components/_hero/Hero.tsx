@@ -18,9 +18,9 @@ const Hero = (props: Props) => {
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-100">
                 Hi, I&apos;m Tomdieu Ivan
               </h1>
-              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900 dark:text-stone-100">
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900 dark:text-stone-100">
                 Full Stack Developer
-              </h3>
+              </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                 A passionate Full Stack Software Developer 🚀 having an
                 experience of building Web applications with JavaScript /
