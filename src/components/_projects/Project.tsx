@@ -1,7 +1,5 @@
-"use client";
 import { ProjectType } from "@/constants/projects";
 
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import React from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -29,7 +27,7 @@ const Project = ({ project, className }: Props) => {
     <Card className={cn("max-w-lg dark:bg-slate-600 hover:scale-105 hover:shadow-lg hover:rotate-1 ease-linear transition-all", className)}>
       <div className="w-full">
           {image && (
-            <AspectRatio ratio={16 / 9}>
+            
 
             <Image
               src={image}
@@ -37,7 +35,6 @@ const Project = ({ project, className }: Props) => {
               height={Math.floor((500 * 9) / 16)}
               alt={title}
             />
-            </AspectRatio>
           )}
         </div>
       <CardHeader>
@@ -54,7 +51,7 @@ const Project = ({ project, className }: Props) => {
             {tags?.map((tag, index) => (
               <Badge
                 key={index}
-                className="text-sm flex items-center space-x-2 space-y-2 gap-2"
+                className="text-sm flex items-center space-x-2 space-y-2 gap-2 line-clamp-1"
                 variant="outline"
               >
                 {/* {tag.icon} */}
@@ -65,7 +62,8 @@ const Project = ({ project, className }: Props) => {
         </div>
         
       </CardContent>
-      <div className={"flex items-center space-x-2 mt-2 mb-1 gap-1 px-2"}>
+      <CardFooter>
+      <div className={"flex items-center space-x-2 gap-1 px-2"}>
           <Button asChild className="rounded-2xl">
             <Link href={source!}>
               <GitHubLogoIcon />
@@ -73,6 +71,8 @@ const Project = ({ project, className }: Props) => {
             </Link>
           </Button>
         </div>
+      </CardFooter>
+      
     </Card>
   );
 };
