@@ -100,7 +100,7 @@ export default function RootLayout({
       suppressHydrationWarning
       translate={"no"}
     >
-      <body className="dark:bg-slate-700">
+      <body className="">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
