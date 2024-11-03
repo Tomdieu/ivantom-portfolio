@@ -12,19 +12,19 @@ export const technologyData: Tech[] = [
   {
     icon: <DiReact />,
     title: "Front-End",
-    desc1: "Experience with",
+    desc1: "ResumeCard with",
     desc2: "Html, Css, React.js & NextJs",
   },
   {
     icon: <DiDatabase />,
     title: "Backend-End",
-    desc1: "Experience with",
+    desc1: "ResumeCard with",
     desc2: "Django and Express Js",
   },
   {
     icon: <CgDesktop />,
     title: "Desktop",
-    desc1: "Experience with",
+    desc1: "ResumeCard with",
     desc2: "PyQt Framework and Electron js",
   },
 ];
