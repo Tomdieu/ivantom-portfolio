@@ -2,17 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import HeroImage from "./HeroImage";
+import BlurFade from "../magicui/blur-fade";
+import BlurFadeText from "../magicui/blur-fade-text";
 
 type Props = {};
+
+const BLUR_FADE_DELAY = 0.04;
+
 
 const Hero = (props: Props) => {
 
   return (
     <section id="hero" className="container mx-auto w-full py-6 sm:py-12 md:py-18">
-      <div className="container px-4 md:px-6  ">
+      <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          
-          <HeroImage/>
+
+
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-100">
@@ -21,12 +26,20 @@ const Hero = (props: Props) => {
               <h2 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900">
                 Full Stack Developer
               </h2>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+              {/* <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                 A passionate Full Stack Software Developer 🚀 having an
                 experience of building Web applications with JavaScript /
                 Reactjs / Nodejs / Django and some other cool libraries and
                 frameworks.
-              </p>
+              </p> */}
+              <BlurFadeText
+                className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400"
+                delay={BLUR_FADE_DELAY}
+                text={`A passionate Full Stack Software Developer 🚀 having an
+                experience of building Web applications with JavaScript /
+                Reactjs / Nodejs / Django and some other cool libraries and
+                frameworks.`}
+              />
             </div>
             <div className="space-x-4">
               <Link
@@ -37,6 +50,8 @@ const Hero = (props: Props) => {
               </Link>
             </div>
           </div>
+          <HeroImage />
+
         </div>
       </div>
     </section>
