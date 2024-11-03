@@ -6,12 +6,14 @@ import Link from 'next/link'
 import React from 'react'
 import { ModeToggle } from '../toggle-theme';
 
-type Props = {}
+type Props = {
+  className?: string
+}
 
-const Header = (props: Props) => {
+const Header = ({className}: Props) => {
   const scrolled = useScrollTop()
   return (
-    <header className={cn('container mx-auto px-5 md:px-0 flex items-center justify-between w-full py-5 sticky top-0 z-[50] bg-white dark:bg-slate-700 dark:text-stone-50',scrolled && "border-b")}>
+    <header className={cn(className,'container mx-auto px-5 md:px-0 flex items-center justify-between w-full py-5 sticky top-0 z-[50]',scrolled && "border-b")}>
        <Link className="flex items-center justify-center cursor-pointer" href="#">
        <h1 className='text-xl font-bold'>Tomdieu Ivan</h1>
 
