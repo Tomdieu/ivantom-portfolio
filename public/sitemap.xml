@@ -5,23 +5,39 @@
     <lastmod>2024-02-06T15:02:24.021Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1</priority>
+    <image:image>
+      <image:loc>https://ivantomdieu.vercel.app/images/logo-white.png</image:loc>
+      <image:title>Tomdieu Ivan</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://ivantomdieu.vercel.app/#about</loc>
     <lastmod>2024-02-06T15:02:24.021Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+     <image:image>
+      <image:loc>https://ivantomdieu.vercel.app/images/logo-white.png</image:loc>
+      <image:title>Tomdieu Ivan</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://ivantomdieu.vercel.app/#projects</loc>
     <lastmod>2024-02-06T15:02:24.021Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+     <image:image>
+      <image:loc>https://ivantomdieu.vercel.app/images/logo-white.png</image:loc>
+      <image:title>Tomdieu Ivan</image:title>
+    </image:image>
   </url>
   <url>
       <loc>https://ivantomdieu.vercel.app/#technologies</loc>
       <lastmod>2024-02-06T15:02:24.021Z</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
+       <image:image>
+      <image:loc>https://ivantomdieu.vercel.app/images/logo-white.png</image:loc>
+      <image:title>Tomdieu Ivan</image:title>
+    </image:image>
     </url>
 </urlset>
