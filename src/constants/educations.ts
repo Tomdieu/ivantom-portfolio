@@ -17,7 +17,7 @@ export const educations = [
     },
     {
         school: "Government bilingual high school yaounde",
-        href: "https://uy1.uninet.cm/",
+        href: "#",
         degree: "GCE Advanced Level",
         logoUrl: "",
         start: "Sep 2019",
@@ -25,7 +25,7 @@ export const educations = [
     },
     {
         school: "Government bilingual high school yaounde",
-        href: "https://uy1.uninet.cm/",
+        href: "#",
         degree: "GCE Ordinary Level",
         logoUrl: "",
         start: "Sep 2017",

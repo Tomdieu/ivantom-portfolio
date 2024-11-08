@@ -1,3 +1,5 @@
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Globe } from "lucide-react";
 import {
   DiPython,
   DiJavascript1,
@@ -13,6 +15,12 @@ type TagType = {
   label: string;
 };
 
+type LinkType = {
+  icon?: React.ReactNode;
+  label: string;
+  href: string;
+};
+
 export type ProjectType = {
   title: string;
   description: string;
@@ -21,7 +29,8 @@ export type ProjectType = {
   visit?: string;
   tags?: TagType[];
   id?: number;
-  dates?:string;
+  dates?: string;
+  links?: LinkType[];
 };
 
 export const projectsData: ProjectType[] = [
@@ -56,88 +65,129 @@ export const projectsData: ProjectType[] = [
         icon: <DiDocker size={16} />,
       },
       {
-        label:"NextJs"
+        label: "NextJs",
       },
       {
-        label:"Minikube"
+        label: "Minikube",
       },
       {
-        label:"Kubernetes"
+        label: "Kubernetes",
       },
       {
-        label:"Microiservices"
-      }
+        label: "Microiservices",
+      },
     ],
-    image: "/trixwallet.png",
-    dates:"Jan 2024 - Jun 2024"
+    image: "/wikiculture.jpeg",
+    dates: "Jan 2024 - Jun 2024",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/wikiculture",
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label: "Preview",
+        href: "https://wikiculture.vercel.app/",
+        icon: <Globe size={16} />,
+      },
+    ],
   },
   {
     title: "Url Shortener",
-    description:
-      "A web app to shorten long urls",
+    description: "A web app to shorten long urls",
     source: "https://github.com/Tomdieu/wikiculture",
     tags: [
       {
         label: "Javascript",
         icon: <DiJavascript1 size={16} />,
       },
-      
+
       {
-        label:"NextJs"
+        label: "NextJs",
       },
       {
-        label:"Prisma"
+        label: "Prisma",
       },
       {
-        label:"React Query"
-      }
+        label: "React Query",
+      },
     ],
-    image: "/trixwallet.png",
-    dates:"Sep 2023 - Dec 2023"
+    image: "/trixurl.png",
+    dates: "Sep 2023 - Dec 2023",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/url-shortener",
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label: "Preview",
+        href: "https://trixurl.vercel.app/",
+        icon: <Globe size={16} />,
+      },
+    ],
   },
   {
     title: "annonce-ventes-voiture",
-    description:
-      "un site d'annonce des ventes des voiture",
+    description: "un site d'annonce des ventes des voiture",
     source: "https://github.com/Tomdieu/wikiculture",
     tags: [
       {
         label: "React Js",
       },
-      
+
       {
-        label:"ViteJs"
+        label: "ViteJs",
       },
       {
-        label:"Django Rest framework"
-      }
+        label: "Django Rest framework",
+      },
     ],
-    image: "/trixwallet.png",
-    dates:"Jul 2023 - Aug 2023"
+    image: "/annonce-ventes.png",
+    dates: "Jul 2023 - Aug 2023",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/annonce-ventes-voiture",
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label: "Preview",
+        href: "https://annonce-ventes-voiture.vercel.app/",
+        icon: <Globe size={16} />,
+      },
+    ],
   },
   {
     title: "AgroHelp",
-    description:
-      "un site d'annonce des ventes des voiture",
+    description: "application d'aide à la décision agricole",
     source: "https://github.com/Tomdieu/wikiculture",
     tags: [
       {
         label: "Microiservices",
       },
-      
+
       {
-        label:"Django"
+        label: "Django",
       },
       {
-        label:"Django Rest framework"
+        label: "Django Rest framework",
       },
       {
-        label:"Fast api"
+        label: "Fast api",
       },
-      {label:"ExpressJs"}
+      { label: "ExpressJs" },
+      { label: "Adnroid app" },
     ],
-    image: "/trixwallet.png",
-    dates:"Apr 2023 - Jul 2023"
+    image: "/django.png",
+    dates: "Apr 2023 - Jul 2023",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/BrownofDarkness/AgroHelp/",
+        icon: <GitHubLogoIcon />,
+      },
+    ],
   },
   {
     title: "Trix Wallet",
@@ -169,14 +219,44 @@ export const projectsData: ProjectType[] = [
         label: "Docker",
         icon: <DiDocker size={16} />,
       },
+      {
+        label:"Android"
+      }
     ],
     image: "/trixwallet.png",
-    dates:"Oct 2022 - Jan 2023"
+    dates: "Oct 2022 - Jan 2023",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/momo-app-clone",
+        icon: <GitHubLogoIcon />,
+      },
+    ],
+  },
+  {
+    title: "Map project",
+    description: "A Small project that works with mapbox maps and position stack and geopapify api",
+    tags:[
+    {label:"Mapbox"},
+    {label:"ReactJs"},
+    {label:"Position Stack"},
+    {label:"Geoapify"},
+
+    ],
+    image:"/trix.png",
+    links: [
+      {
+        label: "Preview",
+        href: "https://nv-trix.vercel.app/user",
+        icon: <Globe size={16} />,
+      },
+    ],
+    dates:"Jul 2022 - Sep 2022"
   },
   {
     source: "https://github.com/Tomdieu/NvChat",
     title: "Nv Chat Application",
-    image: "/nvchat.svg",
+    image: "/nvchat.jpg",
     description:
       "NvChat is a complete chat application that include group chats and single chats and also have a post section where people can like and comment posts",
     tags: [
@@ -197,13 +277,24 @@ export const projectsData: ProjectType[] = [
         icon: <DiDjango size={16} />,
       },
     ],
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/NvChat",
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label: "Preview",
+        href: "#",
+        icon: <Globe size={16} />,
+      },
+    ],
   },
   {
-    source: "https://github.com",
     title: "NvHospital",
     description:
       "This is a website where realtor can go an add property which can either be for rent or sale and the a user visiting the website can contact the realtor it the property interest him/her ",
-    image: "/logo.png",
+    image: "/qt.png",
     tags: [
       {
         label: "PyQt5",
@@ -213,11 +304,19 @@ export const projectsData: ProjectType[] = [
         label: "Python",
         icon: <DiPython size={16} />,
       },
+      {
+        label:"Desktop"
+      }
+    ],
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/NvHospital",
+        icon: <GitHubLogoIcon />,
+      },
     ],
   },
   {
-    source: "https://github.com",
-
     title: "A Djangi Website",
     description:
       "This is a web application where people can manage thier Djangi",
@@ -244,8 +343,20 @@ export const projectsData: ProjectType[] = [
         icon: <DiCss3 size={16} />,
       },
       {
-        label:"Bootstrap Css"
-      }
+        label: "Bootstrap Css",
+      },
+    ],
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/wikiculture",
+        icon: <GitHubLogoIcon />,
+      },
+      // {
+      //   label: "Preview",
+      //   href: "#",
+      //   icon: <Globe size={16} />,
+      // },
     ],
   },
 ];
