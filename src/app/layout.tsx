@@ -41,6 +41,7 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
+    siteName:"Tomdieu Ivan Portfolio",
   },
   twitter: {
     site: "@IvanTomdieu",
