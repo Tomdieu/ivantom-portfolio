@@ -15,7 +15,7 @@ const Educations = () => {
 
                 {educations.map((education, id) => (
                     <BlurFade
-                        key={education.school}
+                        key={id}
                         delay={BLUR_FADE_DELAY * 8 + id * 0.05}
                     >
                         <ResumeCard
