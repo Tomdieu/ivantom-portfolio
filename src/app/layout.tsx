@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = localFont({
   src: [
@@ -225,6 +226,7 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+        <Analytics/>
       </body>
     </html>
   );
