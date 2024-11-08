@@ -4,6 +4,7 @@ import React from "react";
 import HeroImage from "./HeroImage";
 import BlurFade from "../magicui/blur-fade";
 import BlurFadeText from "../magicui/blur-fade-text";
+import { DownloadCloudIcon } from "lucide-react";
 
 type Props = {};
 
@@ -13,10 +14,10 @@ const BLUR_FADE_DELAY = 0.04;
 const Hero = (props: Props) => {
 
   return (
-    <section id="hero" className="container mx-auto w-full py-6 sm:py-12 md:py-18">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-
+    <section id="hero" className="py-6 sm:py-12 md:py-18 w-full">
+      <div className="w-full">
+        <div className="flex items-center justify-around flex-col-reverse sm:flex-row container mx-auto px-0 w-full">
+{/* grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] */}
 
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
@@ -33,7 +34,7 @@ const Hero = (props: Props) => {
                 frameworks.
               </p> */}
               <BlurFadeText
-                className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400"
+                className="mx-auto max-w-[700px] text-gray-500 text-lg md:text-xl dark:text-gray-400"
                 delay={BLUR_FADE_DELAY}
                 text={`A passionate Full Stack Software Developer 🚀 having an
                 experience of building Web applications with JavaScript /
@@ -41,12 +42,13 @@ const Hero = (props: Props) => {
                 frameworks.`}
               />
             </div>
-            <div className="space-x-4">
+            <div className="space-x-4  flex ">
               <Link
-                className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                href="#"
+                className="inline-flex w-full sm:w-fit h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-xs sm:text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                href="/TomdieuTchadieukoIvanGottfriedResume-2.pdf"
               >
-                Get in Touch
+                <DownloadCloudIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2"/>
+                Download Resume
               </Link>
             </div>
           </div>
