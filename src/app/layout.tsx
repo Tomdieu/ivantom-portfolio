@@ -2,6 +2,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Navbar from "@/components/navbar";
 
 const poppins = localFont({
   src: [
@@ -218,7 +220,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Navbar />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
