@@ -39,7 +39,7 @@ const Skills = (props: Props) => {
 
                 <div className="flex flex-wrap gap-1">
                     {skills.map((skill, id) => (
-                        <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                        <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
 
                             <Badge key={skill}>{skill}</Badge>
                         </BlurFade>
