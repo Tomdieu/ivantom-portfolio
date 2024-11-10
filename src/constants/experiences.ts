@@ -35,7 +35,7 @@ export const experiences = [
         location: "Ngousso",
         title: "Travel Consultant",
         logoUrl: "",
-        start: "Sep 2024",
+        start: "Apr 2022",
         end: "Present",
         description: `
         At Revolution Travel & Services, my primary responsibility is to book and sell airline tickets.
