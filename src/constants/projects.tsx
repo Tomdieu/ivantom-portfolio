@@ -283,17 +283,12 @@ export const projectsData: ProjectType[] = [
         href: "https://github.com/Tomdieu/NvChat",
         icon: <GitHubLogoIcon />,
       },
-      {
-        label: "Preview",
-        href: "#",
-        icon: <Globe size={16} />,
-      },
     ],
   },
   {
     title: "NvHospital",
     description:
-      "This is a website where realtor can go an add property which can either be for rent or sale and the a user visiting the website can contact the realtor it the property interest him/her ",
+      "NvHospital is a desktop app for dental consultation made with python and pyside6",
     image: "/qt.png",
     tags: [
       {
@@ -349,7 +344,7 @@ export const projectsData: ProjectType[] = [
     links: [
       {
         label: "Github",
-        href: "https://github.com/Tomdieu/wikiculture",
+        href: "https://github.com/Tomdieu/",
         icon: <GitHubLogoIcon />,
       },
       // {
