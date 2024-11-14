@@ -346,12 +346,7 @@ export const projectsData: ProjectType[] = [
         label: "Github",
         href: "https://github.com/Tomdieu/",
         icon: <GitHubLogoIcon />,
-      },
-      // {
-      //   label: "Preview",
-      //   href: "#",
-      //   icon: <Globe size={16} />,
-      // },
+      }
     ],
   },
 ];
