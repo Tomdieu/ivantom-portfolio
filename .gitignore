@@ -40,3 +40,7 @@ other.js
 .env
 
 /other
+
+.idea
+.vscode
+/.idea
