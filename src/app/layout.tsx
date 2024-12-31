@@ -26,7 +26,7 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-  keywords: "Tomdieu Ivan,ivantom, TOMDIEU TCHADIEUKO IVAN GOTTFRIED,tomdieu tchadieuko,ivan gottfied, Full Stack Developer, Software Engineer, Web Developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, Portfolio, JavaScript Developer, Python Developer, Remote Developer, Fullstack, Cloud Computing, API Development, Frontend, Backend, Web Applications, Software Engineering, Full Stack Web Developer, TailwindCSS, TypeScript",
+  keywords: "Tomdieu Ivan,ivantom,tomdieu,tomdieu ivan,ivan gottfried,cameroon developers,IVAN GOTTFRIED,Trix,TrixGroup,trix, TOMDIEU TCHADIEUKO IVAN GOTTFRIED,tomdieu tchadieuko,ivan gottfied, Full Stack Developer, Software Engineer, Web Developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, Portfolio, JavaScript Developer, Python Developer, Remote Developer, Fullstack, Cloud Computing, API Development, Frontend, Backend, Web Applications, Software Engineering, Full Stack Web Developer, TailwindCSS, TypeScript",
   description: "Versatile Full Stack Software Developer with expertise in Django, Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. Passionate about building robust web applications and delivering top-notch solutions using JavaScript, React, Node.js, and other cutting-edge frameworks and technologies.",
   openGraph: {
     url: "https://ivantomdieu.vercel.app/",
