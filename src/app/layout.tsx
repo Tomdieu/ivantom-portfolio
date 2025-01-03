@@ -73,6 +73,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification:{
+    google:"oL_X940seqpUmflSfAjNxmf39DH707nkgHr__ALLx7c"
+  },
   metadataBase: new URL("https://ivantomdieu.vercel.app/"),
   icons: [
     {
