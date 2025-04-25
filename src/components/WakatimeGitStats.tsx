@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import GitHubCalendar from "react-github-calendar";
 import BlurFade from "@/components/magicui/blur-fade";
 
@@ -37,11 +38,16 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="View Wakatime Profile"
+                  className="h-6"
                 >
-                  <img
+                  <Image
                     src="https://wakatime.com/badge/user/7a03d500-b310-4adb-9229-1bb6044d565d.svg"
                     alt="Total time coded since Dec 28 2022"
-                    className="h-6"
+                    width={150}
+                    height={24}
+                    priority={false}
+                    quality={75}
+                    className="h-6 w-auto"
                   />
                 </a>
               </div>
@@ -50,12 +56,16 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="View Wakatime Statistics"
+                className="block relative w-full"
               >
-                <img
+                <Image
                   src="https://wakatime.com/share/@ivantom/46e13348-3bec-4f73-b187-eab7c71ab7c9.png"
                   alt="Tomdieu Wakatime coding activity stats"
+                  width={800}
+                  height={450}
+                  quality={90}
+                  priority={false}
                   className="w-full rounded-md"
-                  loading="lazy"
                 />
               </a>
             </div>
@@ -88,12 +98,16 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="View language statistics on Wakatime"
+              className="block relative w-full"
             >
-              <img
+              <Image
                 src="https://wakatime.com/share/@ivantom/c94b351c-736a-4238-ad13-bbdebb37f6a5.png"
                 alt="Tomdieu Wakatime programming languages"
+                width={400}
+                height={400}
+                quality={90}
+                priority={false}
                 className="w-full rounded-md"
-                loading="lazy"
               />
             </a>
           </div>
@@ -107,13 +121,16 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="View editor statistics on Wakatime"
-            className="block max-w-3xl mx-auto"
+            className="block max-w-3xl mx-auto relative"
           >
-            <img
-              className="w-full rounded-md"
+            <Image
               src="https://wakatime.com/share/@ivantom/aa994e81-7bc7-4bbf-8caa-007fec0f905d.png"
               alt="Tomdieu Editors usage over last year"
-              loading="lazy"
+              width={600} 
+              height={300}
+              quality={90}
+              priority={false}
+              className="w-full rounded-md"
             />
           </a>
         </div>
