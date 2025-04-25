@@ -1,9 +1,9 @@
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
 
-# Host information
+# Host
 Host: https://ivantomdieu.vercel.app
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://ivantomdieu.vercel.app/sitemap.xml
