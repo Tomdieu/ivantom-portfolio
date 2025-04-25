@@ -30,9 +30,9 @@ const Skills = (props: Props) => {
         "Uml"
     ]
     return (
-        <section id="skills" className={"font-poppins"}>
+        <section id="skills" className={"font-poppins py-12"}>
             {/*<SectionDivider/>*/}
-            <div className="flex min-h-0 flex-col gap-y-3">
+            <div className="flex min-h-0 flex-col gap-y-3 mt-8">
                 <BlurFade delay={BLUR_FADE_DELAY * 9}>
                     <h2 className="text-xl font-bold">Skills</h2>
                 </BlurFade>
