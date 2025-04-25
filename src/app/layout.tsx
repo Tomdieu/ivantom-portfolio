@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { projectsData } from "@/constants/projects"; // Corrected import name
 
 const poppins = localFont({
   src: [
@@ -26,12 +27,12 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-  keywords: "Tomdieu Ivan,ivantom,tomdieu,tomdieu ivan,ivan gottfried,cameroon developers,IVAN GOTTFRIED,Trix,TrixGroup,trix, TOMDIEU TCHADIEUKO IVAN GOTTFRIED,tomdieu tchadieuko,ivan gottfied, Full Stack Developer, Software Engineer, Web Developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, Portfolio, JavaScript Developer, Python Developer, Remote Developer, Fullstack, Cloud Computing, API Development, Frontend, Backend, Web Applications, Software Engineering, Full Stack Web Developer, TailwindCSS, TypeScript",
-  description: "Versatile Full Stack Software Developer with expertise in Django, Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. Passionate about building robust web applications and delivering top-notch solutions using JavaScript, React, Node.js, and other cutting-edge frameworks and technologies.",
+  keywords: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED, Tomdieu Ivan, Ivan Tomdieu, Ivan Gottfried, développeur full stack, full stack developer, ingénieur logiciel, software engineer, développeur web, web developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, développeur JavaScript, JavaScript developer, développeur Python, Python developer, développeur freelance, freelance developer, développeur à distance, remote developer, développement d'API, API development, développement frontend, frontend development, développement backend, backend development, applications web, web applications, génie logiciel, software engineering, développeur web full stack, full stack web developer, TailwindCSS, TypeScript, développeur React Native, React Native developer, consultant informatique, IT consultant, développeur camerounais, Cameroonian developer, intégration continue, continuous integration, déploiement continu, continuous deployment, architecture logicielle, software architecture, développement agile, agile development, expert SEO, SEO specialist, optimisation pour moteurs de recherche, search engine optimization, développement mobile, mobile development, expert cloud computing, cloud computing expert, DevOps, sécurité web, web security, migration de base de données, database migration",
+  description: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Versatile Full Stack Software Developer with expertise in Django, Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. Passionate about building robust web applications and delivering top-notch solutions using JavaScript, React, Node.js, and other cutting-edge frameworks and technologies.",
   openGraph: {
     url: "https://ivantomdieu.vercel.app/",
     title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-    description: "I'm Tomdieu Tcahdieuko Ivan, a passionate Full Stack Software Developer with expertise in Django, Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. With years of experience in building beautiful, functional, and responsive websites, I specialize in delivering professional-grade software solutions.",
+    description: "I'm Tomdieu Tchadieuko Ivan, a passionate Full Stack Software Developer with expertise in Django, Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. With years of experience in building beautiful, functional, and responsive websites, I specialize in delivering professional-grade software solutions.",
     images: [
       {
         url: "/logo.png",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     site: "@IvanTomdieu",
-    description: "Experienced Full Stack Developer specializing in Django, Next.js, and Docker. Visit my portfolio to learn more about my projects and expertise in software engineering.",
+    description: "Tomdieu Ivan - Experienced Full Stack Developer specializing in Django, Next.js, and Docker. Visit my portfolio to learn more about my projects and expertise in software engineering.",
     title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Developer",
     creator: "Tomdieu Ivan",
     card: "summary_large_image",
@@ -96,6 +97,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Generate WorkExample schema for projects
+  const workExamples = projectsData.map(project => ({ // Corrected variable name
+    "@type": "WorkExample",
+    "name": project.title,
+    "description": project.description,
+    "url": project.links?.find(link => link.label === "Preview")?.href || project.links?.find(link => link.label === "Github")?.href, // Prefer preview link, added optional chaining
+    "image": project.image ? `https://ivantomdieu.vercel.app${project.image}` : undefined, // Added check for image existence
+    "keywords": project.tags?.map(tag => tag.label).join(", "), // Added optional chaining
+    "creator": {
+      "@type": "Person",
+      "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED"
+    },
+    // Add potentialAction if there's a live preview
+    ...(project.links?.find(link => link.label === "Preview") && {
+      "potentialAction": {
+        "@type": "ViewAction",
+        "target": project.links.find(link => link.label === "Preview")?.href
+      }
+    })
+  }));
+
   return (
     <html
       lang="en"
@@ -111,108 +133,195 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED",
+              "givenName": "Ivan Gottfried",
+              "familyName": "Tomdieu Tchadieuko",
               "alternateName": "Tomdieu Ivan",
-              "jobTitle": "Software Developer",
+              "description": "Versatile Full Stack Software Developer with expertise in Django, Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. Passionate about building robust web applications and delivering top-notch solutions.",
+              "gender": "Male",
+              "nationality": "Cameroonian",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://ivantomdieu.vercel.app/logo.png",
+                "width": "1200",
+                "height": "630",
+                "caption": "Tomdieu Ivan - Full Stack Developer"
+              },
+              "jobTitle": "Full Stack Software Developer",
               "url": "https://ivantomdieu.vercel.app/",
               "sameAs": [
                 "https://www.linkedin.com/in/tomdieuivan/",
-                "https://github.com/Tomdieu"
+                "https://github.com/Tomdieu",
+                "https://twitter.com/IvanTomdieu"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Work",
-                "email": "mailto:ivan.tomdieu@gmail.com",
+                "email": "ivan.tomdieu@gmail.com",
                 "telephone": "+237650039773"
               },
-              "knowsAbout": [
-                "React",
-                "Next.js",
-                "Typescript",
-                "Javascript",
-                "Node.js",
-                "Python",
-                "Postgres",
-                "Docker",
-                "Kubernetes",
-                "Java",
-                "Django Rest Framework",
-                "Ontology Web Language",
-                "Prisma",
-                "Tailwindcss",
-                "React Native",
-                "Expo",
-                "Sequelize",
-                "Websockets",
-                "Uml"
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Yaounde",
+                "addressCountry": "Cameroon"
+              },
+              "worksFor": [
+                {
+                  "@type": "Organization",
+                  "name": "Coding Industry Sarl",
+                  "url": "http://coding-industry.com/fr_fr/",
+                  "logo": "https://ivantomdieu.vercel.app/coding-industry.png"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Sciences de la Professionnalisation",
+                  "url": "https://esso-idp.com/",
+                  "logo": "https://ivantomdieu.vercel.app/esso-idp.jpg"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Revolution Travel & Services",
+                  "url": "https://www.facebook.com/p/Revolution-Travel-Services-100064125607997/"
+                }
+              ],
+              "workExperience": [
+                {
+                  "@type": "WorkExperience",
+                  "name": "Backend Developer",
+                  "description": "Full Stack Developer specializing in building comprehensive full-stack applications. Key responsibilities include crafting and maintaining scalable server-side logic using Django and creating dynamic user interfaces with Next.js and React.",
+                  "startDate": "2024-06",
+                  "endDate": "",
+                  "employerName": "Coding Industry Sarl",
+                  "workLocation": {
+                    "@type": "Place",
+                    "name": "Remote"
+                  }
+                },
+                {
+                  "@type": "WorkExperience",
+                  "name": "Fullstack Developer",
+                  "startDate": "2023-08",
+                  "endDate": "",
+                  "employerName": "Sciences de la Professionnalisation",
+                  "workLocation": {
+                    "@type": "Place",
+                    "name": "Remote"
+                  }
+                },
+                {
+                  "@type": "WorkExperience",
+                  "name": "Travel Consultant",
+                  "description": "Responsible for booking and selling airline tickets.",
+                  "startDate": "2024-09",
+                  "endDate": "",
+                  "employerName": "Revolution Travel & Services",
+                  "workLocation": {
+                    "@type": "Place",
+                    "name": "Ngousso, Cameroon"
+                  }
+                }
               ],
               "alumniOf": [
                 {
                   "@type": "EducationalOrganization",
                   "name": "University of Yaounde 1",
                   "url": "https://uy1.uninet.cm/",
-                  "degree": "Master 1",
-                  "logoUrl": "/uy1.png",
-                  "startDate": "Oct 2023",
-                  "endDate": "Jul 2024"
-                },
-                {
-                  "@type": "EducationalOrganization",
-                  "name": "University of Yaounde 1",
-                  "url": "https://uy1.uninet.cm/",
-                  "degree": "Bachelor Degree in Computer Science (Software Engineer)",
-                  "logoUrl": "/uy1.png",
-                  "startDate": "Oct 2020",
-                  "endDate": "Jul 2023"
-                },
-                {
-                  "@type": "EducationalOrganization",
-                  "name": "Government Bilingual High School Yaounde",
-                  "degree": "GCE Advanced Level",
-                  "startDate": "Sep 2019",
-                  "endDate": "Jun 2020"
-                },
-                {
-                  "@type": "EducationalOrganization",
-                  "name": "Government Bilingual High School Yaounde",
-                  "degree": "GCE Ordinary Level",
-                  "startDate": "Sep 2017",
-                  "endDate": "Jun 2018"
+                  "logo": "https://ivantomdieu.vercel.app/uy1.png"
                 }
               ],
-              "hasOccupation": [
+              "hasCredential": [
                 {
-                  "@type": "Organization",
-                  "name": "Coding Industry Sarl",
-                  "url": "http://coding-industry.com/fr_fr/",
-                  "location": "Remote",
-                  "jobTitle": "Backend Developer",
-                  "logoUrl": "./coding-industry.png",
-                  "startDate": "Jun 2024",
-                  "endDate": "Present",
-                  "description": "Full Stack Developer. At Coding Industry, I specialize in building comprehensive full-stack applications. My key responsibilities include: Backend Development: Crafting and maintaining scalable and efficient server-side logic using Django. Frontend Development: Creating dynamic and responsive user interfaces with Next.js and React."
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "Master 1 in Computer Science",
+                  "credentialCategory": "Master's Degree",
+                  "dateCreated": "2024-07",
+                  "validFrom": "2023-10",
+                  "educationalLevel": "Graduate",
+                  "recognizedBy": {
+                    "@type": "EducationalOrganization",
+                    "name": "University of Yaounde 1"
+                  }
                 },
                 {
-                  "@type": "Organization",
-                  "name": "Sciences de la Professionnalisation",
-                  "url": "https://esso-idp.com/",
-                  "location": "Remote",
-                  "jobTitle": "Fullstack Developer",
-                  "logoUrl": "./esso-idp.jpg",
-                  "startDate": "Aug 2023",
-                  "endDate": "Present",
-                  "description": ""
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "Bachelor Degree in Computer Science (Software Engineering)",
+                  "credentialCategory": "Bachelor's Degree",
+                  "dateCreated": "2023-07",
+                  "validFrom": "2020-10",
+                  "educationalLevel": "Undergraduate",
+                  "recognizedBy": {
+                    "@type": "EducationalOrganization",
+                    "name": "University of Yaounde 1"
+                  }
                 },
                 {
-                  "@type": "Organization",
-                  "name": "Revolution Travel & Services",
-                  "url": "https://www.facebook.com/p/Revolution-Travel-Services-100064125607997/",
-                  "location": "Ngousso",
-                  "jobTitle": "Travel Consultant",
-                  "startDate": "Sep 2024",
-                  "endDate": "Present",
-                  "description": "At Revolution Travel & Services, my primary responsibility is to book and sell airline tickets."
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "GCE Advanced Level",
+                  "credentialCategory": "High School",
+                  "dateCreated": "2020-06",
+                  "validFrom": "2019-09",
+                  "recognizedBy": {
+                    "@type": "EducationalOrganization",
+                    "name": "Government Bilingual High School Yaounde"
+                  }
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "GCE Ordinary Level",
+                  "credentialCategory": "Middle School",
+                  "dateCreated": "2018-06",
+                  "validFrom": "2017-09",
+                  "recognizedBy": {
+                    "@type": "EducationalOrganization",
+                    "name": "Government Bilingual High School Yaounde"
+                  }
                 }
-              ]
+              ],
+              "knowsAbout": [
+                "Full Stack Development",
+                "Web Application Architecture", 
+                "API Development",
+                "Cloud Computing",
+                "Software Engineering"
+              ],
+              "skills": [
+                {
+                  "@type": "DefinedTerm",
+                  "name": "Frontend Development",
+                  "termCode": "frontend",
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Technical Skills"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "name": "Backend Development",
+                  "termCode": "backend",
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Technical Skills"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "name": "DevOps & Database",
+                  "termCode": "devops",
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Technical Skills"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "name": "Other Skills",
+                  "termCode": "other",
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Technical Skills"
+                  }
+                }
+              ],
+              "workExample": workExamples // Add the generated work examples here
             })
           }}
         />
