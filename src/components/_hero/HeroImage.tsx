@@ -13,11 +13,21 @@ const HeroImage = (props: Props) => {
     <>
       <BlurFade delay={BLUR_FADE_DELAY}>
         <Avatar className="size-56 border dark:hidden">
-          <AvatarImage alt={'Tomdieu Ivan'} src={'/logo.png'} />
+          <AvatarImage 
+            alt={'Tomdieu Ivan'} 
+            src={'/logo.png'} 
+            loading="eager" 
+            fetchPriority="high"
+          />
           <AvatarFallback>{'IT'}</AvatarFallback>
         </Avatar>
         <Avatar className="size-56 border hidden dark:block">
-          <AvatarImage alt={'Tomdieu Ivan'} src={'/logo-white.png'} />
+          <AvatarImage 
+            alt={'Tomdieu Ivan'} 
+            src={'/logo-white.png'} 
+            loading="eager" 
+            fetchPriority="high"
+          />
           <AvatarFallback>{'IT'}</AvatarFallback>
         </Avatar>
         {/* <Image
