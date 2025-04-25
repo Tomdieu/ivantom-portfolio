@@ -41,7 +41,7 @@ const Project = ({ project, className }: Props) => {
             width={500}
             height={300}
             alt={title}
-            className="h-40 w-full overflow-hidden object-cover object-top rounded-t-md"
+            className="h-40 w-full overflow-hidden object-contain object-top rounded-t-md"
           />
         )}
       </Link>

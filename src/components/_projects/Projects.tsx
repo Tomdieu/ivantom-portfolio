@@ -13,16 +13,18 @@ const Projects = (props: Props) => {
     <section
       id="projects"
       className={"font-poppins"}
-    // className="mx-auto w-full py-6 sm:py-12 md:py-18 text-stone-900 dark:text-stone-50"
+      aria-label="Tomdieu Ivan's Projects"
     >
       <div className="space-y-12 py-12">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
 
           <div className={"space-y-2"}>
             <span className="text-xl lg:text-2xl font-bold">My Projects</span>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Check out my latest work</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              <span className="sr-only">Tomdieu Ivan - </span>Check out my latest work
+            </h2>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              I&apos;ve worked on a variety of projects, from simple
+              I&apos;m Tomdieu Ivan, a full stack developer who has worked on a variety of projects, from simple
               websites to complex web applications. Here are a few of my
               favorites.
             </p>
