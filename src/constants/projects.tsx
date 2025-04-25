@@ -35,6 +35,147 @@ export type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
+    title: "AI News Automation Tool",
+    description: "Python script that automates finding news articles related to Artificial Intelligence from BBC Innovation website, filtering by date, classifying using Google Gemini, and providing a web interface for review and PDF export.",
+    source: "https://github.com/Tomdieu/automation-test",
+    tags: [
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "Streamlit",
+      },
+      {
+        label: "Google Gemini API",
+      },
+      {
+        label: "Web Scraping",
+      },
+      {
+        label: "SQLite",
+      },
+    ],
+    image: "/django.png",
+    dates: "Apr 2025",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/automation-test",
+        icon: <GitHubLogoIcon />,
+      },
+    ],
+  },
+  {
+    title: "E-Recruitment CMR",
+    description: "An electronic recruitment platform for managing job applications, interviews, and the hiring process in Cameroon.",
+    source: "https://github.com/Tomdieu/erecruitement-cmr",
+    tags: [
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "Django",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "React",
+        icon: <DiReact size={16} />,
+      },
+      {
+        label: "PostgreSQL",
+      },
+      {
+        label: "Redux",
+      },
+    ],
+    image: "/erecruitment.png",
+    dates: "Mar 2025 - Apr 2025",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/erecruitement-cmr",
+        icon: <GitHubLogoIcon />,
+      },
+    ],
+  },
+  {
+    title: "ClassConnect",
+    description:
+      "ClassConnect is an educational platform that connects students and teachers with integrated notification systems.",
+    tags: [
+      {
+        label: "Javascript",
+        icon: <DiJavascript1 size={16} />,
+      },
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "Django",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "Django Rest Framework",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "NextJs",
+      },
+    ],
+    image: "/classconnect.png",
+    dates: "Jan 2025 - Apr 2025",
+    links: [
+      {
+        label: "Preview",
+        href: "https://classconnect.cm/",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
+    title: "OngolaPhone",
+    description:
+      "OngolaPhone is a platform for mobile device services and solutions developed during my time at Coding Industry Sarl. The project features comprehensive mobile phone management and service solutions.",
+    tags: [
+      {
+        label: "Javascript",
+        icon: <DiJavascript1 size={16} />,
+      },
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "Django",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "Django Rest Framework",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "ViteJs",
+      },
+      {
+        label: "React",
+        icon: <DiReact size={16} />,
+      },
+    ],
+    image: "/ongolaphone.svg",
+    dates: "Jul 2024 - Oct 2024",
+    links: [
+      {
+        label: "Preview",
+        href: "https://ongolaphone.com/",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+
+  {
     title: "Wikiculture",
     description:
       "WikiCulture is a project that aims to group all the culture of Cameroon.",
@@ -220,7 +361,7 @@ export const projectsData: ProjectType[] = [
         icon: <DiDocker size={16} />,
       },
       {
-        label:"Android"
+        label: "Android"
       }
     ],
     image: "/trixwallet.png",
@@ -236,14 +377,14 @@ export const projectsData: ProjectType[] = [
   {
     title: "Map project",
     description: "A Small project that works with mapbox maps and position stack and geopapify api",
-    tags:[
-    {label:"Mapbox"},
-    {label:"ReactJs"},
-    {label:"Position Stack"},
-    {label:"Geoapify"},
+    tags: [
+      { label: "Mapbox" },
+      { label: "ReactJs" },
+      { label: "Position Stack" },
+      { label: "Geoapify" },
 
     ],
-    image:"/trix.png",
+    image: "/trix.png",
     links: [
       {
         label: "Preview",
@@ -251,7 +392,7 @@ export const projectsData: ProjectType[] = [
         icon: <Globe size={16} />,
       },
     ],
-    dates:"Jul 2022 - Sep 2022"
+    dates: "Jul 2022 - Sep 2022"
   },
   {
     source: "https://github.com/Tomdieu/NvChat",
@@ -300,7 +441,7 @@ export const projectsData: ProjectType[] = [
         icon: <DiPython size={16} />,
       },
       {
-        label:"Desktop"
+        label: "Desktop"
       }
     ],
     links: [
@@ -349,4 +490,5 @@ export const projectsData: ProjectType[] = [
       }
     ],
   },
+
 ];
