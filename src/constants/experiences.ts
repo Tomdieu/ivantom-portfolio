@@ -25,7 +25,7 @@ export const experiences = [
         title: "Fullstack developer",
         logoUrl: "./esso-idp.jpg",
         start: "Aug 2023",
-        end: "Present",
+        end: "Dec 2024",
         description: ""
     },
     {

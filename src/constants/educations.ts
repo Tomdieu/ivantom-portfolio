@@ -2,7 +2,7 @@ export const educations = [
     {
         school: "University of Yaounde 1",
         href: "https://uy1.uninet.cm/",
-        degree: "Master's in Software Engineering",
+        degree: "Master's research in Software Engineering",
         logoUrl: "/uy1.png",
         start: "Oct 2023",
         end: "Present",

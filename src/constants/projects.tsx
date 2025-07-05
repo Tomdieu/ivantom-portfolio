@@ -35,6 +35,30 @@ export type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
+    title: "Revolution Travel & Services",
+    description: "Revolution Travel & Services is a travel agency that specializes in booking and selling airline tickets, providing comprehensive travel solutions to clients.",
+    source: "https://github.com/Tomdieu/pouantou-revolution-travel",
+    tags: [
+      {
+        label:"NextJs",        
+      }
+    ],
+    image: "/django.png",
+    dates: "Apr 2025",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/pouantou-revolution-travel",
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label:"Preview",
+        href: "https://pouantou-revolution-travel.vercel.app/",
+        icon: <Globe size={16} />,
+      }
+    ],
+  },
+  {
     title: "AI News Automation Tool",
     description: "Python script that automates finding news articles related to Artificial Intelligence from BBC Innovation website, filtering by date, classifying using Google Gemini, and providing a web interface for review and PDF export.",
     source: "https://github.com/Tomdieu/automation-test",
