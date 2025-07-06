@@ -43,8 +43,8 @@ export const projectsData: ProjectType[] = [
         label:"NextJs",        
       }
     ],
-    image: "/django.png",
-    dates: "Apr 2025",
+    image: "/revolution-travel.png",
+    dates: "July 2025",
     links: [
       {
         label: "Github",
@@ -53,7 +53,7 @@ export const projectsData: ProjectType[] = [
       },
       {
         label:"Preview",
-        href: "https://pouantou-revolution-travel.vercel.app/",
+        href: "https://puantou-revolution-travel.vercel.app/",
         icon: <Globe size={16} />,
       }
     ],
