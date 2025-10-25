@@ -2,14 +2,8 @@
 
 import React, { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Credenza, CredenzaContent, CredenzaDescription, CredenzaHeader, CredenzaTitle } from './ui/credenza';
 
 const ChatbotFAB: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,20 +21,20 @@ const ChatbotFAB: React.FC = () => {
       </Button>
 
       {/* Dialog/Modal */}
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-2xl h-[80vh] p-0 gap-0">
-          <DialogHeader className="p-6 pb-4 border-b">
+      <Credenza open={isOpen} onOpenChange={setIsOpen}>
+        <CredenzaContent className="max-w-2xl h-[80vh] p-0 gap-0">
+          <CredenzaHeader className="p-6 pb-4 border-b">
             <div className="flex items-center justify-between">
               <div>
-                <DialogTitle className="text-2xl font-bold">
+                <CredenzaTitle className="text-2xl font-bold">
                   Chat with My AI Assistant
-                </DialogTitle>
-                <DialogDescription className="mt-2">
+                </CredenzaTitle>
+                <CredenzaDescription className="mt-2">
                   Have questions about my work, experience, or projects? Ask my AI assistant for instant answers!
-                </DialogDescription>
+                </CredenzaDescription>
               </div>
             </div>
-          </DialogHeader>
+          </CredenzaHeader>
           
           {/* Chatbot iframe */}
           <div className="flex-1 overflow-hidden">
@@ -53,8 +47,8 @@ const ChatbotFAB: React.FC = () => {
               loading="lazy"
             />
           </div>
-        </DialogContent>
-      </Dialog>
+        </CredenzaContent>
+      </Credenza>
     </>
   );
 };
