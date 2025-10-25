@@ -7,6 +7,7 @@ import Experiences from "@/components/_work_experience/Experiences";
 import ContactSection from "@/components/ContactSection";
 import GitHubCalendar from "react-github-calendar";
 import WakatimeGitStats from "@/components/WakatimeGitStats";
+import ChatbotFAB from "@/components/ChatbotFAB";
 
 export default function Home() {
   return (
@@ -14,15 +15,21 @@ export default function Home() {
       <main className="flex-1 container  mx-auto relative space-y-4">
         <Header className="bg-white dark:bg-background" />
         <div className="flex flex-col px-2">
-          <Hero/>
-          <Experiences/>
-          <Educations/>
-          <Skills/>
-          <Projects/>
-          <WakatimeGitStats/>
-          <ContactSection/>
+          <Hero />
+          <Experiences />
+          <Educations />
+          <Skills />
+          <Projects />
+          <WakatimeGitStats />
+
+          
+
+          <ContactSection />
         </div>
       </main>
+      
+      {/* Floating Action Button for AI Assistant */}
+      <ChatbotFAB />
     </div>
   );
 }
