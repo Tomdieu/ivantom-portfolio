@@ -22,24 +22,15 @@ const Hero = (props: Props) => {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-100">
-                Hi, I&apos;m Tomdieu Ivan
+              Hi, I&apos;m Tomdieu Ivan
               </h1>
               <h2 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900">
-                Full Stack Developer
+              Full Stack Developer
               </h2>
-              {/* <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                A passionate Full Stack Software Developer 🚀 having an
-                experience of building Web applications with JavaScript /
-                Reactjs / Nodejs / Django and some other cool libraries and
-                frameworks.
-              </p> */}
               <BlurFadeText
-                className="mx-auto max-w-[700px] text-gray-500 text-lg md:text-xl dark:text-gray-400"
-                delay={BLUR_FADE_DELAY}
-                text={`A passionate Full Stack Software Developer 🚀 having an
-                experience of building Web applications with JavaScript /
-                Reactjs / Nodejs / Django and some other cool libraries and
-                frameworks.`}
+              className="mx-auto max-w-[700px] text-gray-500 text-lg md:text-xl dark:text-gray-400"
+              delay={BLUR_FADE_DELAY}
+              text={`A passionate Full Stack Software Developer 🚀 with over 3 years of experience in Django and 2 years working with React and Node. I have built Web applications with JavaScript / Reactjs / Nodejs / Django and some other cool libraries and frameworks.`}
               />
             </div>
             <div className="space-x-4  flex ">
