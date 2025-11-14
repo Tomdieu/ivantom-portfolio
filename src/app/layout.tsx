@@ -231,9 +231,9 @@ export default function RootLayout({
               "hasCredential": [
                 {
                   "@type": "EducationalOccupationalCredential",
-                  "name": "Master 1 in Computer Science",
+                  "name": "Master 2 in Computer Science",
                   "credentialCategory": "Master's Degree",
-                  "dateCreated": "2024-07",
+                  "dateCreated": "2025-11",
                   "validFrom": "2023-10",
                   "educationalLevel": "Graduate",
                   "recognizedBy": {
