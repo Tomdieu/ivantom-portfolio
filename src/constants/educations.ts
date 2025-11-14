@@ -5,8 +5,7 @@ export const educations = [
         degree: "Master's research in Software Engineering",
         logoUrl: "/uy1.png",
         start: "Oct 2023",
-        end: "Present",
-        current: true,
+        end: "November 2025",
     },
     {
         school: "University of yaounde 1",
