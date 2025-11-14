@@ -35,6 +35,48 @@ export type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
+    title: "FigmaToReact",
+    description: "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
+    source: "https://github.com/Tomdieu/FigmaToReact",
+    tags: [
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "Java",
+      },
+      {
+        label: "ATL",
+      },
+      {
+        label: "EMF",
+      },
+      {
+        label: "Eclipse Modeling Framework",
+      },
+      {
+        label: "Model Transformation",
+      },
+      {
+        label: "React",
+        icon: <DiReact size={16} />,
+      },
+      {
+        label: "Figma API",
+      },
+    ],
+    image: "/FigmaToReact.png",
+    dates: "Jan 2025 - Jun 2025",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/FigmaToReact",
+        icon: <GitHubLogoIcon />,
+      },
+    ],
+  },
+  {
     title: "Revolution Travel & Services",
     description: "Revolution Travel & Services is a travel agency that specializes in booking and selling airline tickets, providing comprehensive travel solutions to clients.",
     source: "https://github.com/Tomdieu/pouantou-revolution-travel",
