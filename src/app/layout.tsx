@@ -27,7 +27,7 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-  keywords: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED, Tomdieu Ivan, Ivan Tomdieu, Ivan Gottfried, développeur full stack, full stack developer, 3+ years Django experience, 2+ years React experience, expert Django developer, expert React developer, ingénieur logiciel, software engineer, développeur web, web developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, développeur JavaScript, JavaScript developer, développeur Python, Python developer, senior Django developer, experienced React developer, développeur freelance, freelance developer, développeur à distance, remote developer, développement d'API, API development, développement frontend, frontend development, développement backend, backend development, applications web, web applications, génie logiciel, software engineering, développeur web full stack, full stack web developer, TailwindCSS, TypeScript, développeur React Native, React Native developer, consultant informatique, IT consultant, développeur camerounais, Cameroonian developer, intégration continue, continuous integration, déploiement continu, continuous deployment, architecture logicielle, software architecture, développement agile, agile development, expert SEO, SEO specialist, optimisation pour moteurs de recherche, search engine optimization, développement mobile, mobile development, expert cloud computing, cloud computing expert, DevOps, sécurité web, web security, migration de base de données, database migration",
+  keywords: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED, Tomdieu Ivan, Ivan Tomdieu, Ivan Gottfried, développeur full stack, full stack developer, 3+ years Django experience, 2+ years React experience, expert Django developer, expert React developer, FigmaToReact, Model Driven Architecture, ATL transformation, Eclipse Modeling Framework, Revolution Travel Services, AI News Automation, E-Recruitment CMR, ClassConnect, OngolaPhone, Wikiculture, Url Shortener, AgroHelp, Trix Wallet, NvChat, NvHospital, Figma to React converter, MDA project, model transformation, travel booking system, recruitment platform, educational platform, mobile money app, chat application, desktop application, ingénieur logiciel, software engineer, développeur web, web developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, développeur JavaScript, JavaScript developer, développeur Python, Python developer, senior Django developer, experienced React developer, développeur freelance, freelance developer, développeur à distance, remote developer, développement d'API, API development, développement frontend, frontend development, développement backend, backend development, applications web, web applications, génie logiciel, software engineering, développeur web full stack, full stack web developer, TailwindCSS, TypeScript, développeur React Native, React Native developer, consultant informatique, IT consultant, développeur camerounais, Cameroonian developer, intégration continue, continuous integration, déploiement continu, continuous deployment, architecture logicielle, software architecture, développement agile, agile development, expert SEO, SEO specialist, optimisation pour moteurs de recherche, search engine optimization, développement mobile, mobile development, expert cloud computing, cloud computing expert, DevOps, sécurité web, web security, migration de base de données, database migration",
   description: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer. A passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation. Adept at collaborating in agile environments to drive technical excellence and create user-centered applications.",
   openGraph: {
     url: "https://ivantomdieu.vercel.app/",
@@ -97,24 +97,56 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Generate WorkExample schema for projects
-  const workExamples = projectsData.map(project => ({ // Corrected variable name
+  // Generate enhanced WorkExample schema for projects with better SEO
+  const workExamples = projectsData.map((project, index) => ({
     "@type": "WorkExample",
-    "name": project.title,
+    "@id": `https://ivantomdieu.vercel.app/#project-${index + 1}`,
+    "name": `${project.title} - ${project.description?.split('.')[0]}`,
     "description": project.description,
-    "url": project.links?.find(link => link.label === "Preview")?.href || project.links?.find(link => link.label === "Github")?.href, // Prefer preview link, added optional chaining
-    "image": project.image ? `https://ivantomdieu.vercel.app${project.image}` : undefined, // Added check for image existence
-    "keywords": project.tags?.map(tag => tag.label).join(", "), // Added optional chaining
+    "url": project.links?.find(link => link.label === "Preview")?.href || project.links?.find(link => link.label === "Github")?.href,
+    "image": project.image ? `https://ivantomdieu.vercel.app${project.image}` : undefined,
+    "keywords": project.tags?.map(tag => tag.label).join(", "),
+    "dateCreated": project.dates || "2024",
+    "programmingLanguage": project.tags?.map(tag => tag.label).filter(tag => 
+      ['Python', 'JavaScript', 'Java', 'TypeScript'].includes(tag)
+    ),
+    "applicationCategory": "WebApplication",
+    "operatingSystem": "Web Browser",
     "creator": {
       "@type": "Person",
+      "@id": "https://ivantomdieu.vercel.app/#person",
+      "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED",
+      "alternateName": "Tomdieu Ivan"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://ivantomdieu.vercel.app/#person",
       "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED"
     },
-    // Add potentialAction if there's a live preview
+    "publisher": {
+      "@type": "Person", 
+      "@id": "https://ivantomdieu.vercel.app/#person",
+      "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ivantomdieu.vercel.app/"
+    },
+    // Add GitHub repository information
+    ...(project.links?.find(link => link.label === "Github") && {
+      "codeRepository": project.links.find(link => link.label === "Github")?.href
+    }),
+    // Add live demo information
     ...(project.links?.find(link => link.label === "Preview") && {
       "potentialAction": {
         "@type": "ViewAction",
-        "target": project.links.find(link => link.label === "Preview")?.href
+        "target": project.links.find(link => link.label === "Preview")?.href,
+        "name": `View ${project.title} Live Demo`
       }
+    }),
+    // Add download action for GitHub
+    ...(project.links?.find(link => link.label === "Github") && {
+      "downloadUrl": project.links.find(link => link.label === "Github")?.href
     })
   }));
 
@@ -132,6 +164,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
+              "@id": "https://ivantomdieu.vercel.app/#person",
               "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED",
               "givenName": "Ivan Gottfried",
               "familyName": "Tomdieu Tchadieuko",
@@ -281,7 +314,17 @@ export default function RootLayout({
                 "Web Application Architecture", 
                 "API Development",
                 "Cloud Computing",
-                "Software Engineering"
+                "Software Engineering",
+                "Model Driven Architecture",
+                "Eclipse Modeling Framework",
+                "ATL Transformation",
+                "Figma to React Conversion",
+                "Travel Booking Systems",
+                "Recruitment Platforms",
+                "Educational Technology",
+                "Mobile Money Applications",
+                "Chat Applications",
+                "Cultural Heritage Platforms"
               ],
               "skills": [
                 {
@@ -321,7 +364,44 @@ export default function RootLayout({
                   }
                 }
               ],
-              "workExample": workExamples // Add the generated work examples here
+              "workExample": workExamples
+            })
+          }}
+        />
+        
+        {/* Additional schema for project portfolio as ItemList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "@id": "https://ivantomdieu.vercel.app/#portfolio",
+              "name": "Tomdieu Ivan - Software Development Portfolio Projects",
+              "description": "A comprehensive portfolio of software development projects by TOMDIEU TCHADIEUKO IVAN GOTTFRIED, showcasing expertise in Django, React, Model Driven Architecture, and full-stack development.",
+              "url": "https://ivantomdieu.vercel.app/",
+              "numberOfItems": workExamples.length,
+              "itemListElement": workExamples.map((project, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": project["@id"],
+                  "name": project.name,
+                  "description": project.description,
+                  "url": project.url,
+                  "image": project.image,
+                  "keywords": project.keywords,
+                  "dateCreated": project.dateCreated,
+                  "programmingLanguage": project.programmingLanguage,
+                  "applicationCategory": project.applicationCategory,
+                  "operatingSystem": project.operatingSystem,
+                  "creator": project.creator,
+                  "author": project.author,
+                  "codeRepository": project.codeRepository,
+                  "downloadUrl": project.downloadUrl
+                }
+              }))
             })
           }}
         />
