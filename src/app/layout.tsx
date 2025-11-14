@@ -28,11 +28,11 @@ const poppins = localFont({
 export const metadata: Metadata = {
   title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
   keywords: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED, Tomdieu Ivan, Ivan Tomdieu, Ivan Gottfried, développeur full stack, full stack developer, 3+ years Django experience, 2+ years React experience, expert Django developer, expert React developer, ingénieur logiciel, software engineer, développeur web, web developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, développeur JavaScript, JavaScript developer, développeur Python, Python developer, senior Django developer, experienced React developer, développeur freelance, freelance developer, développeur à distance, remote developer, développement d'API, API development, développement frontend, frontend development, développement backend, backend development, applications web, web applications, génie logiciel, software engineering, développeur web full stack, full stack web developer, TailwindCSS, TypeScript, développeur React Native, React Native developer, consultant informatique, IT consultant, développeur camerounais, Cameroonian developer, intégration continue, continuous integration, déploiement continu, continuous deployment, architecture logicielle, software architecture, développement agile, agile development, expert SEO, SEO specialist, optimisation pour moteurs de recherche, search engine optimization, développement mobile, mobile development, expert cloud computing, cloud computing expert, DevOps, sécurité web, web security, migration de base de données, database migration",
-  description: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Experienced Full Stack Software Developer with 3+ years of Django expertise and 2+ years of React.js experience. Specializing in Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. Passionate about building robust web applications and delivering top-notch solutions using cutting-edge frameworks and technologies.",
+  description: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer. A passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation. Adept at collaborating in agile environments to drive technical excellence and create user-centered applications.",
   openGraph: {
     url: "https://ivantomdieu.vercel.app/",
     title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-    description: "I'm Tomdieu Tchadieuko Ivan, a passionate Full Stack Software Developer with 3+ years of Django experience and 2+ years of React.js expertise. Specializing in Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. With extensive experience in building beautiful, functional, and responsive websites, I deliver professional-grade software solutions.",
+    description: "I'm Tomdieu Tchadieuko Ivan, a passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation.",
     images: [
       {
         url: "/logo.png",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     site: "@IvanTomdieu",
-    description: "Tomdieu Ivan - Experienced Full Stack Developer with 3+ years of Django expertise and 2+ years of React.js experience. Specializing in Next.js and Docker. Visit my portfolio to learn more about my projects and software engineering expertise.",
+    description: "Tomdieu Ivan - Full Stack Software Developer with a proven track record of building scalable web applications. Skilled in React.js (2+ years), Django (3+ years), and modern technologies. Visit my portfolio to learn more about my projects and software engineering expertise.",
     title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Developer",
     creator: "Tomdieu Ivan",
     card: "summary_large_image",
@@ -136,7 +136,7 @@ export default function RootLayout({
               "givenName": "Ivan Gottfried",
               "familyName": "Tomdieu Tchadieuko",
               "alternateName": "Tomdieu Ivan",
-              "description": "Experienced Full Stack Software Developer with 3+ years of Django expertise and 2+ years of React.js experience. Specializing in Django REST Framework, Next.js, Express.js, Docker, Kubernetes, and React Native. Passionate about building robust web applications and delivering top-notch solutions.",
+              "description": "Full Stack Software Developer. A passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation.",
               "gender": "Male",
               "nationality": "Cameroonian",
               "image": {
