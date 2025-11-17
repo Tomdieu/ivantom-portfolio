@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
             <div className="space-x-4  flex ">
               <Link
                 className="inline-flex w-full sm:w-fit h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-xs sm:text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                href="/TomdieuTchadieukoIvanGottfriedResume-2.pdf"
+                href="/TomdieuTchadieukoIvanGottfried-Software-Engineer-Resume.pdf"
               >
                 <DownloadCloudIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2"/>
                 Download Resume
