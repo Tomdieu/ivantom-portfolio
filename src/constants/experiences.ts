@@ -30,7 +30,7 @@ export const experiences = [
     },
     {
         company: "Revolution Travel & Services",
-        href: "https://www.facebook.com/p/Revolution-Travel-Services-100064125607997/",
+        href: "https://puantou-revolution-travel.vercel.app/",
         badges: [],
         location: "Ngousso",
         title: "Travel Consultant",
