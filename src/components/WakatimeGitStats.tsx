@@ -21,7 +21,17 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
   return (
     <section id="stats" className="font-poppins py-6">
       <BlurFade delay={BLUR_FADE_DELAY * 11}>
-        <h2 className="text-xl lg:text-2xl font-bold mb-6">My Git & Wakatime Stats</h2>
+        <div className="space-y-2 mb-8">
+          <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">
+            Activity
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Coding Stats
+          </h2>
+          <p className="text-muted-foreground max-w-xl">
+            My development activity tracked via Wakatime and GitHub contributions over the past year.
+          </p>
+        </div>
       </BlurFade>
       
       <div className="space-y-8">
