@@ -1,20 +1,12 @@
-import { ProjectType } from "@/constants/projects";
+"use client";
 
-import React from "react";
+import { ProjectType } from "@/constants/projects";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import Image from "next/image";
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+import ProjectModal from "./ProjectModal";
 
 type Props = {
   project: ProjectType;
@@ -22,78 +14,106 @@ type Props = {
 };
 
 const Project = ({ project, className }: Props) => {
-  const { id, title, description, image, tags, visit, source, dates, links } =
-    project;
+  const { title, description, image, tags, dates, links } = project;
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Card
-      className={cn(
-        "flex flex-col border hover:shadow-lg transition-all duration-300 ease-out h-full w-full",
-        className
-      )}
-    >
-      <Link
-        href={visit || source || "#"}
-        className={cn("block cursor-pointer w-full")}
+    <>
+      <div
+        role="button"
+        tabIndex={0}
+        aria-label={`View details for ${title}`}
+        onClick={() => setIsOpen(true)}
+        onKeyDown={(e) => e.key === "Enter" && setIsOpen(true)}
+        className={cn(
+          "group flex flex-col rounded-xl border border-border bg-card overflow-hidden",
+          "hover:border-border/80 hover:shadow-lg cursor-pointer transition-all duration-300 h-full",
+          className
+        )}
       >
-        {image && (
-          <Image
-            src={image}
-            width={500}
-            height={300}
-            alt={title}
-            className="h-40 w-full overflow-hidden object-contain object-top rounded-t-md"
-          />
-        )}
-      </Link>
-      <CardHeader className="px-2">
-        <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          {dates && <time className="font-sans text-xs">{dates}</time>}
-          <CardDescription className="line-clamp-2">
-            {description}
-          </CardDescription>
-        </div>
-      </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
-        {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
-              <Badge
-                className="px-1 py-0 text-[10px]"
-                variant="secondary"
-                key={tag.label}
-              >
-                {tag.label}
-              </Badge>
-            ))}
-          </div>
-        )}
-      </CardContent>
-      <CardFooter className="px-2 pb-2">
-        <div className="flex flex-row flex-wrap items-start gap-1">
-          {/* {source && (
-            <Link href={source} target="_blank">
-              <Badge className="flex gap-2 px-2 py-1 text-[10px]">
-                <GitHubLogoIcon />
-                Github
-              </Badge>
-            </Link>
-          )} */}
-          {links && links.length > 0 && (
+        {/* Image */}
+        <div className="relative overflow-hidden bg-muted" style={{ height: "180px" }}>
+          {image ? (
             <>
-              {links.map(({ href, label, icon }, index) => (
-                <Link href={href} key={index} target="_blank">
-                  <Badge className="flex gap-2 px-2 py-1 text-[10px]">
-                    {icon && icon}
-                    {label}
-                  </Badge>
-                </Link>
-              ))}
+              <Image
+                src={image}
+                width={600}
+                height={360}
+                alt={title}
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="flex items-center gap-2 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-full border border-border">
+                  <ExternalLink className="h-3 w-3" />
+                  View Details
+                </span>
+              </div>
             </>
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-muted">
+              <span className="text-4xl font-bold text-muted-foreground/20">
+                {title.charAt(0)}
+              </span>
+            </div>
           )}
         </div>
-      </CardFooter>
-    </Card>
+
+        {/* Content */}
+        <div className="flex flex-col flex-1 p-4 space-y-3">
+          <div className="space-y-1">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="font-semibold text-sm leading-tight">{title}</h3>
+              {dates && (
+                <time className="text-[10px] text-muted-foreground shrink-0 tabular-nums">
+                  {dates}
+                </time>
+              )}
+            </div>
+            <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+              {description}
+            </p>
+          </div>
+
+          {/* Tags */}
+          {tags && tags.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-auto">
+              {tags.map((tag) => (
+                <span
+                  key={tag.label}
+                  className="inline-flex items-center rounded-md bg-secondary text-secondary-foreground px-2 py-0.5 text-[10px] font-medium"
+                >
+                  {tag.label}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Links preview */}
+          {links && links.length > 0 && (
+            <div
+              className="flex flex-wrap items-center gap-2 pt-2 border-t border-border"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {links.map(({ href, label, icon }, index) => (
+                <Link
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center border p-1 rounded-sm items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {icon && <span className="h-4 w-4">{icon}</span>}
+                  {label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <ProjectModal project={project} open={isOpen} onOpenChange={setIsOpen} />
+    </>
   );
 };
 
