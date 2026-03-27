@@ -24,7 +24,7 @@ const Hero = (props: Props) => {
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-100">
               Hi, I&apos;m Tomdieu Ivan
               </h1>
-              <h2 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900">
+              <h2 className="bg-linear-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900">
               Full Stack Developer
               </h2>
               <BlurFadeText
@@ -35,7 +35,7 @@ const Hero = (props: Props) => {
             </div>
             <div className="space-x-4  flex ">
               <Link
-                className="inline-flex w-full sm:w-fit h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-xs sm:text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                className="inline-flex w-full sm:w-fit h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-xs sm:text-sm font-medium text-gray-50 shadow-sm transition-colors hover:bg-gray-900/90 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                 href="/TomdieuTchadieukoIvanGottfried-Software-Engineer-Resume.pdf"
               >
                 <DownloadCloudIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2"/>
