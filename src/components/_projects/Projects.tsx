@@ -3,44 +3,40 @@ import { projectsData } from "@/constants/projects";
 import Project from "./Project";
 import BlurFade from "../magicui/blur-fade";
 
-type Props = {};
-
 const BLUR_FADE_DELAY = 0.04;
 
-
-const Projects = (props: Props) => {
+const Projects = () => {
   return (
-    <section
-      id="projects"
-      className={"font-poppins"}
-      aria-label="Tomdieu Ivan's Projects"
-    >
-      <div className="space-y-12 py-12">
+    <section id="projects" aria-label="Tomdieu Ivan's Projects" className="py-12">
+      <div className="space-y-8">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
-
-          <div className={"space-y-2"}>
-            <span className="text-xl lg:text-2xl font-bold">My Projects</span>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              <span className="sr-only">Tomdieu Ivan - </span>Check out my latest work
+          <div className="space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">
+              Portfolio
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Featured Projects
             </h2>
-            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              I&apos;m Tomdieu Ivan, a full stack developer who has worked on a variety of projects, from simple
-              websites to complex web applications. Here are a few of my
-              favorites.
+            <p className="text-muted-foreground max-w-xl">
+              A selection of{" "}
+              <span className="text-foreground font-medium">{projectsData.length} projects</span>{" "}
+              I&apos;ve built — from SaaS platforms and mobile apps to AI tools and open-source utilities.
             </p>
           </div>
         </BlurFade>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
           {projectsData.map((project, index) => (
             <BlurFade
               key={project.title}
-              delay={BLUR_FADE_DELAY * 12 + index * 0.05}
+              delay={BLUR_FADE_DELAY * 12 + index * 0.04}
+              inView
             >
-              <Project key={index} project={project} />
-            </BlurFade>))}
+              <Project project={project} />
+            </BlurFade>
+          ))}
         </div>
       </div>
-
     </section>
   );
 };
