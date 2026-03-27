@@ -8,6 +8,11 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
+// Workaround for framer-motion typing mismatch that can occur
+// with certain TypeScript versions. Alias motion.div to `MotionDiv`
+// with `any` so we can pass regular HTML props like `className`.
+const MotionDiv: any = motion.div;
+
 type ExperienceProps = {
   experience: ExperienceType;
 };
@@ -66,7 +71,7 @@ export const ResumeCard = ({
           )}
 
           {description && (
-            <motion.div
+            <MotionDiv
               initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
@@ -78,7 +83,7 @@ export const ResumeCard = ({
               <p className="pt-2 text-xs text-muted-foreground leading-relaxed border-t border-border mt-2">
                 {description}
               </p>
-            </motion.div>
+            </MotionDiv>
           )}
         </div>
       </div>
