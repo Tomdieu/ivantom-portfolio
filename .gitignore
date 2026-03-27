@@ -44,3 +44,5 @@ other.js
 .idea
 .vscode
 /.idea
+# next-agents-md
+.next-docs/
