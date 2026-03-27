@@ -9,6 +9,11 @@ import {
   Variants,
 } from "framer-motion";
 
+// Workaround for framer-motion typing mismatch with certain TypeScript
+// versions. Alias motion.div to `MotionDiv` with `any` so we can pass
+// regular HTML props like `className`.
+const MotionDiv: any = motion.div;
+
 type MarginType = UseInViewOptions["margin"];
 
 interface BlurFadeProps {
@@ -47,7 +52,7 @@ export default function BlurFade({
   const combinedVariants = variant || defaultVariants;
   return (
     <AnimatePresence>
-      <motion.div
+      <MotionDiv
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -61,7 +66,7 @@ export default function BlurFade({
         className={className}
       >
         {children}
-      </motion.div>
+      </MotionDiv>
     </AnimatePresence>
   );
 }
