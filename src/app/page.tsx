@@ -5,30 +5,40 @@ import Projects from "@/components/_projects/Projects";
 import Skills from "@/components/_skills/Skills";
 import Experiences from "@/components/_work_experience/Experiences";
 import ContactSection from "@/components/ContactSection";
-import GitHubCalendar from "react-github-calendar";
 import WakatimeGitStats from "@/components/WakatimeGitStats";
 import ChatbotFAB from "@/components/ChatbotFAB";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth min-h-screen h-screen flex flex-col relative bg-[#102A46e]">
-      <main className="flex-1 container  mx-auto relative space-y-4">
-        <Header className="bg-white dark:bg-background" />
-        <div className="flex flex-col px-2">
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <div className="container mx-auto w-screen flex flex-col">
+        <main className="flex-1 relative">
+          <div className="flex flex-col px-4 sm:px-6">
           <Hero />
+
+          <Separator className="my-2 opacity-50" />
           <Experiences />
+
+          <Separator className="my-2 opacity-50" />
           <Educations />
+
+          <Separator className="my-2 opacity-50" />
           <Skills />
+
+          <Separator className="my-2 opacity-50" />
           <Projects />
+
+          <Separator className="my-2 opacity-50" />
           <WakatimeGitStats />
 
-          
-
+          <Separator className="my-2 opacity-50" />
           <ContactSection />
         </div>
       </main>
-      
-      {/* Floating Action Button for AI Assistant */}
+      </div>
+
       <ChatbotFAB />
     </div>
   );
