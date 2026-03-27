@@ -35,6 +35,51 @@ export type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
+    title: "Trixly",
+    description: "Trixly is an all-in-one platform for freelancers and teams to track time, manage projects, write daily reports, and export client-ready insights — without the bloat.",
+    tags: [
+      {
+        label: "NextJs",
+      },
+      {
+        label: "Prisma",
+      },
+    ],
+    image: "/time.png",
+    dates: "Jan 2026 - Mar 2026",
+    links: [
+      {
+        label: "Preview",
+        href: "https://trixly.vercel.app/",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
+    title: "F.I.B.E.M Ambasade",
+    description: "A webapp project for the Embassy of Guinea-Bissau in France.",
+    tags: [
+      {
+        label: "NextJs",
+      },
+      {
+        label: "Prisma",
+      },
+      {
+        label: "Next-international",
+      },
+    ],
+    image: "/fibem.png",
+    dates: "Mar 2026",
+    links: [
+      {
+        label: "Preview",
+        href: "https://fibem-ambasade.vercel.app",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
     title: "FigmaToReact",
     description: "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
     source: "https://github.com/Tomdieu/FigmaToReact",
