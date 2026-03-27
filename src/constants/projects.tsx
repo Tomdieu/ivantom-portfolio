@@ -80,6 +80,31 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
+    title: "OhKeroh",
+    description: "An assignment submission platform for students to submit and track their assignments. Built in partnership with Durable Impact.",
+    tags: [
+      {
+        label: "Django",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "NextJs",
+      },
+      {
+        label: "Next-international",
+      },
+    ],
+    image: "/ohkeroh.png",
+    dates: "Jan 2026 - Feb 2026",
+    links: [
+      {
+        label: "Preview",
+        href: "https://ohkeroh.com/",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
     title: "FigmaToReact",
     description: "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
     source: "https://github.com/Tomdieu/FigmaToReact",
