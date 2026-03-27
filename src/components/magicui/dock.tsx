@@ -5,6 +5,11 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import React, { PropsWithChildren, useRef } from "react";
 
+// Workaround for framer-motion typing mismatch with certain TypeScript
+// versions. Alias motion.div to `MotionDiv` with `any` so we can pass
+// regular HTML props like `className`.
+const MotionDiv: any = motion.div;
+
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string;
   magnification?: number;
@@ -46,7 +51,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     };
 
     return (
-      <motion.div
+      <MotionDiv
         ref={ref}
         onMouseMove={(e) => mousex.set(e.pageX)}
         onMouseLeave={() => mousex.set(Infinity)}
@@ -54,7 +59,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
         className={cn(dockVariants({ className }))}
       >
         {renderChildren()}
-      </motion.div>
+      </MotionDiv>
     );
   }
 );
@@ -100,7 +105,7 @@ const DockIcon = ({
   });
 
   return (
-    <motion.div
+    <MotionDiv
       ref={ref}
       style={{ width }}
       className={cn(
@@ -110,7 +115,7 @@ const DockIcon = ({
       {...props}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 };
 
