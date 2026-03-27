@@ -25,10 +25,10 @@ const Hero = (props: Props) => {
               Hi, I&apos;m Tomdieu Ivan
               </h1>
               <h2 className="bg-linear-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl text-stone-900">
-              Full Stack Developer
+              Software Engineer
               </h2>
               <BlurFadeText
-              className="mx-auto max-w-[700px] text-gray-500 text-lg md:text-xl dark:text-gray-400"
+              className="mx-auto max-w-175 text-gray-500 text-lg md:text-xl dark:text-gray-400"
               delay={BLUR_FADE_DELAY}
               text={`A passionate Full Stack Software Developer 🚀 with over 3 years of experience in Django and 2 years working with React and Node. I have built Web applications with JavaScript / Reactjs / Nodejs / Django and some other cool libraries and frameworks.`}
               />
