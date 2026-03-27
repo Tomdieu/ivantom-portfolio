@@ -13,7 +13,7 @@ type Props = {
 const Header = ({className}: Props) => {
   const scrolled = useScrollTop()
   return (
-    <header className={cn(className,'flex items-center justify-between w-full py-5 sticky top-0 left-0 right-0 z-[50]',scrolled && "border-b")}>
+    <header className={cn(className,'flex items-center justify-between w-full py-5 sticky top-0 left-0 right-0 z-50',scrolled && "border-b")}>
        <Link className="flex items-center justify-center cursor-pointer" href="#">
        <h1 className='text-xl font-bold'>Tomdieu Ivan</h1>
 
