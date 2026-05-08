@@ -7,7 +7,7 @@ export const experiences = [
         badges: ["Full-time"],
         location: "Hybrid / Remote",
         title: "Backend Developer",
-        logoUrl: "",
+        logoUrl: "./durable-impact-logo.png",
         start: "Jan 2026",
         end: "Present",
         description: "Full-time Backend Developer."
@@ -15,7 +15,7 @@ export const experiences = [
     {
         company: "Coding Industry Sarl",
         href: "http://coding-industry.com/fr_fr/",
-        badges: [],
+        badges: ["Part time"],
         location: "Remote",
         title: "Backend developer",
         logoUrl: "./coding-industry.png",
@@ -31,7 +31,7 @@ export const experiences = [
     {
         company: "Sciences de la professionnalisation",
         href: "https://esso-idp.com/",
-        badges: [],
+        badges: ["Part time"],
         location: "Remote",
         title: "Fullstack developer",
         logoUrl: "./esso-idp.jpg",
