@@ -2,6 +2,17 @@
 
 export const experiences = [
     {
+        company: "Durable Impact",
+        href: "https://durableimpact.org/",
+        badges: ["Full-time"],
+        location: "Hybrid / Remote",
+        title: "Backend Developer",
+        logoUrl: "",
+        start: "Jan 2026",
+        end: "Present",
+        description: "Full-time Backend Developer."
+    },
+    {
         company: "Coding Industry Sarl",
         href: "http://coding-industry.com/fr_fr/",
         badges: [],
@@ -9,7 +20,7 @@ export const experiences = [
         title: "Backend developer",
         logoUrl: "./coding-industry.png",
         start: "Jun 2024",
-        end: "Present",
+        end: "Apr 2026",
         description: `
         Full Stack Developer
         At Coding Industry, I specialize in building comprehensive full-stack applications. My key responsibilities include:
