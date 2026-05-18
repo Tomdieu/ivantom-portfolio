@@ -35,6 +35,22 @@ export type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
+    title: "Durable impact academy",
+    description: "Website of the Durable impact academy",
+    tags: [
+      {
+        label: "NextJs"
+      }
+    ],
+    image: "/durableimpactacademy.png",
+    dates: "Apr 2025",
+    links: [{
+      label: "Preview",
+      href: "https://durableimpactacademy.com",
+      icon: <Globe size={16} />,
+    }],
+  },
+  {
     title: "Trixly",
     description: "Trixly is an all-in-one platform for freelancers and teams to track time, manage projects, write daily reports, and export client-ready insights — without the bloat.",
     tags: [
@@ -152,7 +168,7 @@ export const projectsData: ProjectType[] = [
     source: "https://github.com/Tomdieu/pouantou-revolution-travel",
     tags: [
       {
-        label:"NextJs",        
+        label: "NextJs",
       }
     ],
     image: "/revolution-travel.png",
@@ -164,7 +180,7 @@ export const projectsData: ProjectType[] = [
         icon: <GitHubLogoIcon />,
       },
       {
-        label:"Preview",
+        label: "Preview",
         href: "https://puantou-revolution-travel.vercel.app/",
         icon: <Globe size={16} />,
       }
