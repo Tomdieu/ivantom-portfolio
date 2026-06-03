@@ -31,14 +31,14 @@ const contactMethods = [
     color: "text-foreground",
     bg: "bg-foreground/10",
   },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: contact.tel,
-    href: `tel:${contact.tel}`,
-    color: "text-emerald-500",
-    bg: "bg-emerald-500/10",
-  },
+  // {
+  //   icon: Phone,
+  //   label: "Phone",
+  //   value: contact.tel,
+  //   href: `tel:${contact.tel}`,
+  //   color: "text-emerald-500",
+  //   bg: "bg-emerald-500/10",
+  // },
 ];
 
 const ContactSection = () => {

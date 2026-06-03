@@ -13,7 +13,7 @@ export const portfolioData = {
     "@type": "ContactPoint",
     contactType: "Work",
     email: "mailto:ivan.tomdieu@gmail.com",
-    telephone: "+237650039773",
+    // telephone: "+237650039773",
   },
   skills: [
     "React",

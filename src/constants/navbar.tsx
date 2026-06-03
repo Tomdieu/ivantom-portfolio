@@ -8,7 +8,7 @@ export const navbar = [
 
 export const contact =  {
     email: "ivan.tomdieu@gmail.com",
-    tel: "+237650039773",
+    // tel: "+237650039773",
     social: {
       GitHub: {
         name: "GitHub",
