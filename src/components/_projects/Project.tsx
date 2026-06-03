@@ -1,6 +1,6 @@
 "use client";
 
-import { ProjectType } from "@/constants/projects";
+import { ProjectType, getProjectSlug } from "@/constants/projects";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -43,12 +43,16 @@ const Project = ({ project, className }: Props) => {
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <Link
+                href={`/projects/${getProjectSlug(project)}`}
+                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <span className="flex items-center gap-2 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-full border border-border">
                   <ExternalLink className="h-3 w-3" />
                   View Details
                 </span>
-              </div>
+              </Link>
             </>
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-muted">
@@ -63,7 +67,11 @@ const Project = ({ project, className }: Props) => {
         <div className="flex flex-col flex-1 p-4 space-y-3">
           <div className="space-y-1">
             <div className="flex items-start justify-between gap-2">
-              <h3 className="font-semibold text-sm leading-tight">{title}</h3>
+              <h3 className="font-semibold text-sm leading-tight">
+                <Link href={`/projects/${getProjectSlug(project)}`} className="hover:underline">
+                  {title}
+                </Link>
+              </h3>
               {dates && (
                 <time className="text-[10px] text-muted-foreground shrink-0 tabular-nums">
                   {dates}
