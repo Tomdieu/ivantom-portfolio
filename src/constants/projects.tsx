@@ -33,6 +33,26 @@ export type ProjectType = {
   links?: LinkType[];
 };
 
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-+/g, "-")
+}
+
+export function getProjectBySlug(slug: string): ProjectType | undefined {
+  return projectsData.find((p) => slugify(p.title) === slug)
+}
+
+export function getProjectSlug(project: ProjectType): string {
+  return slugify(project.title)
+}
+
+export { slugify as slugifyProject }
+
 export const projectsData: ProjectType[] = [
   {
     title: "JoyFund",
