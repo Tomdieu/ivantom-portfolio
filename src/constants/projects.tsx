@@ -37,7 +37,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "JoyFund",
     description:
-      "A mobile-first healthcare crowdfunding and voucher platform targeting Cameroon, built for Durable Impact. JoyFund enables donors to fund medical campaigns with full transparency through a voucher-based escrow mechanism, proportional surplus refunds, and real-time notifications. Features six distinct portals (Donor, Contributor, Social Worker, Hospital, Hospital Admin, System Admin) with MTN MoMo and Orange Money payment integration via Notch Pay.",
+      "A mobile-first healthcare crowdfunding and voucher platform targeting Cameroon, built for Durable Impact. JoyFund enables donors to fund medical campaigns with full transparency through a voucher-based escrow mechanism, proportional surplus refunds, and real-time notifications. Features six distinct portals (Donor, Contributor, Social Worker, Hospital, Hospital Admin, System Admin) with MTN MoMo and Orange Money payment integration via Campay Pay.",
     tags: [
       {
         label: "Django",
