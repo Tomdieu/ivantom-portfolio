@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
-import { ProjectType } from "@/constants/projects";
+import { ArrowUpRight } from "lucide-react";
+import { ProjectType, getProjectSlug } from "@/constants/projects";
 import {
   Credenza,
   CredenzaContent,
@@ -78,6 +79,18 @@ const ProjectModal = ({ project, open, onOpenChange }: Props) => {
               </div>
             </div>
           )}
+
+          {/* Project page link */}
+          <div>
+            <Link
+              href={`/projects/${getProjectSlug(project)}`}
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:text-blue-400 transition-colors"
+              onClick={() => onOpenChange(false)}
+            >
+              <ArrowUpRight className="h-4 w-4" />
+              Open project page
+            </Link>
+          </div>
 
           {/* Links */}
           {project.links && project.links.length > 0 && (
