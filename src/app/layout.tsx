@@ -189,8 +189,7 @@ export default function RootLayout({
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Work",
-                "email": "ivan.tomdieu@gmail.com",
-                "telephone": "+237650039773"
+                "email": "ivan.tomdieu@gmail.com"
               },
               "address": {
                 "@type": "PostalAddress",
