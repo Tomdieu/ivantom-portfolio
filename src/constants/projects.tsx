@@ -182,6 +182,38 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
+    title: "Menu Daily",
+    description:
+      "A web platform for daily menu management, built under Coding Industry Sarl as frontend developer.",
+    tags: [
+      {
+        label: "NextJs",
+      },
+    ],
+    image: "/menu-daily.png",
+    dates: "2025",
+    links: [],
+  },
+  {
+    title: "Easy Immo",
+    description:
+      "A modern real estate management platform for property owners in Cameroon, built under Coding Industry Sarl. Easy Immo allows landlords to centralize the management of their buildings, tenants, and concierges — including rent tracking, payment history, financial reports, contract storage, and automated reminders.",
+    tags: [
+      {
+        label: "NextJs",
+      },
+    ],
+    image: "/easy-immo.png",
+    dates: "2025",
+    links: [
+      {
+        label: "Preview",
+        href: "https://easy-immo.coding-industry.com/",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
     title: "FigmaToReact",
     description:
       "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
