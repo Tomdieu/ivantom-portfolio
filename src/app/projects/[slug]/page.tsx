@@ -4,6 +4,7 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 import { CalendarIcon, ArrowLeft, ExternalLinkIcon } from "lucide-react"
 import { projectsData, getProjectBySlug, getProjectSlug } from "@/constants/projects"
+import Header from "@/components/_header/Header"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -56,7 +57,8 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) notFound()
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      <Header />
       <div className="container mx-auto max-w-4xl px-4 py-8">
         <Link
           href="/#projects"
