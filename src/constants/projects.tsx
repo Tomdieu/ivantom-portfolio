@@ -35,24 +35,84 @@ export type ProjectType = {
 
 export const projectsData: ProjectType[] = [
   {
+    title: "JoyFund",
+    description:
+      "A mobile-first healthcare crowdfunding and voucher platform targeting Cameroon, built for Durable Impact. JoyFund enables donors to fund medical campaigns with full transparency through a voucher-based escrow mechanism, proportional surplus refunds, and real-time notifications. Features six distinct portals (Donor, Contributor, Social Worker, Hospital, Hospital Admin, System Admin) with MTN MoMo and Orange Money payment integration via Notch Pay.",
+    tags: [
+      {
+        label: "Django",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "Django Rest Framework",
+        icon: <DiDjango size={16} />,
+      },
+      {
+        label: "NextJs",
+      },
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "React",
+        icon: <DiReact size={16} />,
+      },
+      {
+        label: "Docker",
+        icon: <DiDocker size={16} />,
+      },
+      {
+        label: "PostgreSQL",
+      },
+      {
+        label: "GeoDjango",
+      },
+      {
+        label: "RabbitMQ",
+      },
+      {
+        label: "Redis",
+      },
+      {
+        label: "Celery",
+      },
+      {
+        label: "WebSockets",
+      },
+    ],
+    image: "/joyfund-logo.jpeg",
+    dates: "Feb 2026 - May 2026",
+    links: [
+      {
+        label: "Preview",
+        href: "https://joy-fund.com",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
     title: "Durable impact academy",
     description: "Website of the Durable impact academy",
     tags: [
       {
-        label: "NextJs"
-      }
+        label: "NextJs",
+      },
     ],
     image: "/durableimpactacademy.png",
     dates: "Apr 2025",
-    links: [{
-      label: "Preview",
-      href: "https://durableimpactacademy.com",
-      icon: <Globe size={16} />,
-    }],
+    links: [
+      {
+        label: "Preview",
+        href: "https://durableimpactacademy.com",
+        icon: <Globe size={16} />,
+      },
+    ],
   },
   {
     title: "Trixly",
-    description: "Trixly is an all-in-one platform for freelancers and teams to track time, manage projects, write daily reports, and export client-ready insights — without the bloat.",
+    description:
+      "Trixly is an all-in-one platform for freelancers and teams to track time, manage projects, write daily reports, and export client-ready insights — without the bloat.",
     tags: [
       {
         label: "NextJs",
@@ -97,7 +157,8 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "OhKeroh",
-    description: "An assignment submission platform for students to submit and track their assignments. Built in partnership with Durable Impact.",
+    description:
+      "An assignment submission platform for students to submit and track their assignments. Built in partnership with Durable Impact.",
     tags: [
       {
         label: "Django",
@@ -122,7 +183,8 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "FigmaToReact",
-    description: "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
+    description:
+      "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
     source: "https://github.com/Tomdieu/FigmaToReact",
     tags: [
       {
@@ -164,12 +226,13 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "Revolution Travel & Services",
-    description: "Revolution Travel & Services is a travel agency that specializes in booking and selling airline tickets, providing comprehensive travel solutions to clients.",
+    description:
+      "Revolution Travel & Services is a travel agency that specializes in booking and selling airline tickets, providing comprehensive travel solutions to clients.",
     source: "https://github.com/Tomdieu/pouantou-revolution-travel",
     tags: [
       {
         label: "NextJs",
-      }
+      },
     ],
     image: "/revolution-travel.png",
     dates: "July 2025",
@@ -183,12 +246,13 @@ export const projectsData: ProjectType[] = [
         label: "Preview",
         href: "https://puantou-revolution-travel.vercel.app/",
         icon: <Globe size={16} />,
-      }
+      },
     ],
   },
   {
     title: "AI News Automation Tool",
-    description: "Python script that automates finding news articles related to Artificial Intelligence from BBC Innovation website, filtering by date, classifying using Google Gemini, and providing a web interface for review and PDF export.",
+    description:
+      "Python script that automates finding news articles related to Artificial Intelligence from BBC Innovation website, filtering by date, classifying using Google Gemini, and providing a web interface for review and PDF export.",
     source: "https://github.com/Tomdieu/automation-test",
     tags: [
       {
@@ -220,7 +284,8 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "E-Recruitment CMR",
-    description: "An electronic recruitment platform for managing job applications, interviews, and the hiring process in Cameroon.",
+    description:
+      "An electronic recruitment platform for managing job applications, interviews, and the hiring process in Cameroon.",
     source: "https://github.com/Tomdieu/erecruitement-cmr",
     tags: [
       {
@@ -513,8 +578,8 @@ export const projectsData: ProjectType[] = [
         icon: <DiDocker size={16} />,
       },
       {
-        label: "Android"
-      }
+        label: "Android",
+      },
     ],
     image: "/trixwallet.png",
     dates: "Oct 2022 - Jan 2023",
@@ -528,13 +593,13 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "Map project",
-    description: "A Small project that works with mapbox maps and position stack and geopapify api",
+    description:
+      "A Small project that works with mapbox maps and position stack and geopapify api",
     tags: [
       { label: "Mapbox" },
       { label: "ReactJs" },
       { label: "Position Stack" },
       { label: "Geoapify" },
-
     ],
     image: "/trix.png",
     links: [
@@ -544,7 +609,7 @@ export const projectsData: ProjectType[] = [
         icon: <Globe size={16} />,
       },
     ],
-    dates: "Jul 2022 - Sep 2022"
+    dates: "Jul 2022 - Sep 2022",
   },
   {
     source: "https://github.com/Tomdieu/NvChat",
@@ -593,8 +658,8 @@ export const projectsData: ProjectType[] = [
         icon: <DiPython size={16} />,
       },
       {
-        label: "Desktop"
-      }
+        label: "Desktop",
+      },
     ],
     links: [
       {
@@ -639,8 +704,7 @@ export const projectsData: ProjectType[] = [
         label: "Github",
         href: "https://github.com/Tomdieu/",
         icon: <GitHubLogoIcon />,
-      }
+      },
     ],
   },
-
 ];
