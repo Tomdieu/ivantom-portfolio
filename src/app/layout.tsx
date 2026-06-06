@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { projectsData } from "@/constants/projects"; // Corrected import name
 
@@ -415,6 +416,7 @@ export default function RootLayout({
         >
           <TooltipProvider delayDuration={0}>
             {children}
+            <Footer />
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
