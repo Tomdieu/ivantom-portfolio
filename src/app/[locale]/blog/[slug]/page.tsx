@@ -1,7 +1,10 @@
 import { getPostBySlug } from '@/lib/mdx';
 import { notFound } from 'next/navigation';
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import { MDXRemote as MDXRemoteRaw } from 'next-mdx-remote/rsc';
+import type { MDXRemoteProps } from 'next-mdx-remote/rsc';
 import { Metadata } from 'next';
+
+const MDXRemote = MDXRemoteRaw as unknown as (props: MDXRemoteProps) => React.ReactElement | null;
 import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
