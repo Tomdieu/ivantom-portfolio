@@ -34,7 +34,7 @@ const Header = ({ className }: Props) => {
         <div className="flex-1 flex justify-start">
           <Link
             className="flex items-center justify-center cursor-pointer group"
-            href="#"
+            href="/"
           >
             <Image 
               src="/ti.png" 
