@@ -3,6 +3,7 @@
 import { useScrollTop } from '@/hooks/use-scroll-top';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ModeToggle } from '../toggle-theme';
 
 type Props = {
@@ -35,9 +36,14 @@ const Header = ({ className }: Props) => {
             className="flex items-center justify-center cursor-pointer group"
             href="#"
           >
-            <span className="text-lg font-bold tracking-tight">
-              Tomdieu<span className="text-blue-500">.</span>
-            </span>
+            <Image 
+              src="/ti.png" 
+              alt="Tomdieu Logo" 
+              width={40} 
+              height={40} 
+              className="object-contain dark:invert"
+              priority
+            />
           </Link>
         </div>
 
