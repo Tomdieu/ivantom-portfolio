@@ -70,13 +70,12 @@ export default async function ProjectPage({ params }: Props) {
 
         <article>
           {project.image && (
-            <div className="relative w-full rounded-xl overflow-hidden mb-8" style={{ minHeight: "400px" }}>
+            <div className="relative w-full h-[400px] rounded-xl overflow-hidden mb-8">
               <Image
                 src={project.image}
                 alt={project.title}
-                width={1200}
-                height={630}
-                className="w-full h-auto object-contain"
+                fill
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 896px"
                 priority
               />
