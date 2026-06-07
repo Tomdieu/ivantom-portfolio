@@ -21,10 +21,11 @@ const Header = ({ className }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "#work-experience", label: t('nav.experience') },
-    { href: "#projects", label: t('nav.projects') },
-    { href: "#skills", label: t('nav.skills') },
-    { href: "#contact", label: t('nav.contact') },
+    { href: "/#work-experience", label: t('nav.experience') },
+    { href: "/#projects", label: t('nav.projects') },
+    { href: "/#skills", label: t('nav.skills') },
+    { href: "/blog", label: t('nav.blog' as any) },
+    { href: "/#contact", label: t('nav.contact') },
   ];
 
   return (

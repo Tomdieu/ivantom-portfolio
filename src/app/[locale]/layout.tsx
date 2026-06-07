@@ -27,74 +27,84 @@ const poppins = localFont({
   variable: "--font-poppins",
 });
 
-export const metadata: Metadata = {
-// ... omitting metadata edits since it's huge, I need to do a targeted edit.
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const canonicalUrl = `https://ivantomdieu.vercel.app/${locale}`;
 
-  title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-  keywords: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED, Tomdieu Ivan, Ivan Tomdieu, Ivan Gottfried, développeur full stack, full stack developer, 3+ years Django experience, 2+ years React experience, expert Django developer, expert React developer, FigmaToReact, Model Driven Architecture, ATL transformation, Eclipse Modeling Framework, Revolution Travel Services, AI News Automation, E-Recruitment CMR, ClassConnect, OngolaPhone, Wikiculture, Url Shortener, AgroHelp, Trix Wallet, NvChat, NvHospital, Figma to React converter, MDA project, model transformation, travel booking system, recruitment platform, educational platform, mobile money app, chat application, desktop application, ingénieur logiciel, software engineer, développeur web, web developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, développeur JavaScript, JavaScript developer, développeur Python, Python developer, senior Django developer, experienced React developer, développeur freelance, freelance developer, développeur à distance, remote developer, développement d'API, API development, développement frontend, frontend development, développement backend, backend development, applications web, web applications, génie logiciel, software engineering, développeur web full stack, full stack web developer, TailwindCSS, TypeScript, développeur React Native, React Native developer, consultant informatique, IT consultant, développeur camerounais, Cameroonian developer, intégration continue, continuous integration, déploiement continu, continuous deployment, architecture logicielle, software architecture, développement agile, agile development, expert SEO, SEO specialist, optimisation pour moteurs de recherche, search engine optimization, développement mobile, mobile development, expert cloud computing, cloud computing expert, DevOps, sécurité web, web security, migration de base de données, database migration",
-  description: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer. A passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation. Adept at collaborating in agile environments to drive technical excellence and create user-centered applications.",
-  openGraph: {
-    url: "https://ivantomdieu.vercel.app/",
-    title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
-    description: "I'm Tomdieu Tchadieuko Ivan, a passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation.",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Tomdieu Ivan Portfolio",
-      },
-    ],
-    type: "website",
-    siteName:"Tomdieu Ivan Portfolio",
-  },
-  twitter: {
-    site: "@IvanTomdieu",
-    description: "Tomdieu Ivan - Full Stack Software Developer with a proven track record of building scalable web applications. Skilled in React.js (2+ years), Django (3+ years), and modern technologies. Visit my portfolio to learn more about my projects and software engineering expertise.",
-    title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Developer",
+  return {
+    metadataBase: new URL("https://ivantomdieu.vercel.app/"),
+    title: {
+      default: "Tomdieu Ivan | Senior Full Stack Software Engineer",
+      template: "%s | Tomdieu Ivan",
+    },
+    description: "Senior Full Stack Developer based in Cameroon specializing in Django, React, and Next.js. I architect and build scalable, production-ready web and mobile applications.",
+    keywords: ["Software Engineer Cameroon", "Full Stack Developer", "Django Developer", "Next.js Developer", "React Developer", "AI Engineer", "Robotics Engineer", "Tomdieu Ivan", "Ivan Gottfried", "Développeur Full Stack", "Web Developer"],
+    authors: [{ name: "Tomdieu Ivan", url: "https://github.com/tomdieu" }],
     creator: "Tomdieu Ivan",
-    card: "summary_large_image",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Tomdieu Ivan Portfolio",
+    publisher: "Tomdieu Ivan",
+    category: "technology",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': 'https://ivantomdieu.vercel.app/en',
+        'fr': 'https://ivantomdieu.vercel.app/fr',
+        'x-default': 'https://ivantomdieu.vercel.app/en',
       },
-    ],
-  },
-  creator: "Tomdieu Ivan",
-  authors: [{ name: "Tomdieu Ivan", url: "https://github.com/tomdieu" }],
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
+    },
+    robots: {
       index: true,
       follow: true,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-  verification:{
-    google:"oL_X940seqpUmflSfAjNxmf39DH707nkgHr__ALLx7c"
-  },
-  metadataBase: new URL("https://ivantomdieu.vercel.app/"),
-  icons: [
-    {
-      url: "/ninga.png",
-      rel: "icon",
-      type: "image/png",
+    verification: {
+      google: "oL_X940seqpUmflSfAjNxmf39DH707nkgHr__ALLx7c"
     },
-    {
-      url: "/logo.png",
-      rel: "apple-touch-icon",
-      sizes: "180x180",
+    icons: [
+      {
+        url: "/ti.png",
+        rel: "icon",
+        type: "image/png",
+      },
+      {
+        url: "/ti.png",
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+      },
+    ],
+    openGraph: {
+      title: "Tomdieu Ivan | Senior Full Stack Software Engineer",
+      description: "Senior Full Stack Developer based in Cameroon specializing in Django, React, and Next.js.",
+      url: canonicalUrl,
+      siteName: "Tomdieu Ivan Portfolio",
+      images: [
+        {
+          url: "/ti.png",
+          width: 1200,
+          height: 630,
+          alt: "Tomdieu Ivan - Full Stack Engineer",
+        },
+      ],
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      type: "website",
     },
-  ],
-};
+    twitter: {
+      card: "summary_large_image",
+      title: "Tomdieu Ivan | Senior Full Stack Software Engineer",
+      description: "Building scalable digital products with Django and Next.js.",
+      site: "@IvanTomdieu",
+      creator: "@IvanTomdieu",
+      images: ["/ti.png"],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -182,7 +192,7 @@ export default async function RootLayout({
               "nationality": "Cameroonian",
               "image": {
                 "@type": "ImageObject",
-                "url": "https://ivantomdieu.vercel.app/logo.png",
+                "url": "https://ivantomdieu.vercel.app/ti.png",
                 "width": "1200",
                 "height": "630",
                 "caption": "Tomdieu Ivan - Full Stack Developer"
@@ -207,6 +217,12 @@ export default async function RootLayout({
               "worksFor": [
                 {
                   "@type": "Organization",
+                  "name": "Durable Impact",
+                  "url": "https://durableimpact.org/",
+                  "logo": "https://ivantomdieu.vercel.app/durable-impact-logo.png"
+                },
+                {
+                  "@type": "Organization",
                   "name": "Coding Industry Sarl",
                   "url": "http://coding-industry.com/fr_fr/",
                   "logo": "https://ivantomdieu.vercel.app/coding-industry.png"
@@ -226,10 +242,22 @@ export default async function RootLayout({
               "workExperience": [
                 {
                   "@type": "WorkExperience",
+                  "name": "Backend Engineer",
+                  "description": "Led backend architecture and infrastructure development, architected highly scalable RESTful APIs utilizing Django Rest Framework, and optimized database queries with Celery/Redis.",
+                  "startDate": "2026-01",
+                  "endDate": "",
+                  "employerName": "Durable Impact",
+                  "workLocation": {
+                    "@type": "Place",
+                    "name": "Hybrid / Remote"
+                  }
+                },
+                {
+                  "@type": "WorkExperience",
                   "name": "Backend Developer",
                   "description": "Full Stack Developer specializing in building comprehensive full-stack applications. Key responsibilities include crafting and maintaining scalable server-side logic using Django and creating dynamic user interfaces with Next.js and React.",
                   "startDate": "2024-06",
-                  "endDate": "",
+                  "endDate": "2026-01",
                   "employerName": "Coding Industry Sarl",
                   "workLocation": {
                     "@type": "Place",

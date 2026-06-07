@@ -30,7 +30,7 @@ const Projects = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
           {projectsData.map((project, index) => (
             <BlurFade
-              key={project.title}
+              key={`${project.title}-${index}`}
               delay={BLUR_FADE_DELAY * 12 + index * 0.04}
               inView
             >

@@ -1,0 +1,135 @@
+---
+title: "The Ultimate Guide to Nginx Proxy Manager for Developers"
+description: "Learn how to easily expose your local Docker containers to the world securely using Nginx Proxy Manager with free SSL certificates."
+date: "2026-06-07"
+tags: ["DevOps", "Nginx", "Docker", "Self-Hosting", "SSL"]
+author: "Tomdieu Ivan"
+---
+
+As a Full Stack Developer, deploying applications and managing reverse proxies can quickly become a headache. Manually editing Nginx configuration files is tedious and prone to errors. 
+
+Enter **Nginx Proxy Manager (NPM)**—a brilliant, Docker-based tool that provides a beautiful web interface to manage your Nginx proxy hosts, complete with free Let's Encrypt SSL certificates.
+
+In this guide, I'll walk you through how to install Nginx Proxy Manager and use it to securely route traffic to your applications.
+
+## Prerequisites
+
+Before we start, you will need:
+- A server (VPS) with Linux installed.
+- Docker and Docker Compose installed.
+- A domain name pointing to your server's IP address.
+
+---
+
+## Step 1: Installing Nginx Proxy Manager via Docker Compose
+
+The easiest way to install NPM is using Docker Compose. Create a new directory on your server and create a `docker-compose.yml` file.
+
+```yaml
+version: '3.8'
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'    # Public HTTP Port
+      - '443:443'  # Public HTTPS Port
+      - '81:81'    # Admin Web Port
+    environment:
+      DB_MYSQL_HOST: "db"
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: "npm"
+      DB_MYSQL_PASSWORD: "npm"
+      DB_MYSQL_NAME: "npm"
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+  db:
+    image: 'jc21/mariadb-aria:latest'
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 'npm'
+      MYSQL_DATABASE: 'npm'
+      MYSQL_USER: 'npm'
+      MYSQL_PASSWORD: 'npm'
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+```
+
+Start the container by running:
+
+```bash
+docker-compose up -d
+```
+
+![Docker Compose Terminal Output](/images/blog/npm/docker-compose-up.png)
+
+---
+
+## Step 2: Accessing the Admin Interface
+
+Once the containers are running, navigate to your server's IP address on port `81` in your web browser:
+`http://<your-server-ip>:81`
+
+Log in using the default credentials:
+- **Email:** `admin@example.com`
+- **Password:** `changeme`
+
+![NPM Login Screen](/images/blog/npm/npm-login.png)
+
+Immediately after logging in, the system will prompt you to update your details and change your password. Make sure you set a strong password!
+
+---
+
+## Step 3: Setting Up Your First Proxy Host
+
+Let's assume you have a Next.js application running in another Docker container on port `3000`. You want to map `app.yourdomain.com` to this container.
+
+1. Go to the **Hosts** tab and click on **Proxy Hosts**.
+2. Click the **Add Proxy Host** button.
+
+### Details Tab Configuration:
+- **Domain Names:** `app.yourdomain.com`
+- **Scheme:** `http`
+- **Forward Hostname / IP:** `<your-docker-container-ip>` (or the internal Docker network name)
+- **Forward Port:** `3000`
+- Check **Block Common Exploits** for basic security.
+
+![Proxy Host Details Configuration](/images/blog/npm/proxy-host-details.png)
+
+---
+
+## Step 4: Securing Your App with Free SSL (Let's Encrypt)
+
+Nobody likes the "Not Secure" warning. NPM makes it incredibly easy to get a free SSL certificate.
+
+In the same "Add Proxy Host" window, switch to the **SSL** tab:
+
+1. Select **Request a new SSL Certificate** from the dropdown.
+2. Check **Force SSL** (to redirect all HTTP traffic to HTTPS).
+3. Enter your email address for Let's Encrypt notifications.
+4. Agree to the Terms of Service.
+5. Click **Save**.
+
+![SSL Configuration Tab](/images/blog/npm/ssl-configuration.png)
+
+Nginx Proxy Manager will now securely contact Let's Encrypt, verify your domain, and issue an SSL certificate. In a few seconds, your app will be live and secure!
+
+---
+
+## Step 5: Testing Your Deployment
+
+Open a new browser tab and navigate to `https://app.yourdomain.com`. 
+
+If everything was configured correctly, you should see your application running with a beautiful padlock icon in the URL bar, indicating that the SSL certificate is valid and active.
+
+![Live Application with SSL Padlock](/images/blog/npm/live-app-ssl.png)
+
+## Conclusion
+
+Nginx Proxy Manager is an absolute lifesaver for developers who self-host applications. It completely abstracts away the complexities of Nginx configuration and SSL certificate renewals, allowing you to focus on what you do best: writing code.
+
+Have you tried Nginx Proxy Manager? Let me know your thoughts or hit me up if you run into any issues deploying your stack!
+
+---
+*If you found this guide helpful, check out my [Projects](/en/projects) to see how I architect full-stack applications!*

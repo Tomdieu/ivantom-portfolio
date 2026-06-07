@@ -45,7 +45,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 mb-16 relative overflow-hidden rounded-2xl bg-slate-50/50 dark:bg-slate-900/20 border border-slate-200/50 dark:border-slate-800/50 backdrop-blur-sm">
       {/* Background ambient light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="relative z-10 px-8 sm:px-16 flex flex-col lg:flex-row gap-16 items-center justify-between">
         <div className="space-y-8 max-w-xl flex-1">
@@ -57,7 +57,7 @@ const ContactSection = () => {
               </span>
               {t('contact.badge')}
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-500 dark:from-white dark:via-slate-200 dark:to-slate-400 mb-6 leading-tight">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
               {t('contact.title').split('\\n').map((line, i) => (
                 <React.Fragment key={i}>
                   {line}

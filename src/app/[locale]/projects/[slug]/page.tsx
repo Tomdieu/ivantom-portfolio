@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProjectBySlug(slug)
   if (!project) return {}
 
-  const title = `${project.title} - Tomdieu Ivan Portfolio`
+  const title = project.title
   const description = project.description
   const siteUrl = "https://ivantomdieu.vercel.app"
   const projectUrl = `${siteUrl}/projects/${slug}`

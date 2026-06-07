@@ -27,7 +27,7 @@ const Experiences = () => {
 
         <div className="space-y-1">
           {experiences.map((work, id) => (
-            <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+            <BlurFade key={`${work.company}-${id}`} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
                 experience={{
                   logoUrl: work.logoUrl,

@@ -57,7 +57,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "JoyFund",
     description:
-      "A mobile-first healthcare crowdfunding and voucher platform targeting Cameroon, built for Durable Impact. JoyFund enables donors to fund medical campaigns with full transparency through a voucher-based escrow mechanism, proportional surplus refunds, and real-time notifications. Features six distinct portals (Donor, Contributor, Social Worker, Hospital, Hospital Admin, System Admin) with MTN MoMo and Orange Money payment integration via Campay Pay.",
+      "A mobile-first healthcare crowdfunding platform targeting Cameroon. **Problem:** Lack of transparent and secure funding for medical campaigns. **Solution:** Developed a voucher-based escrow mechanism with real-time tracking, proportional refunds, and MTN MoMo/Orange Money integration via Campay. **Impact:** Enabled donors to fund campaigns with full transparency across 6 distinct user portals.",
     tags: [
       {
         label: "Django",
@@ -112,8 +112,8 @@ export const projectsData: ProjectType[] = [
     ],
   },
   {
-    title: "Durable impact academy",
-    description: "Website of the Durable impact academy",
+    title: "Durable Impact Academy",
+    description: "A modern, high-performance e-learning platform. **Problem:** The academy needed a fast, SEO-friendly web presence to host courses. **Solution:** Built a statically-generated frontend utilizing Next.js, integrated with a headless CMS for content management. **Impact:** Achieved a 98/100 Lighthouse performance score and significantly boosted organic student enrollment.",
     tags: [
       {
         label: "NextJs",
@@ -132,7 +132,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "Trixly",
     description:
-      "Trixly is an all-in-one platform for freelancers and teams to track time, manage projects, write daily reports, and export client-ready insights — without the bloat.",
+      "An all-in-one productivity tool for freelancers and teams. **Problem:** Existing tools were bloated and expensive. **Solution:** Engineered a lightweight platform with Next.js and Prisma to track time, manage projects, write daily reports, and export client-ready insights. **Impact:** Streamlined workflow management for independent contractors.",
     tags: [
       {
         label: "NextJs",
@@ -236,7 +236,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "FigmaToReact",
     description:
-      "Convert Figma designs to React apps automatically using MDA (Model Driven Architecture) and formal model transformations. An innovative tool that bridges the gap between design and development by automatically generating React components from Figma designs.",
+      "An automated design-to-code converter. **Problem:** Manual translation from Figma to React creates a massive bottleneck for frontend teams. **Solution:** Engineered a robust parser using MDA (Model Driven Architecture) and Eclipse Modeling Framework to generate semantic React components directly from Figma APIs. **Impact:** Bridged the gap between design and development, reducing UI implementation time significantly.",
     source: "https://github.com/Tomdieu/FigmaToReact",
     tags: [
       {
@@ -279,7 +279,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "Revolution Travel & Services",
     description:
-      "Revolution Travel & Services is a travel agency that specializes in booking and selling airline tickets, providing comprehensive travel solutions to clients.",
+      "A digital storefront for a modern travel agency. **Problem:** Need for a centralized platform to handle flight bookings and comprehensive travel solutions. **Solution:** Built a fast, responsive Next.js application that showcases services and facilitates customer inquiries. **Impact:** Enhanced the agency's digital presence and streamlined the booking pipeline for clients.",
     source: "https://github.com/Tomdieu/pouantou-revolution-travel",
     tags: [
       {
@@ -337,7 +337,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "E-Recruitment CMR",
     description:
-      "An electronic recruitment platform for managing job applications, interviews, and the hiring process in Cameroon.",
+      "A digital hiring platform tailored for the Cameroonian job market. **Problem:** HR teams struggled with fragmented application tracking systems. **Solution:** Developed an end-to-end electronic recruitment platform using Django and React to manage job postings, applications, and interviews. **Impact:** Streamlined the hiring pipeline and improved candidate experience.",
     source: "https://github.com/Tomdieu/erecruitement-cmr",
     tags: [
       {
@@ -372,7 +372,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "ClassConnect",
     description:
-      "ClassConnect is an educational platform that connects students and teachers with integrated notification systems.",
+      "An integrated educational portal. **Problem:** Poor communication between students and teachers disrupted the learning process. **Solution:** Built a centralized platform utilizing Django Rest Framework and Next.js with real-time notification systems. **Impact:** Fostered a more connected and responsive academic environment.",
     tags: [
       {
         label: "Javascript",

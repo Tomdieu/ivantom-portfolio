@@ -5,6 +5,7 @@ export default {
   'nav.projects': 'Projets',
   'nav.skills': 'Compétences',
   'nav.contact': 'Contact',
+  'nav.blog': 'Blog',
   'footer.rights': 'Tous droits réservés.',
   'footer.builtWith': 'Créé avec passion avec Next.js et Tailwind CSS.',
 
