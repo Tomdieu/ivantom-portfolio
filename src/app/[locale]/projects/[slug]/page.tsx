@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: Props) {
 
         <article>
           {project.image && (
-            <div className="relative w-full h-[400px] rounded-xl overflow-hidden mb-8">
+            <div className="relative w-full h-100 rounded-xl overflow-hidden mb-8">
               <Image
                 src={project.image}
                 alt={project.title}

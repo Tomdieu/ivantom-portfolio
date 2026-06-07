@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import GitHubCalendar from "react-github-calendar";
 import BlurFade from "@/components/magicui/blur-fade";
+import { useI18n } from "@/locales/client";
 
 interface WakatimeGitStatsProps {
   // Add props if needed in the future
@@ -18,18 +19,19 @@ const calendarThemes = {
 };
 
 const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
+  const t = useI18n();
   return (
     <section id="stats" className="font-poppins py-6">
       <BlurFade delay={BLUR_FADE_DELAY * 11}>
         <div className="space-y-2 mb-8">
           <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">
-            Activity
+            {t("stats.badge")}
           </span>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Coding Stats
+            {t("stats.title")}
           </h2>
           <p className="text-muted-foreground max-w-xl">
-            My development activity tracked via Wakatime and GitHub contributions over the past year.
+            {t("stats.description")}
           </p>
         </div>
       </BlurFade>
@@ -42,7 +44,7 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
             {/* Wakatime section */}
             <div className="rounded-lg p-4 border bg-card/50">
               <div className="flex items-center gap-2 mb-4">
-                <h3 className="text-xl font-bold">Wakatime Code Stats</h3>
+                <h3 className="text-xl font-bold">{t("stats.wakatimeTitle")}</h3>
                 <a 
                   href="https://wakatime.com/@7a03d500-b310-4adb-9229-1bb6044d565d" 
                   target="_blank" 
@@ -82,7 +84,7 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
             
             {/* GitHub section */}
             <div className="rounded-lg p-4 border bg-card/50">
-              <h3 className="text-xl font-bold mb-4">GitHub Contribution Calendar</h3>
+              <h3 className="text-xl font-bold mb-4">{t("stats.githubTitle")}</h3>
               <div className="overflow-x-auto">
                 <GitHubCalendar 
                   username="Tomdieu"
@@ -93,7 +95,7 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
                   hideColorLegend={false}
                   hideMonthLabels={false}
                   labels={{
-                    totalCount: '{{count}} contributions in the last year',
+                    totalCount: t("stats.githubContributions", { count: "{{count}}" }),
                   }}
                 />
               </div>
@@ -102,7 +104,7 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
           
           {/* Languages chart - right column */}
           <div className="col-span-full lg:col-span-4 rounded-lg border p-4 bg-card/50">
-            <h3 className="text-xl font-bold mb-4">Languages</h3>
+            <h3 className="text-xl font-bold mb-4">{t("stats.languagesTitle")}</h3>
             <a 
               href="https://wakatime.com" 
               target="_blank" 
@@ -125,7 +127,7 @@ const WakatimeGitStats: React.FC<WakatimeGitStatsProps> = () => {
         
         {/* Editors chart - bottom section */}
         <div className="rounded-lg p-4 border bg-card/50">
-          <h3 className="text-xl font-bold mb-4">Editors Usage</h3>
+          <h3 className="text-xl font-bold mb-4">{t("stats.editorsTitle")}</h3>
           <a 
             href="https://wakatime.com" 
             target="_blank" 

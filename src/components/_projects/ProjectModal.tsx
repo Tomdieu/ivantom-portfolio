@@ -12,6 +12,7 @@ import {
   CredenzaTitle,
   CredenzaBody,
 } from "@/components/ui/credenza";
+import { useI18n } from "@/locales/client";
 
 type Props = {
   project: ProjectType;
@@ -20,6 +21,7 @@ type Props = {
 };
 
 const ProjectModal = ({ project, open, onOpenChange }: Props) => {
+  const t = useI18n();
   return (
     <Credenza open={open} onOpenChange={onOpenChange}>
       <CredenzaContent className="max-w-2xl p-0 gap-0 overflow-hidden">
@@ -64,7 +66,7 @@ const ProjectModal = ({ project, open, onOpenChange }: Props) => {
           {project.tags && project.tags.length > 0 && (
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                Technologies
+                {t('projects.technologies')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
@@ -88,7 +90,7 @@ const ProjectModal = ({ project, open, onOpenChange }: Props) => {
               onClick={() => onOpenChange(false)}
             >
               <ArrowUpRight className="h-4 w-4" />
-              Open project page
+              {t('projects.openProject')}
             </Link>
           </div>
 
@@ -96,7 +98,7 @@ const ProjectModal = ({ project, open, onOpenChange }: Props) => {
           {project.links && project.links.length > 0 && (
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                Links
+                {t('projects.links')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.links.map(({ href, label, icon }, index) => (

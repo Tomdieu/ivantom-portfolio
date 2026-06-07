@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Credenza, CredenzaContent, CredenzaDescription, CredenzaHeader, CredenzaTitle } from './ui/credenza';
+import { useI18n } from "@/locales/client";
 
 const ChatbotFAB: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useI18n();
 
   return (
     <>
@@ -27,10 +29,10 @@ const ChatbotFAB: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <CredenzaTitle className="text-2xl font-bold">
-                  Chat with My AI Assistant
+                  {t("chatbot.title")}
                 </CredenzaTitle>
                 <CredenzaDescription className="mt-2">
-                  Have questions about my work, experience, or projects? Ask my AI assistant for instant answers!
+                  {t("chatbot.description")}
                 </CredenzaDescription>
               </div>
             </div>

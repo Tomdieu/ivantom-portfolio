@@ -1,20 +1,26 @@
-import { educations } from "@/constants/educations";
+"use client";
+
+import { educationsEn, educationsFr } from "@/constants/educations";
 import { ResumeCard } from "@/components/ResumeCard";
 import BlurFade from "../magicui/blur-fade";
+import { useI18n, useCurrentLocale } from "@/locales/client";
 
 const BLUR_FADE_DELAY = 0.04;
 
 const Educations = () => {
+  const t = useI18n();
+  const locale = useCurrentLocale();
+  const educations = locale === 'fr' ? educationsFr : educationsEn;
   return (
     <section id="education" className="py-12">
       <div className="space-y-6">
         <BlurFade delay={BLUR_FADE_DELAY * 7}>
           <div className="space-y-2">
             <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">
-              Academic
+              {t("educations.badge")}
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Education
+              {t("educations.title")}
             </h2>
           </div>
         </BlurFade>

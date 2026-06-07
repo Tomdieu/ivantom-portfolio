@@ -1,25 +1,26 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
-import { projectsData } from "@/constants/projects"; // Corrected import name
+import { projectsData } from "@/constants/projects";
+import { I18nProviderClient } from '@/locales/client';
 
 const poppins = localFont({
   src: [
     {
-      path: "../../public/fonts/Poppins/Poppins-Regular.ttf",
+      path: "../../../public/fonts/Poppins/Poppins-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../../public/fonts/Poppins/Poppins-Bold.ttf",
+      path: "../../../public/fonts/Poppins/Poppins-Bold.ttf",
       weight: "700",
     },
     {
-      path: "../../public/fonts/Poppins/Poppins-Black.ttf",
+      path: "../../../public/fonts/Poppins/Poppins-Black.ttf",
       weight: "800",
     },
   ],
@@ -27,6 +28,8 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
+// ... omitting metadata edits since it's huge, I need to do a targeted edit.
+
   title: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer",
   keywords: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED, Tomdieu Ivan, Ivan Tomdieu, Ivan Gottfried, développeur full stack, full stack developer, 3+ years Django experience, 2+ years React experience, expert Django developer, expert React developer, FigmaToReact, Model Driven Architecture, ATL transformation, Eclipse Modeling Framework, Revolution Travel Services, AI News Automation, E-Recruitment CMR, ClassConnect, OngolaPhone, Wikiculture, Url Shortener, AgroHelp, Trix Wallet, NvChat, NvHospital, Figma to React converter, MDA project, model transformation, travel booking system, recruitment platform, educational platform, mobile money app, chat application, desktop application, ingénieur logiciel, software engineer, développeur web, web developer, ReactJS, NextJS, NodeJS, Django, Django REST Framework, Docker, Kubernetes, ExpressJS, développeur JavaScript, JavaScript developer, développeur Python, Python developer, senior Django developer, experienced React developer, développeur freelance, freelance developer, développeur à distance, remote developer, développement d'API, API development, développement frontend, frontend development, développement backend, backend development, applications web, web applications, génie logiciel, software engineering, développeur web full stack, full stack web developer, TailwindCSS, TypeScript, développeur React Native, React Native developer, consultant informatique, IT consultant, développeur camerounais, Cameroonian developer, intégration continue, continuous integration, déploiement continu, continuous deployment, architecture logicielle, software architecture, développement agile, agile development, expert SEO, SEO specialist, optimisation pour moteurs de recherche, search engine optimization, développement mobile, mobile development, expert cloud computing, cloud computing expert, DevOps, sécurité web, web security, migration de base de données, database migration",
   description: "TOMDIEU TCHADIEUKO IVAN GOTTFRIED - Full Stack Software Developer. A passionate Full Stack Software Developer with a proven track record of building scalable and efficient web applications. Skilled in modern technologies, including JavaScript, React.js (2+ years experience), Node.js, and Django (3+ years experience), alongside a strong command of popular frameworks and libraries. Dedicated to crafting maintainable code and delivering impactful digital solutions, with a keen interest in continuous learning and innovation. Adept at collaborating in agile environments to drive technical excellence and create user-centered applications.",
@@ -93,11 +96,15 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
   // Generate enhanced WorkExample schema for projects with better SEO
   const workExamples = projectsData.map((project, index) => ({
     "@type": "WorkExample",
@@ -153,7 +160,7 @@ export default function RootLayout({
 
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${poppins.variable}`}
       suppressHydrationWarning
       translate={"no"}
@@ -415,9 +422,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Footer />
-            <Navbar />
+            <I18nProviderClient locale={locale}>
+              {children}
+              <Footer />
+              <Navbar />
+            </I18nProviderClient>
           </TooltipProvider>
         </ThemeProvider>
         <Analytics/>

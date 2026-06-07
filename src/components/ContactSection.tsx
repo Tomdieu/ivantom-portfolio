@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import BlurFade from "./magicui/blur-fade";
 import Link from "next/link";
 import { contact } from "@/constants/navbar";
 import { Mail, Linkedin, Github, ArrowRight } from "lucide-react";
+import { useI18n } from '@/locales/client';
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -38,10 +41,11 @@ const contactMethods = [
 ];
 
 const ContactSection = () => {
+  const t = useI18n();
   return (
     <section id="contact" className="py-20 mb-16 relative overflow-hidden rounded-2xl bg-slate-50/50 dark:bg-slate-900/20 border border-slate-200/50 dark:border-slate-800/50 backdrop-blur-sm">
       {/* Background ambient light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="relative z-10 px-8 sm:px-16 flex flex-col lg:flex-row gap-16 items-center justify-between">
         <div className="space-y-8 max-w-xl flex-1">
@@ -51,14 +55,18 @@ const ContactSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
               </span>
-              Available for new opportunities
+              {t('contact.badge')}
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-br from-slate-900 via-slate-700 to-slate-500 dark:from-white dark:via-slate-200 dark:to-slate-400 mb-6 leading-tight">
-              Let&apos;s build <br className="hidden sm:block" />
-              something amazing.
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-500 dark:from-white dark:via-slate-200 dark:to-slate-400 mb-6 leading-tight">
+              {t('contact.title').split('\\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  <br className="hidden sm:block" />
+                </React.Fragment>
+              ))}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-md">
-              Have a project in mind, a question, or just want to connect? I&apos;m always open to discussing new opportunities and creative ideas.
+              {t('contact.description')}
             </p>
           </BlurFade>
         </div>

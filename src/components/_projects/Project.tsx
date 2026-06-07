@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import ProjectModal from "./ProjectModal";
+import { useI18n } from "@/locales/client";
 
 type Props = {
   project: ProjectType;
@@ -16,6 +17,7 @@ type Props = {
 const Project = ({ project, className }: Props) => {
   const { title, description, image, tags, dates, links } = project;
   const [isOpen, setIsOpen] = useState(false);
+  const t = useI18n();
 
   return (
     <>
@@ -50,7 +52,7 @@ const Project = ({ project, className }: Props) => {
               >
                 <span className="flex items-center gap-2 bg-background/90 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-full border border-border">
                   <ExternalLink className="h-3 w-3" />
-                  View Details
+                  {t('projects.viewDetails')}
                 </span>
               </Link>
             </>

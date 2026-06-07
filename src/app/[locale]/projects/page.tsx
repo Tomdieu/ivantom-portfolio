@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { projectsData, getProjectSlug } from "@/constants/projects"
 import Header from "@/components/_header/Header"
+import { getI18n } from "@/locales/server"
 
 export const metadata: Metadata = {
   title: "Projects - Tomdieu Ivan Portfolio",
@@ -12,20 +13,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const t = await getI18n();
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 container mx-auto max-w-6xl px-4 py-12">
         <div className="space-y-2 mb-10">
           <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">
-            Portfolio
+            {t("projects.badge")}
           </span>
-          <h1 className="text-4xl font-bold tracking-tight">All Projects</h1>
+          <h1 className="text-4xl font-bold tracking-tight">{t("projects.allProjects")}</h1>
           <p className="text-muted-foreground max-w-xl">
-            A collection of{" "}
-            <span className="text-foreground font-medium">{projectsData.length} projects</span>{" "}
-            I&apos;ve built — from SaaS platforms and mobile apps to AI tools and open-source utilities.
+            {t("projects.description", { count: projectsData.length })}
           </p>
         </div>
 

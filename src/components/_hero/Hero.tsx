@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,10 +7,13 @@ import BlurFade from "../magicui/blur-fade";
 import { DownloadCloudIcon, MapPin, ArrowRight } from "lucide-react";
 import { Icons } from "@/components/icons";
 import { contact } from "@/constants/navbar";
+import { useI18n, useCurrentLocale } from "@/locales/client";
 
 const BLUR_FADE_DELAY = 0.04;
 
 const Hero = () => {
+  const t = useI18n();
+  const locale = useCurrentLocale();
   const socialLinks = [
     { href: contact.social.GitHub.url, icon: Icons.github, label: "GitHub" },
     { href: contact.social.LinkedIn.url, icon: Icons.linkedin, label: "LinkedIn" },
@@ -27,7 +32,7 @@ const Hero = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
               </span>
-              Available for new opportunities
+              {t("hero.badge")}
             </div>
           </BlurFade>
 
@@ -35,13 +40,13 @@ const Hero = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <div className="space-y-2">
               <p className="text-sm text-muted-foreground font-medium tracking-widest uppercase">
-                Hello, I&apos;m
+                {t("hero.greeting")}
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
                 Tomdieu Ivan
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold bg-linear-to-r from-blue-600 via-blue-400 to-indigo-400 inline-block text-transparent bg-clip-text">
-                Full Stack Software Engineer
+                {t("hero.title")}
               </h2>
             </div>
           </BlurFade>
@@ -49,11 +54,11 @@ const Hero = () => {
           {/* Bio */}
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <p className="max-w-xl text-muted-foreground text-base leading-relaxed">
-              Passionate developer with 3+ years building production-grade web & mobile applications.
-              Specialized in <span className="text-foreground font-medium">Django</span>,{" "}
-              <span className="text-foreground font-medium">React</span>, and{" "}
-              <span className="text-foreground font-medium">Next.js</span> — turning ideas into
-              scalable digital products.
+              {t("hero.bio", {
+                django: <span key="django" className="text-foreground font-medium">Django</span>,
+                react: <span key="react" className="text-foreground font-medium">React</span>,
+                nextjs: <span key="nextjs" className="text-foreground font-medium">Next.js</span>,
+              })}
             </p>
           </BlurFade>
 
@@ -61,7 +66,7 @@ const Hero = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 shrink-0 text-blue-500" />
-              <span>Yaoundé, Cameroon</span>
+              <span>{t("hero.location")}</span>
             </div>
           </BlurFade>
 
@@ -69,17 +74,17 @@ const Hero = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/TomdieuTchadieukoIvanGottfried-Software-Engineer-Resume.pdf"
+                href={locale === 'fr' ? "/TOMDIEU-TCHADIEUKO-french.pdf" : "/TOMDIEU-TCHADIEUKO-english.pdf"}
                 className="inline-flex h-10 items-center justify-center rounded-lg bg-foreground text-background px-5 text-sm font-medium shadow hover:bg-foreground/90 transition-colors gap-2"
               >
                 <DownloadCloudIcon className="h-4 w-4" />
-                Download CV
+                {t("hero.downloadCV")}
               </Link>
               <Link
                 href="#contact"
                 className="inline-flex h-10 items-center justify-center rounded-lg border border-input bg-background px-5 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors gap-2"
               >
-                Get in touch
+                {t("hero.getInTouch")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -107,9 +112,9 @@ const Hero = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
               {[
-                { value: "3+", label: "Years Exp." },
-                { value: "18+", label: "Projects" },
-                { value: "10+", label: "Technologies" },
+                { value: "3+", label: t("hero.stats.yearsExp") },
+                { value: "18+", label: t("hero.stats.projects") },
+                { value: "10+", label: t("hero.stats.technologies") },
               ].map(({ value, label }) => (
                 <div key={label} className="space-y-1">
                   <p className="text-2xl font-bold text-foreground">{value}</p>
@@ -127,7 +132,7 @@ const Hero = () => {
             <div className="relative size-52 sm:size-60 md:size-72 rounded-2xl overflow-hidden border border-border shadow-2xl ring-1 ring-white/10">
               <Image
                 src="/ivantom.jpeg"
-                alt="Tomdieu Ivan — Full Stack Software Engineer"
+                alt={t("hero.greeting") + " Tomdieu Ivan — " + t("hero.title")}
                 fill
                 className="object-cover object-top"
                 priority
@@ -136,8 +141,8 @@ const Hero = () => {
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-3 -right-3 bg-background border border-border rounded-xl px-3 py-2 shadow-lg">
-              <p className="text-xs font-semibold text-foreground">Full Stack</p>
-              <p className="text-[10px] text-muted-foreground">Engineer</p>
+              <p className="text-xs font-semibold text-foreground">{t("hero.floatingBadge.title")}</p>
+              <p className="text-[10px] text-muted-foreground">{t("hero.floatingBadge.subtitle")}</p>
             </div>
           </div>
         </BlurFade>

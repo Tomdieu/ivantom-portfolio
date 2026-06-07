@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { HomeIcon } from "lucide-react";
 
 export const navbar = [
-    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/", icon: HomeIcon, label: "nav.home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
 ]
 
