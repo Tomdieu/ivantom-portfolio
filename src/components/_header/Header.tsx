@@ -24,7 +24,7 @@ const Header = ({ className }: Props) => {
     { href: "/#work-experience", label: t('nav.experience') },
     { href: "/#projects", label: t('nav.projects') },
     { href: "/#skills", label: t('nav.skills') },
-    { href: "/blog", label: t('nav.blog' as any) },
+    { href: "/blog", label: t('nav.blog' as const) },
     { href: "/#contact", label: t('nav.contact') },
   ];
 
