@@ -13,6 +13,7 @@ import {
 // versions. Alias motion.div to `MotionDiv` with `any` so we can pass
 // regular HTML props like `className`.
 const MotionDiv: any = motion.div;
+const MotionPresence: any = AnimatePresence;
 
 type MarginType = UseInViewOptions["margin"];
 
@@ -51,7 +52,7 @@ export default function BlurFade({
   };
   const combinedVariants = variant || defaultVariants;
   return (
-    <AnimatePresence>
+    <MotionPresence>
       <MotionDiv
         ref={ref}
         initial="hidden"
@@ -67,6 +68,6 @@ export default function BlurFade({
       >
         {children}
       </MotionDiv>
-    </AnimatePresence>
+      </MotionPresence>
   );
 }

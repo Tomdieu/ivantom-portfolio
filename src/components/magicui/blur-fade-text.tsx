@@ -2,12 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, Variants } from "framer-motion";
-
-// Workaround for framer-motion typing mismatch with certain TypeScript
-// versions. Alias motion.span to `MotionSpan` with `any` so we can pass
-// regular HTML props like `className`.
-const MotionSpan: any = motion.span;
 import { useMemo } from "react";
+
+const MotionSpan: any = motion.span;
+const MotionPresence: any = AnimatePresence;
 
 interface BlurFadeTextProps {
   text: string;
@@ -41,7 +39,7 @@ const BlurFadeText = ({
   if (animateByCharacter) {
     return (
       <div className="flex">
-        <AnimatePresence>
+        <MotionPresence>
           {characters.map((char, i) => (
             <MotionSpan
               key={i}
@@ -60,14 +58,14 @@ const BlurFadeText = ({
               {char}
             </MotionSpan>
           ))}
-        </AnimatePresence>
+        </MotionPresence>
       </div>
     );
   }
 
   return (
     <div className="flex">
-      <AnimatePresence>
+      <MotionPresence>
         <MotionSpan
           initial="hidden"
           animate="visible"
@@ -82,7 +80,7 @@ const BlurFadeText = ({
         >
           {text}
         </MotionSpan>
-      </AnimatePresence>
+      </MotionPresence>
     </div>
   );
 };
