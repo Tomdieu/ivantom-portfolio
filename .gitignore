@@ -46,3 +46,4 @@ other.js
 /.idea
 # next-agents-md
 .next-docs/
+.opencode/

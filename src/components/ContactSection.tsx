@@ -4,6 +4,7 @@ import React from "react";
 import BlurFade from "./magicui/blur-fade";
 import Link from "next/link";
 import { contact } from "@/constants/navbar";
+import { Icons } from "@/components/icons";
 import { Mail, Linkedin, Github, ArrowRight } from "lucide-react";
 import { useI18n } from '@/locales/client';
 
@@ -37,6 +38,15 @@ const contactMethods = [
     shadow: "hover:shadow-zinc-500/20 dark:hover:shadow-zinc-500/10",
     borderHover: "hover:border-zinc-500/30",
     iconColor: "text-white dark:text-zinc-900",
+  },
+  {
+    icon: Icons.whatsapp,
+    title: "WhatsApp",
+    value: "+237 650 039 773",
+    href: "https://wa.me/237650039773",
+    color: "from-emerald-500 to-green-600",
+    shadow: "hover:shadow-emerald-500/20 dark:hover:shadow-emerald-500/10",
+    borderHover: "hover:border-emerald-500/30",
   },
 ];
 

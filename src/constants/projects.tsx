@@ -31,6 +31,7 @@ export type ProjectType = {
   id?: number;
   dates?: string;
   links?: LinkType[];
+  slugOverride?: string;
 };
 
 function slugify(text: string): string {
@@ -44,11 +45,11 @@ function slugify(text: string): string {
 }
 
 export function getProjectBySlug(slug: string): ProjectType | undefined {
-  return projectsData.find((p) => slugify(p.title) === slug)
+  return projectsData.find((p) => getProjectSlug(p) === slug)
 }
 
 export function getProjectSlug(project: ProjectType): string {
-  return slugify(project.title)
+  return project.slugOverride ?? slugify(project.title)
 }
 
 export { slugify as slugifyProject }
@@ -57,7 +58,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "JoyFund",
     description:
-      "A mobile-first healthcare crowdfunding platform targeting Cameroon. **Problem:** Lack of transparent and secure funding for medical campaigns. **Solution:** Developed a voucher-based escrow mechanism with real-time tracking, proportional refunds, and MTN MoMo/Orange Money integration via Campay. **Impact:** Enabled donors to fund campaigns with full transparency across 6 distinct user portals.",
+      "A mobile-first healthcare crowdfunding platform that digitises Cameroon's traditional Njangi solidarity culture. Donors create milestone-based campaigns (birthdays, weddings), friends contribute via MTN MoMo or Orange Money, and funds are disbursed as care vouchers directly to partner hospitals — enabling transparent, fraud-proof healthcare funding across 6 user portals with a voucher-based escrow mechanism.",
     tags: [
       {
         label: "Django",
@@ -113,7 +114,7 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "Durable Impact Academy",
-    description: "A modern, high-performance e-learning platform. **Problem:** The academy needed a fast, SEO-friendly web presence to host courses. **Solution:** Built a statically-generated frontend utilizing Next.js, integrated with a headless CMS for content management. **Impact:** Achieved a 98/100 Lighthouse performance score and significantly boosted organic student enrollment.",
+    description: "A modern, high-performance e-learning platform rebuilt from a legacy PHP system to Next.js after a complete UX/UI redesign. Built with a statically-generated frontend and headless CMS, achieving a 98/100 Lighthouse performance score and significantly boosting organic student enrollment.",
     tags: [
       {
         label: "NextJs",
@@ -266,6 +267,7 @@ export const projectsData: ProjectType[] = [
         label: "Figma API",
       },
     ],
+    slugOverride: "figma-to-react",
     image: "/FigmaToReact.png",
     dates: "Jan 2025 - Jun 2025",
     links: [

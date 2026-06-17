@@ -1,9 +1,9 @@
 "use client";
 
 import React from 'react';
-import { Badge } from "@/components/ui/badge";
 import BlurFade from '../magicui/blur-fade';
 import { useI18n } from '@/locales/client';
+import { proficiencyData } from "@/data/proficiency";
 import { 
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss,
   SiPython, SiNodedotjs, SiDjango, SiPrisma, SiSequelize,
@@ -118,6 +118,44 @@ const Skills = () => {
               </div>
             </BlurFade>
           ))}
+        </div>
+
+        {/* Proficiency levels */}
+        <div className="space-y-5">
+          {proficiencyData.map((level, idx) => {
+            const levelColors: Record<string, string> = {
+              expert: "border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
+              proficient: "border-blue-500/20 bg-blue-500/10 text-blue-600 dark:text-blue-400",
+              familiar: "border-slate-500/20 bg-slate-500/10 text-slate-600 dark:text-slate-400",
+            };
+            const dotColors: Record<string, string> = {
+              expert: "bg-emerald-500",
+              proficient: "bg-blue-500",
+              familiar: "bg-slate-500",
+            };
+            return (
+              <BlurFade key={level.level} delay={BLUR_FADE_DELAY * 10 + idx * 0.08}>
+                <div className="rounded-xl border border-border bg-card p-5 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className={`w-2 h-2 rounded-full ${dotColors[level.level]}`} />
+                    <h3 className="text-sm font-semibold uppercase tracking-wider">
+                      {t(`skills.proficiency.${level.level}` as Parameters<typeof t>[0])}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {level.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className={`inline-flex items-center rounded-md border px-2.5 py-1 text-xs font-medium transition-all hover:scale-105 ${levelColors[level.level]}`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </BlurFade>
+            );
+          })}
         </div>
       </div>
     </section>
