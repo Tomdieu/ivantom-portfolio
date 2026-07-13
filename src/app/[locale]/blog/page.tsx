@@ -5,17 +5,38 @@ import { format, parseISO } from 'date-fns';
 import Header from '@/components/_header/Header';
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Articles, tutorials, and insights on Full Stack Development, DevOps, and more.',
+  title: 'Blog - Full Stack Development Articles & Tutorials',
+  description: 'Articles, tutorials, and insights on Django, React, Next.js, DevOps, and full-stack web development by Senior Software Engineer Tomdieu Ivan.',
 };
 
 export default async function BlogIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const posts = getAllPostsMeta();
+  const SITE_URL = "https://ivantomdieu.vercel.app";
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": `${SITE_URL}/${locale}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": `${SITE_URL}/${locale}/blog`
+      }
+    ]
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div className="container mx-auto px-4 py-16 max-w-4xl relative z-10">
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Blog</h1>

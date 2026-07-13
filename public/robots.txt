@@ -7,6 +7,30 @@ User-agent: *
 Disallow: /api/
 Disallow: /private/
 
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
 # Host
 Host: https://ivantomdieu.vercel.app
 

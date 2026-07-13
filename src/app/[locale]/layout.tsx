@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       default: "Tomdieu Ivan | Senior Full Stack Software Engineer",
       template: "%s | Tomdieu Ivan",
     },
-    description: "Senior Full Stack Developer based in Cameroon specializing in Django, React, and Next.js. I architect and build scalable, production-ready web and mobile applications.",
+    description: "Tomdieu Ivan is a Senior Full Stack Software Engineer based in Yaoundé, Cameroon with 4+ years of experience building scalable web applications with Django, React, and Next.js. Master's degree in Computer Science from University of Yaoundé 1. Available for freelance and contract work.",
     keywords: ["Software Engineer Cameroon", "Full Stack Developer", "Django Developer", "Next.js Developer", "React Developer", "AI Engineer", "Robotics Engineer", "Tomdieu Ivan", "Ivan Gottfried", "Développeur Full Stack", "Web Developer"],
     authors: [{ name: "Tomdieu Ivan", url: "https://github.com/tomdieu" }],
     creator: "Tomdieu Ivan",
@@ -58,7 +58,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       googleBot: {
         index: true,
         follow: true,
-        noimageindex: true,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
@@ -81,12 +80,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     ],
     openGraph: {
       title: "Tomdieu Ivan | Senior Full Stack Software Engineer",
-      description: "Senior Full Stack Developer based in Cameroon specializing in Django, React, and Next.js.",
+      description: "Tomdieu Ivan is a Senior Full Stack Software Engineer based in Yaoundé, Cameroon with 4+ years of experience building scalable web applications with Django, React, and Next.js.",
       url: canonicalUrl,
       siteName: "Tomdieu Ivan Portfolio",
       images: [
         {
-          url: "/ti.png",
+          url: "https://ivantomdieu.vercel.app/ti.png",
           width: 1200,
           height: 630,
           alt: "Tomdieu Ivan - Full Stack Engineer",
@@ -98,10 +97,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: {
       card: "summary_large_image",
       title: "Tomdieu Ivan | Senior Full Stack Software Engineer",
-      description: "Building scalable digital products with Django and Next.js.",
+      description: "Senior Full Stack Software Engineer specializing in Django, React, and Next.js. Building scalable digital products from Yaoundé, Cameroon.",
       site: "@IvanTomdieu",
       creator: "@IvanTomdieu",
-      images: ["/ti.png"],
+      images: ["https://ivantomdieu.vercel.app/ti.png"],
     },
   };
 }
@@ -437,6 +436,81 @@ export default async function RootLayout({
                   "downloadUrl": project.downloadUrl
                 }
               }))
+            })
+          }}
+        />
+
+        {/* WebSite schema with search action */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://ivantomdieu.vercel.app/#website",
+              "name": "Tomdieu Ivan — Full Stack Software Engineer",
+              "url": "https://ivantomdieu.vercel.app/",
+              "description": "Portfolio of Tomdieu Ivan, a Senior Full Stack Software Engineer specializing in Django, React, and Next.js, based in Yaoundé, Cameroon.",
+              "publisher": {
+                "@type": "Person",
+                "@id": "https://ivantomdieu.vercel.app/#person",
+                "name": "TOMDIEU TCHADIEUKO IVAN GOTTFRIED"
+              },
+              "inLanguage": ["en", "fr"]
+            })
+          }}
+        />
+
+        {/* FAQPage schema for common queries */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://ivantomdieu.vercel.app/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Who is Tomdieu Ivan?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tomdieu Ivan (TOMDIEU TCHADIEUKO IVAN GOTTFRIED) is a Senior Full Stack Software Engineer based in Yaoundé, Cameroon. He holds a Master's degree in Computer Science from University of Yaoundé 1 and has 4+ years of experience building scalable web applications with Django, React, and Next.js. He currently works as a Backend Engineer at Durable Impact."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What technologies does Tomdieu Ivan specialize in?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tomdieu Ivan specializes in Django and Django REST Framework for backend development, React and Next.js for frontend, TypeScript, Python, Docker for containerization, PostgreSQL and MongoDB for databases, and Celery with Redis for task queues and caching."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What kind of projects has Tomdieu Ivan built?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tomdieu Ivan has built a range of production applications including JoyFund (healthcare crowdfunding with MTN MoMo integration), Fiducia (digital trust book for notaries), MamaBrave (mental health crisis intervention app), Mentora (e-learning platform with Stripe), and Hestia (AI-powered energy management system). His portfolio includes 22+ projects spanning fintech, healthtech, edtech, and real estate."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Tomdieu Ivan available for freelance work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Tomdieu Ivan is available for freelance and contract work. He can be contacted via email at ivan.tomdieu@gmail.com or through LinkedIn at linkedin.com/in/tomdieuivan/."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where is Tomdieu Ivan based?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tomdieu Ivan is based in Yaoundé, Cameroon. He works remotely and has experience with hybrid and fully remote teams across multiple organizations."
+                  }
+                }
+              ]
             })
           }}
         />

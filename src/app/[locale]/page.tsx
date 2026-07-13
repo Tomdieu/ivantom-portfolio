@@ -36,8 +36,8 @@ export default function Home() {
             <Separator className="my-2 opacity-50" />
             <Projects />
 
-            {/*<Separator className="my-2 opacity-50" />
-          <Testimonials />*/}
+            <Separator className="my-2 opacity-50" />
+          <Testimonials />
 
             <Separator className="my-2 opacity-50" />
             <WakatimeGitStats />

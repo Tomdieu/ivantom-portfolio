@@ -5,19 +5,41 @@ import Header from "@/components/_header/Header"
 import { getI18n } from "@/locales/server"
 
 export const metadata: Metadata = {
-  title: "Projects - Tomdieu Ivan Portfolio",
-  description: "Browse all projects built by Tomdieu Ivan — from SaaS platforms and mobile apps to AI tools and open-source utilities.",
+  title: "Projects - Full Stack Web & Mobile App Portfolio",
+  description: "Browse all projects built by Tomdieu Ivan — from SaaS platforms and mobile apps to AI tools and open-source utilities built with Django, React, and Next.js.",
   openGraph: {
-    title: "Projects - Tomdieu Ivan Portfolio",
-    description: "Browse all projects built by Tomdieu Ivan.",
+    title: "Projects - Full Stack Web & Mobile App Portfolio",
+    description: "Browse all projects built by Tomdieu Ivan — from SaaS platforms and mobile apps to AI tools.",
   },
 }
 
 export default async function ProjectsPage() {
   const t = await getI18n();
+  const SITE_URL = "https://ivantomdieu.vercel.app";
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": `${SITE_URL}/projects`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <main className="flex-1 container mx-auto max-w-6xl px-4 py-12">
         <div className="space-y-2 mb-10">
           <span className="text-xs font-semibold uppercase tracking-widest text-blue-500">

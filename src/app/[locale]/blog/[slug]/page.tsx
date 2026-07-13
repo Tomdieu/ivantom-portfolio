@@ -53,14 +53,50 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ivantomdieu.vercel.app";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.meta.title,
     "description": post.meta.description,
     "datePublished": post.meta.date,
-    "author": { "@type": "Person", "name": post.meta.author || "Tomdieu Ivan" },
+    "dateModified": post.meta.date,
+    "author": { "@type": "Person", "name": post.meta.author || "Tomdieu Ivan", "url": "https://ivantomdieu.vercel.app/" },
+    "publisher": {
+      "@type": "Person",
+      "name": "Tomdieu Ivan",
+      "url": "https://ivantomdieu.vercel.app/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/${locale}/blog/${slug}`
+    },
     "keywords": post.meta.tags.join(", ")
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": `${SITE_URL}/${locale}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": `${SITE_URL}/${locale}/blog`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.meta.title,
+        "item": `${SITE_URL}/${locale}/blog/${slug}`
+      }
+    ]
   };
 
   return (
@@ -68,6 +104,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Header />
       <article className="container mx-auto px-4 py-16 max-w-3xl relative z-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       
       <Link href={`/${locale}/blog`} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">
         <ArrowLeft className="h-4 w-4" /> Back to blog
