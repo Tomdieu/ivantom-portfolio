@@ -1,0 +1,51 @@
+# Tomdieu Ivan — Senior Full Stack Software Engineer
+
+> Full Stack Software Developer based in Yaoundé, Cameroon. Specializes in Django, React, and Next.js. Builds scalable, production-ready web and mobile applications. Master's degree in Computer Science from University of Yaoundé 1.
+
+## What I Do
+
+I architect and build end-to-end digital products — from backend APIs and database design to responsive frontends and deployment. I work across Django, React, Next.js, and modern cloud infrastructure.
+
+## Technical Expertise
+
+- **Backend:** Django, Django REST Framework, Python, Node.js, RESTful API design, Celery, Redis
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS
+- **DevOps:** Docker, Docker Compose, CI/CD, Linux server administration
+- **Database:** PostgreSQL, MySQL, MongoDB
+
+## Key Projects
+
+- **JoyFund** — Mobile-first healthcare crowdfunding platform digitizing Cameroon's Njangi solidarity culture. Django + Next.js + MTN MoMo/Orange Money integration.
+- **Fiducia** — Cloud-based digital trust book and notary SaaS platform for legal document management.
+- **MamaBrave** — Mental health crisis intervention app for women, featuring anonymous help-seeking, safety planning, and community support.
+- **Mentora** — Next.js-based e-learning platform with Stripe payments and multi-role dashboards.
+- **Prestige Properties** — Real estate property listing platform with Django + Next.js.
+- **Hestia** — AI-powered energy management system for monitoring and optimizing power usage.
+- **Njangi** — Group savings and lending platform inspired by Cameroon's Njangi tradition.
+
+## Experience
+
+- **Backend Engineer** at Durable Impact (2026–present) — Scalable APIs, infrastructure architecture
+- **Backend Developer** at Coding Industry Sarl (2024–2026) — Full-stack applications with Django and Next.js
+- **Fullstack Developer** at Sciences de la Professionnalisation (2023–present) — Platform development
+
+## Education
+
+- Master 2 in Computer Science — University of Yaoundé 1 (2025)
+- Bachelor in Computer Science (Software Engineering) — University of Yaoundé 1 (2023)
+
+## Contact
+
+- Website: https://ivantomdieu.vercel.app
+- Email: ivan.tomdieu@gmail.com
+- GitHub: https://github.com/Tomdieu
+- LinkedIn: https://www.linkedin.com/in/tomdieuivan/
+- Twitter: https://twitter.com/IvanTomdieu
+
+## Languages
+
+English, French
+
+## Pricing / Hiring
+
+Available for freelance and contract work. Contact via email or LinkedIn for rates and availability.
