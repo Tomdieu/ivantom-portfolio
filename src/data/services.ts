@@ -25,7 +25,7 @@ export const servicesData: ServiceItem[] = [
     icon: SiDocker,
     titleKey: "services.items.devops.title",
     descriptionKey: "services.items.devops.description",
-    technologies: ["Docker Compose", "Nginx", "CI/CD", "Prometheus", "Grafana", "VPS"],
+    technologies: ["Docker Compose", "Nginx", "CI/CD",  "VPS"],
   },
   {
     icon: SiExpo,
