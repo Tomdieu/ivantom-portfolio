@@ -112,7 +112,7 @@ const Hero = () => {
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
               {[
-                { value: "3+", label: t("hero.stats.yearsExp") },
+                { value: "4+", label: t("hero.stats.yearsExp") },
                 { value: "18+", label: t("hero.stats.projects") },
                 { value: "10+", label: t("hero.stats.technologies") },
               ].map(({ value, label }) => (
@@ -129,7 +129,7 @@ const Hero = () => {
         <BlurFade delay={BLUR_FADE_DELAY} className="shrink-0">
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/30 to-indigo-600/20 blur-3xl scale-110" />
-            <div className="relative size-52 sm:size-60 md:size-72 rounded-2xl overflow-hidden border border-border shadow-2xl ring-1 ring-white/10">
+            <div className="relative size-52 sm:size-60 md:size-72 rounded-full overflow-hidden border border-border shadow-2xl ring-1 ring-white/10">
               <Image
                 src="/ivantom.jpeg"
                 alt={t("hero.greeting") + " Tomdieu Ivan — " + t("hero.title")}
