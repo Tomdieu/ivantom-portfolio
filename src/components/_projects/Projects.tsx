@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { projectsData } from "@/constants/projects";
+import { projectsData, slugifyProject } from "@/constants/projects";
 import Project from "./Project";
 import BlurFade from "../magicui/blur-fade";
 import { useI18n } from "@/locales/client";
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -34,7 +35,10 @@ const Projects = () => {
               delay={BLUR_FADE_DELAY * 12 + index * 0.04}
               inView
             >
+              <Link href={"/projects/"+slugifyProject(project.title)}>
+
               <Project project={project} />
+              </Link>
             </BlurFade>
           ))}
         </div>
