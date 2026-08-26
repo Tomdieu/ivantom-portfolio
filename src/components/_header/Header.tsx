@@ -22,7 +22,7 @@ const Header = ({ className }: Props) => {
 
   const navLinks = [
     { href: "/#work-experience", label: t('nav.experience') },
-    { href: "/#projects", label: t('nav.projects') },
+    { href: "/projects", label: t('nav.projects') },
     { href: "/#skills", label: t('nav.skills') },
     { href: "/blog", label: t('nav.blog' as const) },
     { href: "/#contact", label: t('nav.contact') },
@@ -45,11 +45,11 @@ const Header = ({ className }: Props) => {
             href="/"
             onClick={() => setIsOpen(false)}
           >
-            <Image 
-              src="/ti.png" 
-              alt="Tomdieu Logo" 
-              width={40} 
-              height={40} 
+            <Image
+              src="/ti.png"
+              alt="Tomdieu Logo"
+              width={40}
+              height={40}
               className="object-contain dark:invert"
               priority
             />
@@ -72,10 +72,10 @@ const Header = ({ className }: Props) => {
           <LanguageToggle />
           <ModeToggle />
           <div className="flex items-center sm:hidden ml-1">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="h-9 w-9" 
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-9 w-9"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -86,7 +86,7 @@ const Header = ({ className }: Props) => {
       </div>
 
       {/* Mobile Menu Full-Width Dropdown */}
-      <div 
+      <div
         className={cn(
           "sm:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border shadow-md transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center",
           isOpen ? "opacity-100 max-h-96 py-4 gap-4" : "opacity-0 max-h-0 py-0 border-transparent shadow-none"
