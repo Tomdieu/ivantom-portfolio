@@ -213,7 +213,13 @@ export const projectsData: ProjectType[] = [
     ],
     image: "/menu-daily.png",
     dates: "2025",
-    links: [],
+    links: [
+      {
+        label: "Preview",
+        href: "https://daily-menus.com",
+        icon: <Globe size={16} />,
+      },
+    ],
   },
   {
     title: "Easy Immo",
@@ -374,15 +380,11 @@ export const projectsData: ProjectType[] = [
   {
     title: "ClassConnect",
     description:
-      "An integrated educational portal. **Problem:** Poor communication between students and teachers disrupted the learning process. **Solution:** Built a centralized platform utilizing Django Rest Framework and Next.js with real-time notification systems. **Impact:** Fostered a more connected and responsive academic environment.",
+      "Cameroon's first adaptive e-learning platform — a comprehensive ecosystem democratizing quality education from middle school to university and professional upskilling. Problem: fragmented access to structured curricula, local payments, and live collaboration. Solution: architected a hybrid Django 5 + DRF + Channels/Celery/Redis backend and Next.js 15 (React 19, TypeScript, Tailwind, Zustand, NextAuth v5, next-international) frontend with class/subject hierarchies, resource library (videos/PDFs/exercises), Jitsi live classrooms, WebSocket forums & real-time chat, OAuth2/Google auth, bilingual FR/EN, and MTN/Orange Money subscriptions via FreemoPay/CamPay. Impact: 1,780+ commits, Docker + PostgreSQL monolith designed for microservices scale, live at classconnect.cm — open-sourced at github.com/Tomdieu/class-connect.",
+    source: "https://github.com/Tomdieu/class-connect",
     tags: [
       {
-        label: "Javascript",
-        icon: <DiJavascript1 size={16} />,
-      },
-      {
-        label: "Python",
-        icon: <DiPython size={16} />,
+        label: "NextJs",
       },
       {
         label: "Django",
@@ -393,12 +395,38 @@ export const projectsData: ProjectType[] = [
         icon: <DiDjango size={16} />,
       },
       {
-        label: "NextJs",
+        label: "TypeScript",
+        icon: <DiJavascript1 size={16} />,
+      },
+      {
+        label: "Python",
+        icon: <DiPython size={16} />,
+      },
+      {
+        label: "PostgreSQL",
+      },
+      {
+        label: "Docker",
+        icon: <DiDocker size={16} />,
+      },
+      {
+        label: "WebSockets",
+      },
+      {
+        label: "Jitsi Meet",
+      },
+      {
+        label: "Tailwind CSS",
       },
     ],
     image: "/classconnect.png",
     dates: "Jan 2025 - Apr 2025",
     links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/class-connect",
+        icon: <GitHubLogoIcon />,
+      },
       {
         label: "Preview",
         href: "https://classconnect.cm/",
@@ -409,7 +437,7 @@ export const projectsData: ProjectType[] = [
   {
     title: "OngolaPhone",
     description:
-      "OngolaPhone is a platform for mobile device services and solutions developed during my time at Coding Industry Sarl. The project features comprehensive mobile phone management and service solutions.",
+      "Digital storefront for a phone seller at Avenue Kennedy, Yaoundé — moved his stall online so clients see live stock and order remotely. Problem: 30+ daily WhatsApp calls asking 'what do you have?' with stale photos and lost orders. Solution: React + Vite + Django REST catalogue with real-time in-stock badges, search/filter by brand/price, and online order-intent flow (delivery/pickup). Impact: after-hours discovery, seller manages stock in <1 min without a developer — live at ongolaphone.com. Built at Coding Industry Sarl.",
     tags: [
       {
         label: "Javascript",
