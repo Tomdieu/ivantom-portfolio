@@ -8,6 +8,8 @@ import { caseStudiesData, type CaseStudyType } from "@/data/case-studies"
 import { getI18n } from "@/locales/server"
 import Header from "@/components/_header/Header"
 import JoyFundCaseStudy from "@/components/_case_studies/JoyFundCaseStudy"
+import ClassConnectCaseStudy from "@/components/_case_studies/ClassConnectCaseStudy"
+import OngolaPhoneCaseStudy from "@/components/_case_studies/OngolaPhoneCaseStudy"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 type Props = {
@@ -291,6 +293,10 @@ export default async function ProjectPage({ params }: Props) {
 
         {slug === "joyfund" ? (
           <JoyFundCaseStudy />
+        ) : slug === "classconnect" ? (
+          <ClassConnectCaseStudy />
+        ) : slug === "ongolaphone" ? (
+          <OngolaPhoneCaseStudy />
         ) : caseStudy ? (
           <CaseStudyContent project={project} caseStudy={caseStudy} />
         ) : (
