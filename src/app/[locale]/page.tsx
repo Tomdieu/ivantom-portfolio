@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
       <div className="container mx-auto w-screen flex flex-col">
         <main className="flex-1 relative">
-          <div className="flex flex-col px-4 sm:px-6">
+          <div className="flex flex-col px-0.5 sm:px-6">
             <Hero />
 
             <Separator className="my-2 opacity-50" />
