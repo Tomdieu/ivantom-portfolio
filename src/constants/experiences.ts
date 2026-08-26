@@ -7,7 +7,7 @@ export const experiencesEn = [
         title: "Backend Engineer",
         logoUrl: "./durable-impact-logo.png",
         start: "Jan 2026",
-        end: "Present",
+        end: "Aug 2026",
         description: "Led backend architecture and infrastructure development. \\n• Architected highly scalable RESTful APIs utilizing Django Rest Framework and PostgreSQL. \\n• Optimized database queries and background tasks with Celery/Redis, reducing average response times by 35%. \\n• Managed CI/CD pipelines and Docker containerization to ensure seamless deployments."
     },
     {
@@ -18,7 +18,7 @@ export const experiencesEn = [
         title: "Full Stack Developer",
         logoUrl: "./coding-industry.png",
         start: "Jun 2024",
-        end: "Jan 2026",
+        end: "Apr 2026",
         description: "Engineered comprehensive full-stack applications from the ground up. \\n• Backend: Designed scalable server-side logic and database schemas using Django and PostgreSQL. \\n• Frontend: Built dynamic, SEO-optimized, and highly responsive user interfaces utilizing Next.js and React. \\n• Collaborated closely with cross-functional teams to translate client requirements into robust technical solutions."
     },
     {
@@ -54,7 +54,7 @@ export const experiencesFr = [
         title: "Ingénieur Backend",
         logoUrl: "./durable-impact-logo.png",
         start: "Janv 2026",
-        end: "Présent",
+        end: "Août 2026 ",
         description: "Direction de l'architecture backend et du développement de l'infrastructure. \\n• Architecture d'API RESTful hautement évolutives utilisant Django Rest Framework et PostgreSQL. \\n• Optimisation des requêtes de base de données et des tâches en arrière-plan avec Celery/Redis, réduisant les temps de réponse moyens de 35%. \\n• Gestion des pipelines CI/CD et de la conteneurisation Docker pour assurer des déploiements fluides."
     },
     {
@@ -65,7 +65,7 @@ export const experiencesFr = [
         title: "Développeur Full Stack",
         logoUrl: "./coding-industry.png",
         start: "Juin 2024",
-        end: "Janv 2026",
+        end: "Avr 2026",
         description: "Ingénierie d'applications full-stack complètes à partir de zéro. \\n• Backend : Conception d'une logique côté serveur et de schémas de base de données évolutifs utilisant Django et PostgreSQL. \\n• Frontend : Création d'interfaces utilisateur dynamiques, optimisées pour le SEO et hautement réactives utilisant Next.js et React. \\n• Collaboration étroite avec des équipes interfonctionnelles pour traduire les exigences des clients en solutions techniques robustes."
     },
     {
