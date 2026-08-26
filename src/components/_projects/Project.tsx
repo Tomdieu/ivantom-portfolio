@@ -1,12 +1,12 @@
 "use client";
 
 import { ProjectType, getProjectSlug } from "@/constants/projects";
-import { useState } from "react";
+// import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import ProjectModal from "./ProjectModal";
+// import ProjectModal from "./ProjectModal";
 import { useI18n } from "@/locales/client";
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
 
 const Project = ({ project, className }: Props) => {
   const { title, description, image, tags, dates, links } = project;
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const t = useI18n();
 
   return (
@@ -25,8 +25,6 @@ const Project = ({ project, className }: Props) => {
         role="button"
         tabIndex={0}
         aria-label={`View details for ${title}`}
-        onClick={() => setIsOpen(true)}
-        onKeyDown={(e) => e.key === "Enter" && setIsOpen(true)}
         className={cn(
           "group flex flex-col rounded-xl border border-border bg-card overflow-hidden",
           "hover:border-border/80 hover:shadow-lg cursor-pointer transition-all duration-300 h-full",
@@ -122,7 +120,7 @@ const Project = ({ project, className }: Props) => {
         </div>
       </div>
 
-      <ProjectModal project={project} open={isOpen} onOpenChange={setIsOpen} />
+      {/*<ProjectModal project={project} open={isOpen} onOpenChange={setIsOpen} />*/}
     </>
   );
 };
