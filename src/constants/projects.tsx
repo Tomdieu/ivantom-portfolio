@@ -56,6 +56,44 @@ export { slugify as slugifyProject }
 
 export const projectsData: ProjectType[] = [
   {
+    title: "NameGen",
+    description:
+      "A combinatoric letter permutations & phonetic name generator designed to create unique combination of words and names from the alphabet with customizable slot constraints, batch controls, and flow modes.",
+    tags: [
+      {
+        label: "NextJs",
+      },
+      {
+        label: "TypeScript",
+        icon: <DiJavascript1 size={16} />,
+      },
+      {
+        label: "React",
+        icon: <DiReact size={16} />,
+      },
+      {
+        label: "Tailwind CSS",
+      },
+      {
+        label: "Combinatorics Engine",
+      },
+    ],
+    image: "/namegen.png",
+    dates: "Sep 2024",
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/Tomdieu/namegen",
+        icon: <GitHubLogoIcon />,
+      },
+      {
+        label: "Preview",
+        href: "https://namegen-phi.vercel.app/",
+        icon: <Globe size={16} />,
+      },
+    ],
+  },
+  {
     title: "JoyFund",
     description:
       "A mobile-first healthcare crowdfunding platform that digitises Cameroon's traditional Njangi solidarity culture. Donors create milestone-based campaigns (birthdays, weddings), friends contribute via MTN MoMo or Orange Money, and funds are disbursed as care vouchers directly to partner hospitals — enabling transparent, fraud-proof healthcare funding across 6 user portals with a voucher-based escrow mechanism.",

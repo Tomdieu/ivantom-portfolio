@@ -36,6 +36,3 @@ Host: https://ivantomdieu.vercel.app
 
 # Sitemaps
 Sitemap: https://ivantomdieu.vercel.app/sitemap.xml
-
-# AI Assistants
-llms.txt: https://ivantomdieu.vercel.app/llms.txt
