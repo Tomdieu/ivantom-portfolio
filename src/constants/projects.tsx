@@ -140,7 +140,7 @@ export const projectsData: ProjectType[] = [
         label: "WebSockets",
       },
     ],
-    image: "/joyfund-logo.jpeg",
+    image: "/joyfund.png",
     dates: "Feb 2026 - May 2026",
     links: [
       {
@@ -180,7 +180,7 @@ export const projectsData: ProjectType[] = [
         label: "Prisma",
       },
     ],
-    image: "/time.png",
+    image: "/trixly.png",
     dates: "Jan 2026 - Mar 2026",
     links: [
       {
@@ -501,7 +501,7 @@ export const projectsData: ProjectType[] = [
         icon: <DiReact size={16} />,
       },
     ],
-    image: "/ongolaphone.svg",
+    image: "/ongolaphone.png",
     dates: "Jul 2024 - Oct 2024",
     links: [
       {
@@ -555,7 +555,7 @@ export const projectsData: ProjectType[] = [
         label: "Microiservices",
       },
     ],
-    image: "/wikiculture.jpeg",
+    image: "/wikiculture.png",
     dates: "Jan 2024 - Jun 2024",
     links: [
       {
@@ -721,7 +721,7 @@ export const projectsData: ProjectType[] = [
       { label: "Position Stack" },
       { label: "Geoapify" },
     ],
-    image: "/trix.png",
+    image: "/nv-trix.png",
     links: [
       {
         label: "Preview",
