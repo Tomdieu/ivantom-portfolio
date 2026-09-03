@@ -79,7 +79,7 @@ export const projectsData: ProjectType[] = [
       },
     ],
     image: "/namegen.png",
-    dates: "Sep 2024",
+    dates: "Sep 2026",
     links: [
       {
         label: "Github",
